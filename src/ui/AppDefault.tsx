@@ -8,6 +8,18 @@ import {
   initialC3DFlashcards,
   initialC4AFlashcards,
   initialC4BFlashcards,
+  initialBai1,
+  initialBai2,
+  initialBai3,
+  initialBai4,
+  initialBai5,
+  initialBai6,
+  initialBai7,
+  initialBai8,
+  initialBai9,
+  initialBai10,
+  initialBai11,
+  initialBai12,
 } from "@/data/flashcard";
 import "../css/app.css";
 
@@ -54,6 +66,18 @@ const AppDefault: React.FC = () => {
       chapTer: "Chương 4B - Học tiếng Nhật thì khó nhưng thú vị!",
       dataFlashCard: initialC4BFlashcards,
     },
+    { id: 7, chapTer: "Bài 1", dataFlashCard: initialBai1 },
+    { id: 8, chapTer: "Bài 2", dataFlashCard: initialBai2 },
+    { id: 9, chapTer: "Bài 3", dataFlashCard: initialBai3 },
+    { id: 10, chapTer: "Bài 4", dataFlashCard: initialBai4 },
+    { id: 11, chapTer: "Bài 5", dataFlashCard: initialBai5 },
+    { id: 12, chapTer: "Bài 6", dataFlashCard: initialBai6 },
+    { id: 13, chapTer: "Bài 7", dataFlashCard: initialBai7 },
+    { id: 14, chapTer: "Bài 8", dataFlashCard: initialBai8 },
+    { id: 15, chapTer: "Bài 9", dataFlashCard: initialBai9 },
+    { id: 16, chapTer: "Bài 10", dataFlashCard: initialBai10 },
+    { id: 17, chapTer: "Bài 11", dataFlashCard: initialBai11 },
+    { id: 18, chapTer: "Bài 12", dataFlashCard: initialBai12 },
   ];
 
   const [selectedChapter, setSelectedChapter] = useState(allDataFlashCards[0]);
