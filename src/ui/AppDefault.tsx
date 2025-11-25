@@ -1,3 +1,4 @@
+// Updated responsive version with mobile Tailwind adjustments
 "use client";
 import React, { useEffect, useMemo, useState } from "react";
 import {
@@ -34,7 +35,6 @@ const makeShuffle = (arr: number[]) => {
 };
 
 const AppDefault: React.FC = () => {
-  // const flashcards = useMemo(() => initialFlashcards, []);
   const allDataFlashCards = [
     {
       id: 1,
@@ -92,6 +92,7 @@ const AppDefault: React.FC = () => {
   const [knownSet, setKnownSet] = useState<number[]>([]);
   const [showKnownList, setShowKnownList] = useState(true);
   const [showUnknownList, setShowUnknownList] = useState(false);
+
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setOrder(flashcards.map((_, i) => i));
@@ -196,8 +197,8 @@ const AppDefault: React.FC = () => {
   const unknownList = flashcards.filter((_, i) => !knownSetLookup.has(i));
 
   const summaryView = (
-    <div className="max-w-[700px] mx-auto p-6 bg-white rounded-xl shadow-md text-center">
-      <h2 className="text-2xl font-bold mb-4">Kết thúc lượt học</h2>
+    <div className="max-w-[700px] mx-auto p-4 sm:p-6 bg-white rounded-xl shadow-md text-center">
+      <h2 className="text-xl sm:text-2xl font-bold mb-4">Kết thúc lượt học</h2>
       <p className="mb-2">
         Tổng số từ: <strong>{total}</strong>
       </p>
@@ -208,90 +209,55 @@ const AppDefault: React.FC = () => {
         Chưa thuộc: <strong>{unknownList.length}</strong>
       </p>
 
-      <div className="flex gap-3 justify-center mb-4">
+      <div className="flex flex-wrap gap-2 justify-center mb-4">
         <button
           onClick={() => restart(false)}
-          className="px-4 py-2 bg-blue-500 text-white rounded-md"
+          className="px-3 py-2 bg-blue-500 text-white rounded-md text-sm sm:text-base"
         >
-          Bắt đầu lại (Xóa trạng thái)
+          Bắt đầu lại (Xóa)
         </button>
         <button
           onClick={() => restart(true)}
-          className="px-4 py-2 bg-yellow-500 text-white rounded-md"
+          className="px-3 py-2 bg-yellow-500 text-white rounded-md text-sm sm:text-base"
         >
-          Bắt đầu lại (Giữ đã thuộc)
+          Bắt đầu lại (Giữ)
         </button>
         <button
           onClick={() => shuffle(true)}
-          className="px-4 py-2 bg-purple-500 text-white rounded-md"
+          className="px-3 py-2 bg-purple-500 text-white rounded-md text-sm sm:text-base"
         >
-          Xáo trộn & giữ trạng thái
+          Xáo trộn
         </button>
       </div>
 
-      <div className="flex justify-center gap-4">
+      <div className="flex justify-center gap-2 sm:gap-4">
         <button
           onClick={() => setShowKnownList((s) => !s)}
-          className="px-3 py-2 border rounded"
+          className="px-3 py-2 border rounded text-sm"
         >
-          {showKnownList ? "Ẩn" : "Hiện"} danh sách đã thuộc ({knownList.length}
-          )
+          {showKnownList ? "Ẩn" : "Hiện"} đã thuộc ({knownList.length})
         </button>
         <button
           onClick={() => setShowUnknownList((s) => !s)}
-          className="px-3 py-2 border rounded"
+          className="px-3 py-2 border rounded text-sm"
         >
-          {showUnknownList ? "Ẩn" : "Hiện"} danh sách chưa thuộc (
-          {unknownList.length})
+          {showUnknownList ? "Ẩn" : "Hiện"} chưa thuộc ({unknownList.length})
         </button>
       </div>
-
-      {showKnownList && (
-        <div className="mt-4 text-left max-h-48 overflow-auto p-3 bg-green-50 rounded">
-          <h3 className="font-semibold mb-2">Từ đã thuộc</h3>
-          <ul className="list-disc pl-5">
-            {knownList.length === 0 ? (
-              <li>Chưa có</li>
-            ) : (
-              knownList.map((f) => (
-                <li key={f.id || f.word}>
-                  {f.word} {f.type} — {f.reading} — {f.meaning}
-                </li>
-              ))
-            )}
-          </ul>
-        </div>
-      )}
-
-      {showUnknownList && (
-        <div className="mt-4 text-left max-h-48 overflow-auto p-3 bg-red-50 rounded">
-          <h3 className="font-semibold mb-2">Từ chưa thuộc</h3>
-          <ul className="list-disc pl-5">
-            {unknownList.length === 0 ? (
-              <li>Không có</li>
-            ) : (
-              unknownList.map((f) => (
-                <li key={f.id || f.word}>
-                  {f.word} {f.type} — {f.reading} — {f.meaning}
-                </li>
-              ))
-            )}
-          </ul>
-        </div>
-      )}
     </div>
   );
 
   return (
     <>
-      <section className="overflow-hidden p-[22px] min-h-[90vh] flex">
-        <div className="w-[40%] mx-auto mb-6 text-left">
+      <section className="overflow-hidden p-3 sm:p-[22px] min-h-[90vh] flex flex-col sm:flex-row">
+        {/* LEFT PANEL */}
+        <div className="w-full sm:w-[40%] mx-auto mb-6 text-left order-1 sm:order-1">
           <div className="w-full p-2">
             <label className="block mb-2 font-semibold">Chọn bài học:</label>
             <select
               value={selectedChapter.id}
               onChange={(e) => handleSelectChapter(Number(e.target.value))}
-              className="border p-2 rounded w-full mb-4"
+              className="border p-2 rounded w-full mb-4 text-sm sm:text-base"
             >
               {allDataFlashCards.map((c) => (
                 <option key={c.id} value={c.id}>
@@ -300,161 +266,77 @@ const AppDefault: React.FC = () => {
               ))}
             </select>
           </div>
-          <label className="block mb-2 font-semibold">
+
+          <label className="mb-2 font-semibold text-sm sm:text-base hidden sm:block">
             Nhập flashcards (JSON):
           </label>
           <textarea
             value={jsonInput}
             onChange={(e) => setJsonInput(e.target.value)}
-            placeholder={`Ví dụ:
-            [
-                {
-                    "id": "1",
-                    "word": "店",
-                    "type": "(N)",
-                    "reading": "みせ",
-                    "romaji": "mise",
-                    "meaning": "cửa hàng"
-                }
-            ]`}
-            className="w-full h-[300px] p-3 border rounded resize-none"
+            placeholder="Nhập JSON tại đây"
+            className="w-full h-[180px] sm:h-[300px] p-3 border rounded resize-none text-sm hidden sm:block"
           />
-          <div className="flex gap-2 mt-2">
+
+          <div className="flex-wrap gap-2 mt-2 hidden sm:flex">
             <button
               onClick={handleLoadJSON}
-              className="px-4 py-2 bg-blue-500 text-white rounded-md"
+              className="px-3 py-2 bg-blue-500 text-white rounded-md text-sm sm:text-base"
             >
-              Load Flashcards
+              Load
             </button>
             <button
               onClick={handleResetFlashcards}
-              className="px-4 py-2 bg-gray-500 text-white rounded-md"
+              className="px-3 py-2 bg-gray-500 text-white rounded-md text-sm sm:text-base"
             >
-              Reset về dữ liệu gốc
+              Reset
             </button>
           </div>
-          <div className="flex gap-4">
-            <div className="flex w-[50%] flex-col gap-3 mt-2">
-              <button
-                onClick={() => setShowKnownList((s) => !s)}
-                className="px-3 py-2 border rounded"
-              >
-                {showKnownList ? "Ẩn" : "Hiện"} đã thuộc ({knownList.length})
-              </button>
-              {showKnownList && (
-                <div className="flex flex-col gap-2 overflow-y-auto max-h-[60vh] p-2 border rounded">
-                  {knownList.map((card) => (
-                    <div
-                      key={card.id}
-                      className="p-3 rounded-lg bg-green-50 dark:bg-green-900/20 border border-green-300 dark:border-green-800"
-                    >
-                      <div className="text-lg font-semibold">
-                        {card.word}{" "}
-                        <span className="opacity-70 text-sm ml-1">
-                          {card.type}
-                        </span>
-                      </div>
-                      <div className="opacity-80">{card.reading}</div>
-                      <div className="text-sm italic opacity-70">
-                        {card.romaji}
-                      </div>
-                      <div className="mt-1">{card.meaning}</div>
-                    </div>
-                  ))}
-                  {knownList.length === 0 && (
-                    <div className="text-sm opacity-70">
-                      Chưa có thẻ đã thuộc.
-                    </div>
-                  )}
-                </div>
-              )}
-            </div>
-            <div className="flex flex-col w-[50%]  gap-3 mt-2">
-              <button
-                onClick={() => setShowUnknownList((s) => !s)}
-                className="px-3 py-2 border rounded"
-              >
-                {showUnknownList ? "Ẩn" : "Hiện"} chưa thuộc (
-                {unknownList.length})
-              </button>
-              {showUnknownList && (
-                <div className="flex flex-col gap-2 overflow-y-auto max-h-[60vh] p-2 border rounded">
-                  {unknownList.map((card) => (
-                    <div
-                      key={card.id}
-                      className="p-3 rounded-lg bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-300 dark:border-yellow-800"
-                    >
-                      <div className="text-lg font-semibold">
-                        {card.word}{" "}
-                        <span className="opacity-70 text-sm ml-1">
-                          {card.type}
-                        </span>
-                      </div>
-                      <div className="opacity-80">{card.reading}</div>
-                      <div className="text-sm italic opacity-70">
-                        {card.romaji}
-                      </div>
-                      <div className="mt-1">{card.meaning}</div>
-                    </div>
-                  ))}
-                  {unknownList.length === 0 && (
-                    <div className="text-sm opacity-70">
-                      Chưa có thẻ chưa thuộc.
-                    </div>
-                  )}
-                </div>
-              )}
-            </div>
-          </div>
         </div>
-        <div className="w-[60%] mx-auto p-4 m-4">
-          <div className="bg-white rounded-xl shadow-1 px-4 py-12 text-black">
+
+        {/* RIGHT PANEL */}
+        <div className="w-full sm:w-[60%] mx-auto p-2 sm:p-4 m-0 sm:m-4 order-1 sm:order-2">
+          <div className="bg-white rounded-xl shadow-1 px-3 sm:px-4 py-6 sm:py-12 text-black">
             <div className="text-center">
-              {/* Header / Progress */}
               <div className="mb-6">
-                <h1 className="text-2xl font-bold text-black">
+                <h1 className="text-xl sm:text-2xl font-bold text-black">
                   📚 Flashcard Từ vựng Tiếng Nhật
                 </h1>
-                <p className="text-sm text-gray-600 mt-2">
+                <p className="text-xs sm:text-sm text-gray-600 mt-2">
                   Thẻ {Math.min(pos + 1, order.length)}/{order.length} • Đã
                   thuộc: {knownList.length} • Chưa thuộc: {unknownList.length}
                 </p>
-                <div className="mt-3 flex items-center justify-center gap-2">
+
+                <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
                   <button
                     onClick={() => shuffle(true)}
-                    className="px-3 py-2 bg-purple-500 text-white rounded-md"
+                    className="px-3 py-2 bg-purple-500 text-white rounded-md text-sm sm:text-base"
                   >
                     Xáo trộn
                   </button>
                   <button
                     onClick={() => setShowJapaneseFirst((s) => !s)}
-                    className="px-3 py-2 bg-indigo-500 text-white rounded-md"
+                    className="px-3 py-2 bg-indigo-500 text-white rounded-md text-sm sm:text-base"
                   >
-                    Hiển thị:{" "}
-                    {showJapaneseFirst
-                      ? "🇯🇵 Nhật → 🇻🇳 Việt"
-                      : "🇻🇳 Việt → 🇯🇵 Nhật"}
+                    Hiển thị: {showJapaneseFirst ? "🇯🇵 → 🇻🇳" : "🇻🇳 → 🇯🇵"}
                   </button>
-
                   <button
                     onClick={() => restart(false)}
-                    className="px-3 py-2 bg-red-500 text-white rounded-md"
+                    className="px-3 py-2 bg-red-500 text-white rounded-md text-sm sm:text-base"
                   >
-                    Bắt đầu lại (xóa)
+                    Bắt đầu lại
                   </button>
                   <button
                     onClick={() => restart(true)}
-                    className="px-3 py-2 bg-yellow-500 text-white rounded-md"
+                    className="px-3 py-2 bg-yellow-500 text-white rounded-md text-sm sm:text-base"
                   >
-                    Bắt đầu lại (giữ đã thuộc)
+                    Giữ đã thuộc
                   </button>
                 </div>
               </div>
 
-              {/* Card */}
               <div className="mx-auto mb-8 flex items-center justify-center">
                 <div
-                  className="ml-12 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] rounded bg-red-200 flex items-center justify-center cursor-pointer"
+                  className="w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] md:w-[450px] md:h-[450px] rounded flex items-center justify-center cursor-pointer"
                   onClick={() => setFlipped((f) => !f)}
                   style={{
                     transition: "transform 0.6s",
@@ -462,79 +344,77 @@ const AppDefault: React.FC = () => {
                     perspective: "1000px",
                     backgroundColor: !flipped
                       ? !showJapaneseFirst
-                        ? "rgb(198, 247, 3, 0.8)"
-                        : "rgb(65, 217, 41, 0.8)"
+                        ? "rgba(198,247,3,0.8)"
+                        : "rgba(65,217,41,0.8)"
                       : !showJapaneseFirst
-                      ? "rgb(65, 217, 41, 0.8)"
-                      : "rgb(198, 247, 3, 0.8)",
+                      ? "rgba(65,217,41,0.8)"
+                      : "rgba(198,247,3,0.8)",
                   }}
                 >
                   {!isFinished ? (
                     !flipped ? (
                       showJapaneseFirst ? (
-                        // Hiển thị tiếng Nhật trước
-                        <div className="px-6 text-center">
-                          <div className="text-7xl font-extrabold py-2 text-black">
+                        <div className="px-4 text-center">
+                          <div className="text-4xl sm:text-6xl font-extrabold py-2 text-black">
                             {flashcards[currentIndex].reading}
                           </div>
-                          <div className="text-xl font-semibold mt-2 py-2 text-gray-700">
+                          <div className="text-base sm:text-xl font-semibold mt-2 py-2 text-gray-700">
                             {flashcards[currentIndex].type}
                           </div>
-                          <div className="text-3xl mt-2 py-2 font-medium text-blue-700">
+                          <div className="text-2xl sm:text-3xl mt-2 py-2 font-medium text-blue-700">
                             {flashcards[currentIndex].word}
                           </div>
-                          <div className="text-sm mt-4 py-2 text-gray-600">
+                          <div className="text-xs sm:text-sm mt-4 py-2 text-gray-600">
                             {flashcards[currentIndex].romaji}
                           </div>
-                          <div className="text-sm mt-4 py-2 text-gray-500">
+                          <div className="text-xs mt-4 py-2 text-gray-500">
                             (Bấm để xem nghĩa)
                           </div>
                         </div>
                       ) : (
-                        // Hiển thị tiếng Việt trước
-                        <div className="px-6 text-center">
-                          <div className="text-5xl font-semibold py-6 text-black">
+                        <div className="px-4 text-center">
+                          <div className="text-3xl sm:text-5xl font-semibold py-6 text-black">
                             {flashcards[currentIndex].meaning}
                           </div>
-                          <div className="text-sm mt-4 py-2 text-gray-500">
+                          <div className="text-xs mt-4 py-2 text-gray-500">
                             (Bấm để xem tiếng Nhật)
                           </div>
                         </div>
                       )
                     ) : showJapaneseFirst ? (
-                      // Lật lại: hiển thị nghĩa (khi Nhật trước)
-                      <div className="px-6 text-center">
-                        <div className="text-4xl font-semibold text-black">
+                      <div className="px-4 text-center">
+                        <div className="text-2xl sm:text-4xl font-semibold text-black">
                           {flashcards[currentIndex].meaning}
                         </div>
-                        <div className="text-sm text-gray-600 mt-3">
+                        <div className="text-xs text-gray-600 mt-3">
                           Bấm để quay lại
                         </div>
                       </div>
                     ) : (
-                      // Lật lại: hiển thị tiếng Nhật (khi Việt trước)
-                      <div className="px-6 text-center">
-                        <div className="text-7xl font-extrabold py-2 text-black">
+                      <div className="px-4 text-center">
+                        <div className="text-4xl sm:text-7xl font-extrabold py-2 text-black">
                           {flashcards[currentIndex].reading}
                         </div>
-                        <div className="text-xl font-semibold mt-2 py-2 text-gray-700">
+                        <div className="text-lg sm:text-xl font-semibold mt-2 py-2 text-gray-700">
                           {flashcards[currentIndex].type}
                         </div>
-                        <div className="text-3xl mt-2 py-2 font-medium text-blue-700">
+                        <div className="text-2xl sm:text-3xl mt-2 py-2 font-medium text-blue-700">
                           {flashcards[currentIndex].word}
                         </div>
-                        <div className="text-sm mt-4 py-2 text-gray-600">
+                        <div className="text-xs sm:text-sm mt-4 py-2 text-gray-600">
                           {flashcards[currentIndex].romaji}
                         </div>
-                        <div className="text-sm text-gray-500 mt-3">
+                        <div className="text-xs text-gray-500 mt-3">
                           Bấm để quay lại
                         </div>
                       </div>
                     )
                   ) : (
-                    <div className="px-6">
-                      <div className="text-2xl font-bold">Hoàn tất!</div>
-                      <div className="mt-2">
+                    <div className="px-4 text-center">
+                      <div className="text-lg sm:text-2xl font-bold">
+                        Hoàn tất!
+                      </div>
+                      <div className="mt-2 text-sm sm:text-base">
                         Bấm nút bên dưới để xem tổng kết.
                       </div>
                     </div>
@@ -542,25 +422,24 @@ const AppDefault: React.FC = () => {
                 </div>
               </div>
 
-              {/* Controls */}
               {!isFinished ? (
                 <div className="flex flex-col items-center gap-4">
-                  <div className="flex justify-center gap-4">
+                  <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
                     <button
                       onClick={prevCard}
-                      className="inline-flex items-center gap-2 font-medium text-white bg-blue-500 py-3 px-6 rounded-md hover:bg-blue-700"
+                      className="px-4 py-2 bg-blue-500 text-white rounded-md text-sm sm:text-base"
                     >
                       Prev
                     </button>
                     <button
                       onClick={() => handleMarkAndNext(currentIndex, false)}
-                      className="inline-flex items-center gap-2 font-medium text-white bg-red-600 py-3 px-6 rounded-md hover:bg-red-700"
+                      className="px-4 py-2 bg-red-600 text-white rounded-md text-sm sm:text-base"
                     >
                       Chưa thuộc
                     </button>
                     <button
                       onClick={() => handleMarkAndNext(currentIndex, true)}
-                      className="inline-flex items-center gap-2 font-medium text-white bg-green-600 py-3 px-6 rounded-md hover:bg-green-700"
+                      className="px-4 py-2 bg-green-600 text-white rounded-md text-sm sm:text-base"
                     >
                       Đã thuộc
                     </button>
