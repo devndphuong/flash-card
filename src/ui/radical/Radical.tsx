@@ -28,7 +28,7 @@ const makeShuffle = (arr: number[]) => {
   return a;
 };
 
-const AppDefault: React.FC = () => {
+const Radical: React.FC = () => {
   // Danh sách tất cả các bài học (chapter)
   // mỗi bài chứa 1 mảng flashcards riêng
   const allDataFlashCards = [
@@ -678,4 +678,4 @@ const relearnUnknown = () => {
   );
 };
 
-export default AppDefault;
+export default Radical;
