@@ -29,6 +29,7 @@ import {
   initialBai25,
 } from "@/data/flashcard";
 import Link from "next/link";
+import LoadingPage from "./loading/LoadingPage";
 
 // Hàm xáo trộn mảng index (Fisher-Yates shuffle)
 // → dùng để random thứ tự hiển thị flashcard
@@ -80,6 +81,7 @@ const allDataFlashCards = [
 
   // ===== STATE =====
 
+  const [mounted, setMounted] = useState(false);
   // Bài học đang được chọn
   const [selectedChapter, setSelectedChapter] = useState(allDataFlashCards[0]);
 
@@ -139,6 +141,22 @@ const allDataFlashCards = [
     setFlipped(false); // reset flip
   }, [flashcards, selectedChapter]);
 
+  useEffect(() => {
+    if (!mounted) return;
+    const savedId = localStorage.getItem("selectedChapterId");
+
+    if (!savedId) return;
+
+    const id = Number(savedId);
+    const found = allDataFlashCards.find((item) => item.id === id);
+
+    if (found) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setSelectedChapter(found);
+      setFlashcards(found.dataFlashCard);
+    }
+  }, [mounted]);
+
   // Tạo Set để lookup nhanh O(1) thay vì includes O(n)
   const knownSetLookup = useMemo(() => new Set(knownSet), [knownSet]);
 
@@ -146,6 +164,9 @@ const allDataFlashCards = [
   const handleSelectChapter = (id: number) => {
     const found = allDataFlashCards.find((item) => item.id === id);
     if (!found) return;
+
+    // lưu vào localStorage
+    localStorage.setItem("selectedChapterId", String(id));
 
     setSelectedChapter(found); // set chapter
     setFlashcards(found.dataFlashCard); // load flashcards
@@ -317,17 +338,30 @@ const allDataFlashCards = [
     };
   };
 
-  // Xáo trộn thứ tự card
-  const shuffle = (preserveKnown = true) => {
-    const idxs = flashcards.map((_, i) => i);
-    const newOrder = makeShuffle(idxs);
+  // Xáo trộn thứ tự card (TypeScript version)
+  const shuffle = (): void => {
+    if (flashcards.length <= 1) return;
+
+    const idxs: number[] = flashcards.map((_, i) => i);
+
+    let newOrder: number[] = [];
+    let isSame = true;
+
+    while (isSame) {
+      newOrder = makeShuffle(idxs);
+
+      isSame =
+        newOrder.length === order.length &&
+        newOrder.every((v, i) => v === order[i]);
+    }
 
     setOrder(newOrder);
     setPos(0);
+    setFlipped(false);
 
-    // có giữ lại trạng thái đã thuộc không
-    if (!preserveKnown) setKnownSet([]);
-    
+    // reset progress
+    setKnownSet([]);
+    setunKnownSet([]);
   };
 
 
@@ -428,7 +462,7 @@ const relearnUnknown = () => {
         </button>
 
         <button
-          onClick={() => shuffle(true)}
+          onClick={() => shuffle()}
           className="px-3 py-2 bg-purple-500 text-white rounded-md text-sm"
         >
           Xáo trộn
@@ -452,6 +486,18 @@ const relearnUnknown = () => {
       </div>
     </div>
   );
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setMounted(true);
+    }, 400);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  // ===== MAIN RENDER =====
+  if (!mounted) {
+    return <LoadingPage />;
+  }
   return (
     <>
       <section className="overflow-hidden p-3 sm:p-[22px] min-h-[90vh] flex flex-col sm:flex-row">
@@ -544,7 +590,7 @@ const relearnUnknown = () => {
                 {!isFinished &&
                   <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
                   <button
-                    onClick={() => shuffle(true)}
+                    onClick={() => shuffle()}
                     className="cursor-pointer px-3 py-2 bg-purple-500 text-white rounded-md text-sm sm:text-base"
                   >
                     Xáo trộn
