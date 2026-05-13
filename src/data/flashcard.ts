@@ -2281,7 +2281,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "3",
-    word: "ごはん",
+    word: "ご飯",
     type: "Danh từ",
     reading: "ごはん",
     romaji: "gohan",
@@ -2289,7 +2289,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "4",
-    word: "たまご",
+    word: "卵",
     type: "Danh từ",
     reading: "たまご",
     romaji: "tamago",
@@ -2297,7 +2297,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "5",
-    word: "にく",
+    word: "肉",
     type: "Danh từ",
     reading: "にく",
     romaji: "niku",
@@ -2305,7 +2305,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "6",
-    word: "ぎゅうにく",
+    word: "牛肉",
     type: "Danh từ",
     reading: "ぎゅうにく",
     romaji: "gyuuniku",
@@ -2313,7 +2313,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "7",
-    word: "さかな",
+    word: "魚",
     type: "Danh từ",
     reading: "さかな",
     romaji: "sakana",
@@ -2321,7 +2321,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "8",
-    word: "やさい",
+    word: "野菜",
     type: "Danh từ",
     reading: "やさい",
     romaji: "yasai",
@@ -2329,7 +2329,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "9",
-    word: "くだもの",
+    word: "果物",
     type: "Danh từ",
     reading: "くだもの",
     romaji: "kudamono",
@@ -2337,7 +2337,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "10",
-    word: "みず",
+    word: "水",
     type: "Danh từ",
     reading: "みず",
     romaji: "mizu",
@@ -2345,7 +2345,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "11",
-    word: "おちゃ",
+    word: "お茶",
     type: "Danh từ",
     reading: "おちゃ",
     romaji: "ocha",
@@ -2385,7 +2385,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "16",
-    word: "おさけ",
+    word: "お酒",
     type: "Danh từ",
     reading: "おさけ",
     romaji: "osake",
@@ -2401,7 +2401,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "18",
-    word: "くすり",
+    word: "薬",
     type: "Danh từ",
     reading: "くすり",
     romaji: "kusuri",
@@ -2409,7 +2409,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "19",
-    word: "てがみ",
+    word: "手紙",
     type: "Danh từ",
     reading: "てがみ",
     romaji: "tegami",
@@ -2441,7 +2441,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "23",
-    word: "おんがく",
+    word: "音楽",
     type: "Danh từ",
     reading: "おんがく",
     romaji: "ongaku",
@@ -2449,7 +2449,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "24",
-    word: "えいが",
+    word: "映画",
     type: "Danh từ",
     reading: "えいが",
     romaji: "eiga",
@@ -2457,7 +2457,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "25",
-    word: "しゃしん",
+    word: "写真",
     type: "Danh từ",
     reading: "しゃしん",
     romaji: "shashin",
@@ -2465,7 +2465,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "26",
-    word: "しゅくだい",
+    word: "宿題",
     type: "Danh từ",
     reading: "しゅくだい",
     romaji: "shukudai",
@@ -2489,7 +2489,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "29",
-    word: "にわ",
+    word: "庭",
     type: "Danh từ",
     reading: "にわ",
     romaji: "niwa",
@@ -2497,7 +2497,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "30",
-    word: "みせ",
+    word: "店",
     type: "Danh từ",
     reading: "みせ",
     romaji: "mise",
@@ -2513,7 +2513,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "32",
-    word: "[お]はなみ",
+    word: "[お]花見",
     type: "Danh từ",
     reading: "[お]はなみ",
     romaji: "ohanami",
@@ -2529,7 +2529,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "34",
-    word: "なに",
+    word: "何",
     type: "Danh từ",
     reading: "なに",
     romaji: "nani",
@@ -2539,7 +2539,7 @@ export const initialBai7: Flashcard[] = [
   // ĐỘNG TỪ NHÓM I
   {
     id: "35",
-    word: "よむ",
+    word: "読む",
     type: "Động từ nhóm I",
     reading: "よみます",
     romaji: "yomimasu",
@@ -2547,7 +2547,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "36",
-    word: "かく",
+    word: "書く",
     type: "Động từ nhóm I",
     reading: "かきます",
     romaji: "kakimasu",
@@ -2555,7 +2555,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "37",
-    word: "かう",
+    word: "買う",
     type: "Động từ nhóm I",
     reading: "かいます",
     romaji: "kaimasu",
@@ -2563,7 +2563,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "38",
-    word: "とる",
+    word: "撮る",
     type: "Động từ nhóm I",
     reading: "とります",
     romaji: "torimasu",
@@ -2571,7 +2571,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "39",
-    word: "きく",
+    word: "聞く",
     type: "Động từ nhóm I",
     reading: "ききます",
     romaji: "kikimasu",
@@ -2579,7 +2579,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "40",
-    word: "すう",
+    word: "吸う",
     type: "Động từ nhóm I",
     reading: "すいます",
     romaji: "suimasu",
@@ -2587,7 +2587,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "41",
-    word: "あう",
+    word: "会う",
     type: "Động từ nhóm I",
     reading: "あいます",
     romaji: "aimasu",
@@ -2595,7 +2595,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "42",
-    word: "のむ",
+    word: "飲む",
     type: "Động từ nhóm I",
     reading: "のみます",
     romaji: "nomimasu",
@@ -2605,7 +2605,7 @@ export const initialBai7: Flashcard[] = [
   // ĐỘNG TỪ NHÓM II
   {
     id: "43",
-    word: "たべる",
+    word: "食べる",
     type: "Động từ nhóm II",
     reading: "たべます",
     romaji: "tabemasu",
@@ -2613,7 +2613,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "44",
-    word: "みる",
+    word: "見る",
     type: "Động từ nhóm II",
     reading: "みます",
     romaji: "mimasu",
@@ -2631,7 +2631,7 @@ export const initialBai7: Flashcard[] = [
   },
   {
     id: "46",
-    word: "しょくじする",
+    word: "食事する",
     type: "Động từ nhóm III",
     reading: "しょくじします",
     romaji: "shokuji shimasu",

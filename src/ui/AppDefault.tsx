@@ -144,7 +144,13 @@ const allDataFlashCards = [
   useEffect(() => {
     if (!mounted) return;
     const savedId = localStorage.getItem("selectedChapterId");
-
+    const savedVisibleFields = localStorage.getItem("visibleFields");
+    if (savedVisibleFields) {
+      const parsed = JSON.parse(savedVisibleFields);
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setVisibleFields(parsed);
+    }
+    
     if (!savedId) return;
 
     const id = Number(savedId);
@@ -178,10 +184,19 @@ const allDataFlashCards = [
   };
 
   const toggleField = (field: keyof typeof visibleFields) => {
-    setVisibleFields((prev) => ({
-      ...prev,
-      [field]: !prev[field],
-    }));
+    setVisibleFields((prev) => {
+      const updated = {
+        ...prev,
+        [field]: !prev[field],
+      };
+
+      localStorage.setItem(
+        "visibleFields",
+        JSON.stringify(updated)
+      );
+
+      return updated;
+    });
   };
 
   // Tổng số flashcards
@@ -232,17 +247,25 @@ const allDataFlashCards = [
 
   // Reset về dữ liệu mặc định
   const handleResetFlashcards = () => {
-    setFlashcards(initialBai1);
-    setOrder(initialBai1.map((_, i) => i));
+    // setFlashcards(initialBai1);
+    const savedId = localStorage.getItem("selectedChapterId");
+    const id = Number(savedId);
+    const found = allDataFlashCards.find((item) => item.id === id);
+    if (savedId && found) {
+      setSelectedChapter(found);
+    } else {
+      setSelectedChapter(allDataFlashCards[0]);
+    };
+   
     setPos(0);
     setKnownSet([]);
     setunKnownSet([]);
     setVisibleFields({
-    word: true,
-    reading: true,
-    romaji: false,
-    type: true
-  });
+      word: true,
+      reading: false,
+      romaji: false,
+      type: false
+    });
     setJsonInput("");
   };
 
