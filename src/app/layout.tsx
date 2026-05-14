@@ -43,9 +43,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://flash-card-jet.vercel.app/"),
 
   icons: {
-   icon: "/logo.png",
-   shortcut: "/logo.png",
-   apple: "/logo.png",
+   icon: "/logo.ico",
+   shortcut: "/logo.ico",
+   apple: "/logo.ico",
   },
   openGraph: {
     title: "Nihongo Flashcard",
