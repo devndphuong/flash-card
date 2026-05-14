@@ -49,11 +49,11 @@ const allDataFlashCards = [
     { id: 7, chapTer: "Bài 1", dataFlashCard: initialBai1 },
     { id: 8, chapTer: "Bài 2", dataFlashCard: initialBai2 },
     { id: 9, chapTer: "Bài 3", dataFlashCard: initialBai3 },
-    { id: 10, chapTer: "Bài 4", dataFlashCard: initialBai4 },
-    { id: 11, chapTer: "Bài 5", dataFlashCard: initialBai5 },
-    { id: 12, chapTer: "Bài 6", dataFlashCard: initialBai6 },
-    { id: 13, chapTer: "Bài 7", dataFlashCard: initialBai7 },
-    { id: 14, chapTer: "Bài 8", dataFlashCard: initialBai8 },
+    { id: 10, chapTer: "Bài 4", dataFlashCard: initialBai5 },
+    { id: 11, chapTer: "Bài 5", dataFlashCard: initialBai6 },
+    { id: 12, chapTer: "Bài 6", dataFlashCard: initialBai7 },
+    { id: 13, chapTer: "Bài 7", dataFlashCard:  initialBai8},
+    { id: 14, chapTer: "Bài 8", dataFlashCard: initialBai4 },
     { id: 15, chapTer: "Bài 9", dataFlashCard: initialBai9 },
     { id: 16, chapTer: "Bài 10", dataFlashCard: initialBai10 },
     { id: 17, chapTer: "Bài 11", dataFlashCard: initialBai11 },
@@ -516,6 +516,61 @@ const relearnUnknown = () => {
 
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+  const handleKeyDown = (e: KeyboardEvent) => {
+    // nếu đã học xong thì không xử lý
+    if (isFinished) return;
+
+    // tránh spam khi giữ phím
+    if (e.repeat) return;
+
+    const currentCard = flashcards[currentIndex];
+
+    switch (e.key.toLowerCase()) {
+      case "d":
+        handleMarkAndNext(currentCard, true);
+        break;
+
+      case "a":
+        handleMarkAndNext(currentCard, false);
+        break;
+
+      case "s":
+        setShowJapaneseFirst((s) => !s);
+        break;
+
+      case "f":
+        setVisibleFields((prev) => {
+          const updated = {
+            ...prev,
+            reading: !prev.reading,
+          };
+
+          localStorage.setItem(
+            "visibleFields",
+            JSON.stringify(updated)
+          );
+
+          return updated;
+        });
+        break;
+
+      default:
+        break;
+    }
+  };
+
+  window.addEventListener("keydown", handleKeyDown);
+
+  return () => {
+    window.removeEventListener("keydown", handleKeyDown);
+  };
+}, [
+  isFinished,
+  flashcards,
+  currentIndex,
+]);
 
   // ===== MAIN RENDER =====
   if (!mounted) {
