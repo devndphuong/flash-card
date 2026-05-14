@@ -528,19 +528,66 @@ const relearnUnknown = () => {
     const currentCard = flashcards[currentIndex];
 
     switch (e.key.toLowerCase()) {
+      // Đã thuộc → next
       case "d":
         handleMarkAndNext(currentCard, true);
         break;
-
+      // Không thuộc → next
       case "a":
         handleMarkAndNext(currentCard, false);
         break;
-
+      // Xao trộn
+      case "r":
+        shuffle();
+        break;
+      // Lật thẻ
       case "s":
         setShowJapaneseFirst((s) => !s);
         break;
-
+      // Quay lại card trước
+      case "q":
+        prevCard();
+        break;
+      // Hiển thị/ẩn reading
       case "f":
+        setVisibleFields((prev) => {
+          const updated = {
+            ...prev,
+            reading: !prev.reading,
+          };
+
+          localStorage.setItem(
+            "visibleFields",
+            JSON.stringify(updated)
+          );
+
+          return updated;
+        });
+        break;
+
+      // Phím số bên phải để đánh dấu đã thuộc/chưa thuộc
+      // Đã thuộc → next
+      case "6":
+        handleMarkAndNext(currentCard, true);
+        break;
+      // Không thuộc → next
+      case "4":
+        handleMarkAndNext(currentCard, false);
+        break;
+      // Xao trộn
+      case "9":
+        shuffle();
+        break;
+      // Lật thẻ
+      case "5":
+        setShowJapaneseFirst((s) => !s);
+        break;
+      // Quay lại card trước
+      case "7":
+        prevCard();
+        break;
+      // Hiển thị/ẩn reading
+      case "+":
         setVisibleFields((prev) => {
           const updated = {
             ...prev,
