@@ -1028,7 +1028,7 @@ export const initialBai3: Flashcard[] = [
   },
 ];
 
-export const initialBai4: Flashcard[] = [
+export const initialBai8: Flashcard[] = [
   {
     id: "1",
     word: "イケメン",
@@ -1047,7 +1047,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "3",
-    word: "しんせつ",
+    word: "親切",
     type: "Tính từ na",
     reading: "しんせつ",
     romaji: "shinsetsu",
@@ -1055,7 +1055,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "4",
-    word: "げんき",
+    word: "元気",
     type: "Tính từ na",
     reading: "げんき",
     romaji: "genki",
@@ -1063,7 +1063,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "5",
-    word: "しずか",
+    word: "静か",
     type: "Tính từ na",
     reading: "しずか",
     romaji: "shizuka",
@@ -1079,7 +1079,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "7",
-    word: "ゆうめい",
+    word: "有名",
     type: "Tính từ na",
     reading: "ゆうめい",
     romaji: "yuumei",
@@ -1087,7 +1087,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "8",
-    word: "べんり",
+    word: "便利",
     type: "Tính từ na",
     reading: "べんり",
     romaji: "benri",
@@ -1095,7 +1095,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "9",
-    word: "たいせつ",
+    word: "大切",
     type: "Tính từ na",
     reading: "たいせつ",
     romaji: "taisetsu",
@@ -1103,7 +1103,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "10",
-    word: "ひま",
+    word: "暇",
     type: "Tính từ na",
     reading: "ひま",
     romaji: "hima",
@@ -1111,7 +1111,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "11",
-    word: "いそがしい",
+    word: "忙しい",
     type: "Tính từ i",
     reading: "いそがしい",
     romaji: "isogashii",
@@ -1119,7 +1119,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "12",
-    word: "おおきい",
+    word: "大きい",
     type: "Tính từ i",
     reading: "おおきい",
     romaji: "ookii",
@@ -1127,7 +1127,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "13",
-    word: "ちいさい",
+    word: "小さい",
     type: "Tính từ i",
     reading: "ちいさい",
     romaji: "chiisai",
@@ -1135,7 +1135,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "14",
-    word: "あたらしい",
+    word: "新しい",
     type: "Tính từ i",
     reading: "あたらしい",
     romaji: "atarashii",
@@ -1143,7 +1143,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "15",
-    word: "ふるい",
+    word: "古い",
     type: "Tính từ i",
     reading: "ふるい",
     romaji: "furui",
@@ -1151,7 +1151,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "16",
-    word: "いい (よい）",
+    word: "いい（良い）",
     type: "Tính từ i",
     reading: "いい",
     romaji: "ii",
@@ -1159,7 +1159,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "17",
-    word: "わるい",
+    word: "悪い",
     type: "Tính từ i",
     reading: "わるい",
     romaji: "warui",
@@ -1167,7 +1167,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "18",
-    word: "あつい",
+    word: "暑い",
     type: "Tính từ i",
     reading: "あつい",
     romaji: "atsui",
@@ -1175,7 +1175,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "19",
-    word: "さむい",
+    word: "寒い",
     type: "Tính từ i",
     reading: "さむい",
     romaji: "samui",
@@ -1183,7 +1183,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "20",
-    word: "あつい",
+    word: "熱い",
     type: "Tính từ i",
     reading: "あつい",
     romaji: "atsui",
@@ -1191,7 +1191,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "21",
-    word: "つめたい",
+    word: "冷たい",
     type: "Tính từ i",
     reading: "つめたい",
     romaji: "tsumetai",
@@ -1199,7 +1199,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "22",
-    word: "むずかしい",
+    word: "難しい",
     type: "Tính từ i",
     reading: "むずかしい",
     romaji: "muzukashii",
@@ -1207,7 +1207,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "23",
-    word: "やさしい",
+    word: "優しい",
     type: "Tính từ i",
     reading: "やさしい",
     romaji: "yasashii",
@@ -1215,7 +1215,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "24",
-    word: "たかい",
+    word: "高い",
     type: "Tính từ i",
     reading: "たかい",
     romaji: "takai",
@@ -1223,7 +1223,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "25",
-    word: "やすい",
+    word: "安い",
     type: "Tính từ i",
     reading: "やすい",
     romaji: "yasui",
@@ -1231,7 +1231,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "26",
-    word: "ひくい",
+    word: "低い",
     type: "Tính từ i",
     reading: "ひくい",
     romaji: "hikui",
@@ -1239,7 +1239,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "27",
-    word: "あかるい",
+    word: "明るい",
     type: "Tính từ i",
     reading: "あかるい",
     romaji: "akarui",
@@ -1247,7 +1247,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "28",
-    word: "くらい",
+    word: "暗い",
     type: "Tính từ i",
     reading: "くらい",
     romaji: "kurai",
@@ -1255,7 +1255,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "29",
-    word: "おもしろい",
+    word: "面白い",
     type: "Tính từ i",
     reading: "おもしろい",
     romaji: "omoshiroi",
@@ -1279,7 +1279,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "32",
-    word: "たのしい",
+    word: "楽しい",
     type: "Tính từ i",
     reading: "たのしい",
     romaji: "tanoshii",
@@ -1287,7 +1287,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "33",
-    word: "しろい",
+    word: "白い",
     type: "Tính từ i",
     reading: "しろい",
     romaji: "shiroi",
@@ -1295,7 +1295,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "34",
-    word: "あかい",
+    word: "赤い",
     type: "Tính từ i",
     reading: "あかい",
     romaji: "akai",
@@ -1303,7 +1303,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "35",
-    word: "あおい",
+    word: "青い",
     type: "Tính từ i",
     reading: "あおい",
     romaji: "aoi",
@@ -1311,7 +1311,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "36",
-    word: "くろい",
+    word: "黒い",
     type: "Tính từ i",
     reading: "くろい",
     romaji: "kuroi",
@@ -1319,7 +1319,7 @@ export const initialBai4: Flashcard[] = [
   },
   {
     id: "37",
-    word: "さびしい",
+    word: "寂しい",
     type: "Tính từ i",
     reading: "さびしい",
     romaji: "sabishii",
@@ -1503,7 +1503,7 @@ export const initialBai4: Flashcard[] = [
   },
 ];
 
-export const initialBai5: Flashcard[] = [
+export const initialBai4: Flashcard[] = [
   {
     id: "1",
     word: "月曜日",
@@ -1850,7 +1850,7 @@ export const initialBai5: Flashcard[] = [
   },
 ];
 
-export const initialBai6: Flashcard[] = [
+export const initialBai5: Flashcard[] = [
   {
     id: "1",
     word: "飛行機",
@@ -2261,7 +2261,7 @@ export const initialBai6: Flashcard[] = [
   },
 ];
 
-export const initialBai7: Flashcard[] = [
+export const initialBai6: Flashcard[] = [
   // DANH TỪ
   {
     id: "1",
@@ -2673,7 +2673,7 @@ export const initialBai7: Flashcard[] = [
   },
 ];
 
-export const initialBai8: Flashcard[] = [
+export const initialBai7: Flashcard[] = [
   {
     id: "1",
     word: "毎週",
