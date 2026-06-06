@@ -1,77 +1,16 @@
 "use client";
 import React, { useEffect, useMemo, useState } from "react";
 import {
-  Flashcard,
-  initialBai1,
-  initialBai2,
-  initialBai3,
-  initialBai4,
-  initialBai5,
-  initialBai6,
-  initialBai7,
-  initialBai8,
-  initialBai9,
-  initialBai10,
-  initialBai11,
-  initialBai12,
-  initialBai13,
-  initialBai14,
-  initialBai15,
-  initialBai16,
-  initialBai17,
-  initialBai18,
-  initialBai19,
-  initialBai20,
-  initialBai21,
-  initialBai22,
-  initialBai23,
-  initialBai24,
-  initialBai25,
+  Flashcard 
 } from "@/data/flashcard";
 import Link from "next/link";
 import LoadingPage from "./loading/LoadingPage";
+import { allDataFlashCards } from "@/data/comon";
+import { fisherYatesShuffle } from "@/utils/handle";
 
-// Hàm xáo trộn mảng index (Fisher-Yates shuffle)
-// → dùng để random thứ tự hiển thị flashcard
-const makeShuffle = (arr: number[]) => {
-  const a = arr.slice(); // clone mảng để không mutate mảng gốc
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]]; // swap
-  }
-  return a;
-};
 
 const AppDefault: React.FC = () => {
-  // Danh sách tất cả các bài học (chapter)
-  // mỗi bài chứa 1 mảng flashcards riêng
-const allDataFlashCards = [
-    { id: 7, chapTer: "Bài 1", dataFlashCard: initialBai1 },
-    { id: 8, chapTer: "Bài 2", dataFlashCard: initialBai2 },
-    { id: 9, chapTer: "Bài 3", dataFlashCard: initialBai3 },
-    { id: 10, chapTer: "Bài 4", dataFlashCard: initialBai4 },
-    { id: 11, chapTer: "Bài 5", dataFlashCard: initialBai5 },
-    { id: 12, chapTer: "Bài 6", dataFlashCard: initialBai6 },
-    { id: 13, chapTer: "Bài 7", dataFlashCard:  initialBai7},
-    { id: 14, chapTer: "Bài 8", dataFlashCard: initialBai8 },
-    { id: 15, chapTer: "Bài 9", dataFlashCard: initialBai9 },
-    { id: 16, chapTer: "Bài 10", dataFlashCard: initialBai10 },
-    { id: 17, chapTer: "Bài 11", dataFlashCard: initialBai11 },
-    { id: 18, chapTer: "Bài 12", dataFlashCard: initialBai12 },
-    { id: 19, chapTer: "Bài 13", dataFlashCard: initialBai13 },
-    { id: 20, chapTer: "Bài 14", dataFlashCard: initialBai14 },
-    { id: 21, chapTer: "Bài 15", dataFlashCard: initialBai15 },
-    { id: 22, chapTer: "Bài 16", dataFlashCard: initialBai16 },
-    { id: 23, chapTer: "Bài 17", dataFlashCard: initialBai17 },
-    { id: 24, chapTer: "Bài 18", dataFlashCard: initialBai18 },
-    { id: 25, chapTer: "Bài 19", dataFlashCard: initialBai19 },
-    { id: 26, chapTer: "Bài 20", dataFlashCard: initialBai20 },
-    { id: 27, chapTer: "Bài 21", dataFlashCard: initialBai21 },
-    { id: 28, chapTer: "Bài 22", dataFlashCard: initialBai22 },
-    { id: 29, chapTer: "Bài 23", dataFlashCard: initialBai23 },
-    { id: 30, chapTer: "Bài 24", dataFlashCard: initialBai24 },
-    { id: 31, chapTer: "Bài 25", dataFlashCard: initialBai25 },
-];
+ 
   const fieldLabels: Record<keyof typeof visibleFields, string> = {
         word: "Kanji",
         reading: "Hiragana",
@@ -163,8 +102,6 @@ const allDataFlashCards = [
     }
   }, [mounted]);
 
-  // Tạo Set để lookup nhanh O(1) thay vì includes O(n)
-  const knownSetLookup = useMemo(() => new Set(knownSet), [knownSet]);
 
   // ===== HANDLE CHỌN BÀI =====
   const handleSelectChapter = (id: number) => {
@@ -363,29 +300,52 @@ const allDataFlashCards = [
 
   // Xáo trộn thứ tự card (TypeScript version)
   const shuffle = (): void => {
-    if (flashcards.length <= 1) return;
-
-    const idxs: number[] = flashcards.map((_, i) => i);
-
-    let newOrder: number[] = [];
-    let isSame = true;
-
-    while (isSame) {
-      newOrder = makeShuffle(idxs);
-
-      isSame =
-        newOrder.length === order.length &&
-        newOrder.every((v, i) => v === order[i]);
-    }
-
-    setOrder(newOrder);
-    setPos(0);
-    setFlipped(false);
-
-    // reset progress
-    setKnownSet([]);
-    setunKnownSet([]);
-  };
+      if (flashcards.length <= 1) return;
+  
+      const indexes = Array.from(
+        { length: flashcards.length },
+        (_, i) => i
+      );
+  
+      const newOrder = fisherYatesShuffle(indexes);
+  
+      // Tránh trường hợp kết quả giống hệt lần trước
+      if (
+        order.length === newOrder.length &&
+        order.every((value, index) => value === newOrder[index])
+      ) {
+        const first = Math.floor(
+          Math.random() * newOrder.length
+        );
+  
+        let second = Math.floor(
+          Math.random() * newOrder.length
+        );
+  
+        while (first === second) {
+          second = Math.floor(
+            Math.random() * newOrder.length
+          );
+        }
+  
+        [newOrder[first], newOrder[second]] = [
+          newOrder[second],
+          newOrder[first],
+        ];
+      }
+  
+      setOrder(newOrder);
+  
+      // Quay về card đầu tiên
+      setPos(0);
+  
+      // Đóng mặt sau của card
+      setFlipped(false);
+  
+      // Reset trạng thái học
+      setKnownSet([]);
+      setunKnownSet([]);
+    };
 
 
   // Học lại tất cả
@@ -634,21 +594,34 @@ const relearnUnknown = () => {
               href="/"
               className="px-3 py-2 bg-blue-500 text-white rounded-md text-sm text-center"
             >
-              📘 Từ vựng
+              📚 Từ vựng
+            </Link>
+
+            <Link
+              href="/review"
+              className="px-3 py-2 bg-orange-500 text-white rounded-md text-sm text-center"
+            >
+              📝 Test tổng hợp
             </Link>
 
             <Link
               href="/kanji"
               className="px-3 py-2 bg-green-500 text-white rounded-md text-sm text-center"
             >
-              🔤 Kanji
+              漢 Kanji
             </Link>
 
             <Link
               href="/radical"
               className="px-3 py-2 bg-purple-500 text-white rounded-md text-sm text-center"
             >
-              🧩 Bộ thủ
+              ⿰ Bộ thủ
+            </Link>
+            <Link
+              href="/alphabet"
+              className="px-3 py-2 bg-pink-500 text-white rounded-md text-sm text-center"
+            >
+              あ ア Bảng chữ cái
             </Link>
           </div>
           <div className="w-full p-2">

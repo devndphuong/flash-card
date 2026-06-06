@@ -1,50 +1,16 @@
 "use client";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Flashcard,
-  initialBai1,
-  initialBai2,
-  initialBai3,
-  initialBai4,
-  initialBai5,
-  initialBai6,
-  initialBai7,
-  initialBai8,
-  initialBai9,
-  initialBai10,
-  initialBai11,
-  initialBai12,
 } from "@/data/flashcard";
 import Link from "next/link";
+import LoadingPage from "./loading/LoadingPage";
+import { allDataFlashCards } from "@/data/comon";
+import { fisherYatesShuffle } from "@/utils/handle";
 
-// Hàm xáo trộn mảng index (Fisher-Yates shuffle)
-// → dùng để random thứ tự hiển thị flashcard
-const makeShuffle = (arr: number[]) => {
-  const a = arr.slice(); // clone mảng để không mutate mảng gốc
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]]; // swap
-  }
-  return a;
-};
 
-const Kanji: React.FC = () => {
-  // Danh sách tất cả các bài học (chapter)
-  // mỗi bài chứa 1 mảng flashcards riêng
-  const allDataFlashCards = [
-    { id: 7, chapTer: "Bài 1", dataFlashCard: initialBai1 },
-    { id: 8, chapTer: "Bài 2", dataFlashCard: initialBai2 },
-    { id: 9, chapTer: "Bài 3", dataFlashCard: initialBai3 },
-    { id: 10, chapTer: "Bài 4", dataFlashCard: initialBai4 },
-    { id: 11, chapTer: "Bài 5", dataFlashCard: initialBai5 },
-    { id: 12, chapTer: "Bài 6", dataFlashCard: initialBai6 },
-    { id: 13, chapTer: "Bài 7", dataFlashCard: initialBai7 },
-    { id: 14, chapTer: "Bài 8", dataFlashCard: initialBai8 },
-    { id: 15, chapTer: "Bài 9", dataFlashCard: initialBai9 },
-    { id: 16, chapTer: "Bài 10", dataFlashCard: initialBai10 },
-    { id: 17, chapTer: "Bài 11", dataFlashCard: initialBai11 },
-    { id: 18, chapTer: "Bài 12", dataFlashCard: initialBai12 },
-  ];
+const ReviewPage: React.FC = () => {
+
   const fieldLabels: Record<keyof typeof visibleFields, string> = {
         word: "Kanji",
         reading: "Hiragana",
@@ -54,21 +20,22 @@ const Kanji: React.FC = () => {
 
   // ===== STATE =====
 
+  const [mounted, setMounted] = useState(false);
   // Bài học đang được chọn
   const [selectedChapter, setSelectedChapter] = useState(allDataFlashCards[0]);
+
+  const [selectedChapterIds, setSelectedChapterIds] = useState<number[]>([]);
 
   // Danh sách flashcard hiện tại (phụ thuộc vào chapter hoặc JSON load)
   const [flashcards, setFlashcards] = useState<Flashcard[]>(
     selectedChapter.dataFlashCard
   );
+  
 
   // Quy định hiển thị mặt trước:
   // true = Nhật → Việt
   // false = Việt → Nhật
   const [showJapaneseFirst, setShowJapaneseFirst] = useState(true);
-
-  // Input JSON để user nhập flashcard custom
-  const [jsonInput, setJsonInput] = useState("");
 
   // order: thứ tự index của flashcard (dùng để shuffle)
   const [order, setOrder] = useState<number[]>(flashcards.map((_, i) => i));
@@ -91,8 +58,14 @@ const Kanji: React.FC = () => {
   });
 
   type HistoryItem = {
-    cardId: string;
-    action: "known" | "unknown";
+    card: Flashcard;
+    previousState:
+      | "known"
+      | "unknown"
+      | null;
+    newState:
+      | "known"
+      | "unknown";
   };
 
   const [history, setHistory] = useState<HistoryItem[]>([]);
@@ -113,90 +86,150 @@ const Kanji: React.FC = () => {
     setFlipped(false); // reset flip
   }, [flashcards, selectedChapter]);
 
-  // Tạo Set để lookup nhanh O(1) thay vì includes O(n)
-  const knownSetLookup = useMemo(() => new Set(knownSet), [knownSet]);
+  useEffect(() => {
+    if (!mounted) return;
 
-  // ===== HANDLE CHỌN BÀI =====
-  const handleSelectChapter = (id: number) => {
-    const found = allDataFlashCards.find((item) => item.id === id);
-    if (!found) return;
+    const savedIds = localStorage.getItem(
+      "selectedChapterIds"
+    );
 
-    setSelectedChapter(found); // set chapter
-    setFlashcards(found.dataFlashCard); // load flashcards
+    const savedVisibleFields = localStorage.getItem(
+      "visibleFields"
+    );
+
+    if (savedVisibleFields) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setVisibleFields(JSON.parse(savedVisibleFields));
+    }
+
+    let ids: number[];
+
+    if (savedIds) {
+      ids = JSON.parse(savedIds);
+    } else {
+      ids = [allDataFlashCards[0].id];
+    }
+
+    // Trường hợp localStorage lưu []
+    if (ids.length === 0) {
+      ids = [allDataFlashCards[0].id];
+    }
+
+    setSelectedChapterIds(ids);
+
+    const cards = ids.flatMap((id) => {
+      const chapter = allDataFlashCards.find(
+        (item) => item.id === id
+      );
+
+      if (!chapter) return [];
+
+      return chapter.dataFlashCard.map((card) => ({
+        ...card,
+        idChapter: id,
+      }));
+    });
+
+    setFlashcards(cards);
+  }, [mounted]);
+
+
+  const handleToggleChapter = (id: number) => {
+    const chapter = allDataFlashCards.find(
+      (item) => item.id === id
+    );
+
+    if (!chapter) return;
+
+    const isSelected = selectedChapterIds.includes(id);
+
+    let newSelectedIds: number[];
+
+    if (isSelected) {
+      if (selectedChapterIds.length <= 1) {
+        return;      
+      }
+      newSelectedIds = selectedChapterIds.filter(
+        (item) => item !== id
+      );
+
+      setFlashcards((prev) =>
+        prev.filter((card) => card.idChapter !== id)
+      );
+    } else {
+      newSelectedIds = [...selectedChapterIds, id];
+
+      setFlashcards((prev) => [
+        ...prev,
+        ...chapter.dataFlashCard.map((card) => ({
+          ...card,
+          idChapter: id,
+        })),
+      ]);
+    }
+
+    setSelectedChapterIds(newSelectedIds);
+
+    localStorage.setItem(
+      "selectedChapterIds",
+      JSON.stringify(newSelectedIds)
+    );
+
     setPos(0);
     setKnownSet([]);
     setunKnownSet([]);
     setFlipped(false);
-    setJsonInput("");
   };
-
+  
   const toggleField = (field: keyof typeof visibleFields) => {
-    setVisibleFields((prev) => ({
-      ...prev,
-      [field]: !prev[field],
-    }));
+    setVisibleFields((prev) => {
+      const updated = {
+        ...prev,
+        [field]: !prev[field],
+      };
+
+      localStorage.setItem(
+        "visibleFields",
+        JSON.stringify(updated)
+      );
+
+      return updated;
+    });
   };
 
   // Tổng số flashcards
   const total = flashcards.length;
 
   // index thực của card hiện tại (theo order)
-  const currentIndex = order[pos];
+  const currentIndex =
+    pos < order.length
+      ? order[pos]
+      : -1;
 
   // kiểm tra đã học hết chưa
   const isFinished = pos >= order.length;
 
-  // ===== LOAD JSON =====
-  const handleLoadJSON = () => {
-    try {
-      const parsed = JSON.parse(jsonInput) as Flashcard[];
-
-      // validate JSON
-      if (!Array.isArray(parsed) || parsed.length === 0) {
-        alert("JSON không hợp lệ hoặc rỗng");
-        return;
-      }
-
-      const isValid = parsed.every(
-        (f) =>
-          typeof f.word === "string" &&
-          typeof f.type === "string" &&
-          typeof f.reading === "string" &&
-          typeof f.romaji === "string" &&
-          typeof f.meaning === "string"
-      );
-
-      if (!isValid) {
-        alert("Một hoặc nhiều flashcards không đúng định dạng");
-        return;
-      }
-
-      // set dữ liệu mới
-      setFlashcards(parsed);
-      setOrder(parsed.map((_, i) => i));
-      setPos(0);
-      setKnownSet([]);
-
-      alert("Đã load flashcards thành công!");
-    } catch (err) {
-      alert("Lỗi JSON: " + (err as Error).message);
-    }
-  };
-
   // Reset về dữ liệu mặc định
   const handleResetFlashcards = () => {
-    setFlashcards(initialBai1);
-    setOrder(initialBai1.map((_, i) => i));
+    // setFlashcards(initialBai1);
+    const savedId = localStorage.getItem("selectedChapterId");
+    const id = Number(savedId);
+    const found = allDataFlashCards.find((item) => item.id === id);
+    if (savedId && found) {
+      setSelectedChapter(found);
+    } else {
+      setSelectedChapter(allDataFlashCards[0]);
+    };
+   
     setPos(0);
     setKnownSet([]);
     setunKnownSet([]);
     setVisibleFields({
-    word: true,
-    reading: true,
-    romaji: false,
-    type: true
-  });
-    setJsonInput("");
+      word: true,
+      reading: false,
+      romaji: false,
+      type: false
+    });
   };
 
   // ===== LOGIC HỌC =====
@@ -205,76 +238,169 @@ const Kanji: React.FC = () => {
   const markKnown = (card: Flashcard) => {
     setKnownSet((prev) => {
       // nếu đã có rồi thì không thêm nữa
-      if (prev.some((c) => c.id === card.id)) return prev;
+      if (
+        prev.some(
+          (c) => c.uniqueId === card.uniqueId
+        )
+      ) {
+        return prev;
+      }
 
       return [...prev, card];
     });
 
     // đồng thời remove khỏi unknown nếu có
-    setunKnownSet((prev) => prev.filter((c) => c.id !== card.id));
+    setunKnownSet((prev) =>
+      prev.filter(
+        (c) => c.uniqueId !== card.uniqueId
+      )
+    );
   };
 
-  // Đánh dấu card là chưa thuộc
+// Đánh dấu card là chưa thuộc
   const markUnknown = (card: Flashcard) => {
     setunKnownSet((prev) => {
-      if (prev.some((c) => c.id === card.id)) return prev;
+      if (
+        prev.some(
+          (c) => c.uniqueId === card.uniqueId
+        )
+      ) {
+        return prev;
+      }
 
       return [...prev, card];
     });
 
     // remove khỏi known nếu có
-    setKnownSet((prev) => prev.filter((c) => c.id !== card.id));
+    setKnownSet((prev) =>
+      prev.filter(
+        (c) => c.uniqueId !== card.uniqueId
+      )
+    );
   };
 
   // Khi user bấm "Đã thuộc" hoặc "Chưa thuộc"
-  const handleMarkAndNext = (card: Flashcard, known: boolean) => {
-    if (known) markKnown(card);
-    else markUnknown(card);
-    // lưu lịch sử
+  const handleMarkAndNext = (
+    card: Flashcard,
+    known: boolean
+  ) => {
+    
+    const wasKnown = knownSet.some(
+      (c) => c.uniqueId === card.uniqueId
+    );
+
+    const wasUnknown = unKnownSet.some(
+      (c) => c.uniqueId === card.uniqueId
+    );
+
+    let previousState:
+      | "known"
+      | "unknown"
+      | null = null;
+
+    if (wasKnown) {
+      previousState = "known";
+    } else if (wasUnknown) {
+      previousState = "unknown";
+    }
+
+    if (known) {
+      markKnown(card);
+    } else {
+      markUnknown(card);
+    }
+
     setHistory((prev) => [
       ...prev,
       {
-        cardId: card.id!,
-        action: known ? "known" : "unknown",
+        card,
+        previousState,
+        newState: known
+          ? "known"
+          : "unknown",
       },
     ]);
 
     setFlipped(false);
-    setPos((p) => {
-      const next = p + 1;
-      return next >= order.length ? order.length : next;
-    });
+    // Chuyển sang card tiếp theo
+    setPos((prev) => prev + 1);
   };
 
   // Quay lại card trước
   const prevCard = () => {
-    setPos((p) => {
-      if (p === 0) return 0;
+    if (pos === 0) {
+      setFlipped(false);
+      return;
+    }
 
-      const prevIndex = p - 1;
-      const card = flashcards[order[prevIndex]];
+    const last =
+      history[history.length - 1];
 
-      // lấy hành động gần nhất
-      const last = history[history.length - 1];
+    if (last) {
+      // Xóa trạng thái hiện tại
+      setKnownSet((prev) =>
+        prev.filter(
+          (c) =>
+            c.uniqueId !==
+            last.card.uniqueId
+        )
+      );
 
-      if (last && last.cardId === card.id) {
-        // undo action
-        if (last.action === "known") {
-          setKnownSet((prev) =>
-            prev.filter((c) => c.id !== card.id)
-          );
-        } else {
-          setunKnownSet((prev) =>
-            prev.filter((c) => c.id !== card.id)
-          );
-        }
+      setunKnownSet((prev) =>
+        prev.filter(
+          (c) =>
+            c.uniqueId !==
+            last.card.uniqueId
+        )
+      );
 
-        // remove history
-        setHistory((prev) => prev.slice(0, -1));
+      // Khôi phục trạng thái trước đó
+      if (
+        last.previousState ===
+        "known"
+      ) {
+        setKnownSet((prev) => {
+          if (
+            prev.some(
+              (c) =>
+                c.uniqueId ===
+                last.card.uniqueId
+            )
+          ) {
+            return prev;
+          }
+
+          return [...prev, last.card];
+        });
       }
 
-      return prevIndex;
-    });
+      if (
+        last.previousState ===
+        "unknown"
+      ) {
+        setunKnownSet((prev) => {
+          if (
+            prev.some(
+              (c) =>
+                c.uniqueId ===
+                last.card.uniqueId
+            )
+          ) {
+            return prev;
+          }
+
+          return [...prev, last.card];
+        });
+      }
+
+      setHistory((prev) =>
+        prev.slice(0, -1)
+      );
+    }
+
+    setPos((prev) =>
+      Math.max(0, prev - 1)
+    );
 
     setFlipped(false);
   };
@@ -291,18 +417,54 @@ const Kanji: React.FC = () => {
     };
   };
 
-  // Xáo trộn thứ tự card
-  const shuffle = (preserveKnown = true) => {
-    const idxs = flashcards.map((_, i) => i);
-    const newOrder = makeShuffle(idxs);
+  // Xáo trộn thứ tự card (TypeScript version)
+  const shuffle = (): void => {
+  if (flashcards.length <= 1) return;
 
-    setOrder(newOrder);
-    setPos(0);
+  const indexes = Array.from(
+    { length: flashcards.length },
+    (_, i) => i
+  );
 
-    // có giữ lại trạng thái đã thuộc không
-    if (!preserveKnown) setKnownSet([]);
-    
-  };
+  const newOrder = fisherYatesShuffle(indexes);
+
+  // Tránh trường hợp kết quả giống hệt lần trước
+  if (
+    order.length === newOrder.length &&
+    order.every((value, index) => value === newOrder[index])
+  ) {
+    const first = Math.floor(
+      Math.random() * newOrder.length
+    );
+
+    let second = Math.floor(
+      Math.random() * newOrder.length
+    );
+
+    while (first === second) {
+      second = Math.floor(
+        Math.random() * newOrder.length
+      );
+    }
+
+    [newOrder[first], newOrder[second]] = [
+      newOrder[second],
+      newOrder[first],
+    ];
+  }
+
+  setOrder(newOrder);
+
+  // Quay về card đầu tiên
+  setPos(0);
+
+  // Đóng mặt sau của card
+  setFlipped(false);
+
+  // Reset trạng thái học
+  setKnownSet([]);
+  setunKnownSet([]);
+};
 
 
   // Học lại tất cả
@@ -314,27 +476,59 @@ const relearnAll = () => {
   setunKnownSet([]);
 };
 
-// Học lại chỉ những từ đã thuộc
-const relearnKnown = () => {
-  const knownIndexes = flashcards
-    .map((card, i) => (knownSet.some((k) => k.id === card.id) ? i : -1))
-    .filter((i) => i !== -1);
+  // Học lại chỉ những từ đã thuộc
+  const relearnKnown = () => {
+    const knownIds = new Set(
+      knownSet.map((card) => card.uniqueId)
+    );
 
-  setOrder(knownIndexes);
-  setPos(0);
-  setFlipped(false);
-};
+    const knownIndexes = flashcards
+      .map((card, index) =>
+        knownIds.has(card.uniqueId)
+          ? index
+          : -1
+      )
+      .filter((index) => index !== -1);
 
-// Học lại chỉ những từ chưa thuộc
-const relearnUnknown = () => {
-  const unknownIndexes = flashcards
-    .map((card, i) => (!knownSet.some((k) => k.id === card.id) ? i : -1))
-    .filter((i) => i !== -1);
+    if (knownIndexes.length === 0) {
+      alert("Chưa có từ nào được đánh dấu đã thuộc");
+      return;
+    }
 
-  setOrder(unknownIndexes);
-  setPos(0);
-  setFlipped(false);
-};
+    setOrder(knownIndexes);
+    setPos(0);
+    setFlipped(false);
+
+    // reset lịch sử cho phiên học mới
+    setHistory([]);
+  };
+
+  // Học lại chỉ những từ chưa thuộc
+  const relearnUnknown = () => {
+    const unknownIds = new Set(
+      unKnownSet.map((card) => card.uniqueId)
+    );
+
+    const unknownIndexes = flashcards
+      .map((card, index) =>
+        unknownIds.has(card.uniqueId)
+          ? index
+          : -1
+      )
+      .filter((index) => index !== -1);
+
+    if (unknownIndexes.length === 0) {
+      alert("Chưa có từ nào được đánh dấu chưa thuộc");
+      return;
+    }
+
+    setOrder(unknownIndexes);
+    setPos(0);
+    setFlipped(false);
+
+    // reset lịch sử cho phiên học mới
+    setHistory([]);
+  };
 
   // ===== VIEW TỔNG KẾT =====
   const summaryView = (
@@ -402,7 +596,7 @@ const relearnUnknown = () => {
         </button>
 
         <button
-          onClick={() => shuffle(true)}
+          onClick={() => shuffle()}
           className="px-3 py-2 bg-purple-500 text-white rounded-md text-sm"
         >
           Xáo trộn
@@ -426,6 +620,120 @@ const relearnUnknown = () => {
       </div>
     </div>
   );
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setMounted(true);
+    }, 400);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+  const handleKeyDown = (e: KeyboardEvent) => {
+    // nếu đã học xong thì không xử lý
+    if (isFinished) return;
+
+    // tránh spam khi giữ phím
+    if (e.repeat) return;
+
+    const currentCard = flashcards[currentIndex];
+
+    switch (e.key.toLowerCase()) {
+      // Đã thuộc → next
+      case "d":
+        handleMarkAndNext(currentCard, true);
+        break;
+      // Không thuộc → next
+      case "a":
+        handleMarkAndNext(currentCard, false);
+        break;
+      // Xao trộn
+      case "r":
+        shuffle();
+        break;
+      // Lật thẻ
+      case "s":
+        setShowJapaneseFirst((s) => !s);
+        break;
+      // Quay lại card trước
+      case "q":
+        prevCard();
+        break;
+      // Hiển thị/ẩn reading
+      case "f":
+        setVisibleFields((prev) => {
+          const updated = {
+            ...prev,
+            reading: !prev.reading,
+          };
+
+          localStorage.setItem(
+            "visibleFields",
+            JSON.stringify(updated)
+          );
+
+          return updated;
+        });
+        break;
+
+      // Phím số bên phải để đánh dấu đã thuộc/chưa thuộc
+      // Đã thuộc → next
+      case "6":
+        handleMarkAndNext(currentCard, true);
+        break;
+      // Không thuộc → next
+      case "4":
+        handleMarkAndNext(currentCard, false);
+        break;
+      // Xao trộn
+      case "9":
+        shuffle();
+        break;
+      // Lật thẻ
+      case "5":
+        setShowJapaneseFirst((s) => !s);
+        break;
+      // Quay lại card trước
+      case "7":
+        prevCard();
+        break;
+      // Hiển thị/ẩn reading
+      case "+":
+        setVisibleFields((prev) => {
+          const updated = {
+            ...prev,
+            reading: !prev.reading,
+          };
+
+          localStorage.setItem(
+            "visibleFields",
+            JSON.stringify(updated)
+          );
+
+          return updated;
+        });
+        break;
+
+      default:
+        break;
+    }
+  };
+
+  window.addEventListener("keydown", handleKeyDown);
+
+  return () => {
+    window.removeEventListener("keydown", handleKeyDown);
+  };
+}, [
+  isFinished,
+  flashcards,
+  currentIndex,
+]);
+
+  // ===== MAIN RENDER =====
+  if (!mounted) {
+    return <LoadingPage />;
+  }
   return (
     <>
       <section className="overflow-hidden p-3 sm:p-[22px] min-h-[90vh] flex flex-col sm:flex-row">
@@ -468,18 +776,31 @@ const relearnUnknown = () => {
             </Link>
           </div>
           <div className="w-full p-2">
-            <label className="block mb-2 font-semibold">Chọn bài học:</label>
-            <select
-              value={selectedChapter.id}
-              onChange={(e) => handleSelectChapter(Number(e.target.value))}
-              className="border p-2 rounded w-full mb-4 text-sm sm:text-base"
-            >
-              {allDataFlashCards.map((c) => (
-                <option key={c.id} value={c.id}>
-                  {c.chapTer}
-                </option>
-              ))}
-            </select>
+            <span className="block mb-2 font-semibold">Chọn bài học:</span>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            {allDataFlashCards.map((chapter) => {
+              const isSelected = selectedChapterIds.includes(chapter.id);
+              return (
+                <button
+                  key={chapter.id}
+                  type="button"
+                  onClick={() => handleToggleChapter(chapter.id)}
+                  className={`
+                    px-2 py-1 rounded-md border transition-all duration-200
+                    text-sm font-medium
+                    ${
+                      isSelected
+                        ? "bg-blue-500 border-blue-500 text-white shadow-md scale-105"
+                        : "bg-white border-gray-300 hover:border-blue-400 hover:bg-blue-50 text-black"
+                    }
+                  `}
+                >
+                  {isSelected && "✓ "}
+                  {chapter.chapTer}
+                </button>
+              );
+            })}
           </div>
             {
                 !isFinished &&
@@ -531,7 +852,7 @@ const relearnUnknown = () => {
                 {!isFinished &&
                   <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
                   <button
-                    onClick={() => shuffle(true)}
+                    onClick={() => shuffle()}
                     className="cursor-pointer px-3 py-2 bg-purple-500 text-white rounded-md text-sm sm:text-base"
                   >
                     Xáo trộn
@@ -691,4 +1012,4 @@ const relearnUnknown = () => {
   );
 };
 
-export default Kanji;
+export default ReviewPage;
