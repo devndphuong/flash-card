@@ -1,4 +1,4 @@
-import ReviewPage from '@/ui/Review'
+import ReviewPage from '@/ui/review/Review'
 import React from 'react'
 
 const page = () => {
