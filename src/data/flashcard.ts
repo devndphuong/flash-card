@@ -5,6 +5,8 @@ export interface Flashcard {
   romaji: string;
   meaning: string; // Nghĩa tiếng Việt
   id?: string; // optional unique id
+  idChapter: number; 
+  uniqueId: string;
 }
 
 export const initialBaiExp: Flashcard[] = [
@@ -15,6 +17,8 @@ export const initialBaiExp: Flashcard[] = [
     reading: "わたし",
     romaji: "watashi",
     meaning: "tôi",
+    idChapter: 0,
+    uniqueId: ""
   }
 ];
 
@@ -26,6 +30,8 @@ export const initialBai1: Flashcard[] = [
     reading: "わたし",
     romaji: "watashi",
     meaning: "tôi",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "2",
@@ -34,6 +40,8 @@ export const initialBai1: Flashcard[] = [
     reading: "わたしたち",
     romaji: "watashitachi",
     meaning: "chúng tôi, chúng ta",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "3",
@@ -42,6 +50,8 @@ export const initialBai1: Flashcard[] = [
     reading: "かれ",
     romaji: "kare",
     meaning: "anh ấy, bạn trai",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "4",
@@ -50,6 +60,8 @@ export const initialBai1: Flashcard[] = [
     reading: "かのじょ",
     romaji: "kanojo",
     meaning: "cô ấy, bạn gái",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "5",
@@ -58,6 +70,8 @@ export const initialBai1: Flashcard[] = [
     reading: "みなさん",
     romaji: "minasan",
     meaning: "các anh chị, các ông bà, các bạn, quý vị",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "6",
@@ -66,6 +80,8 @@ export const initialBai1: Flashcard[] = [
     reading: "あなた",
     romaji: "anata",
     meaning: "anh/chị, ông/bà, bạn",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "7",
@@ -74,6 +90,8 @@ export const initialBai1: Flashcard[] = [
     reading: "あのひと",
     romaji: "ano hito",
     meaning: "người đó, anh kia, chị kia",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "8",
@@ -82,6 +100,8 @@ export const initialBai1: Flashcard[] = [
     reading: "あのかた",
     romaji: "ano kata",
     meaning: "(vị kia) là cách nói lịch sự của あのひと",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "9",
@@ -90,6 +110,8 @@ export const initialBai1: Flashcard[] = [
     reading: "きょうし",
     romaji: "kyoushi",
     meaning: "giáo viên",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "10",
@@ -98,6 +120,8 @@ export const initialBai1: Flashcard[] = [
     reading: "せんせい",
     romaji: "sensei",
     meaning: "thầy/cô",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "11",
@@ -106,6 +130,8 @@ export const initialBai1: Flashcard[] = [
     reading: "がくせい",
     romaji: "gakusei",
     meaning: "học sinh",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "12",
@@ -114,6 +140,8 @@ export const initialBai1: Flashcard[] = [
     reading: "うんてんしゅ",
     romaji: "untenshu",
     meaning: "tài xế",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "13",
@@ -122,6 +150,8 @@ export const initialBai1: Flashcard[] = [
     reading: "かいしゃいん",
     romaji: "kaishain",
     meaning: "nhân viên công ty",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "14",
@@ -130,6 +160,8 @@ export const initialBai1: Flashcard[] = [
     reading: "しゃいん",
     romaji: "shain",
     meaning: "nhân viên công ty",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "15",
@@ -138,6 +170,8 @@ export const initialBai1: Flashcard[] = [
     reading: "ぎんこういん",
     romaji: "ginkouin",
     meaning: "nhân viên ngân hàng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "16",
@@ -146,6 +180,8 @@ export const initialBai1: Flashcard[] = [
     reading: "いしゃ",
     romaji: "isha",
     meaning: "bác sĩ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "17",
@@ -154,6 +190,8 @@ export const initialBai1: Flashcard[] = [
     reading: "エンジニア",
     romaji: "enjinia",
     meaning: "kỹ sư",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "18",
@@ -162,6 +200,8 @@ export const initialBai1: Flashcard[] = [
     reading: "けんきゅうしゃ",
     romaji: "kenkyuusha",
     meaning: "nhà nghiên cứu",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "19",
@@ -170,6 +210,8 @@ export const initialBai1: Flashcard[] = [
     reading: "りゅうがくせい",
     romaji: "ryuugakusei",
     meaning: "du học sinh",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "20",
@@ -178,6 +220,8 @@ export const initialBai1: Flashcard[] = [
     reading: "だれ",
     romaji: "dare",
     meaning: "ai",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "21",
@@ -186,6 +230,8 @@ export const initialBai1: Flashcard[] = [
     reading: "どなた",
     romaji: "donata",
     meaning: "(vị nào) là cách nói lịch sự của だれ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "22",
@@ -194,6 +240,8 @@ export const initialBai1: Flashcard[] = [
     reading: "だいがく",
     romaji: "daigaku",
     meaning: "đại học, trường đại học",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "23",
@@ -202,6 +250,8 @@ export const initialBai1: Flashcard[] = [
     reading: "びょういん",
     romaji: "byouin",
     meaning: "bệnh viện",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "24",
@@ -210,6 +260,8 @@ export const initialBai1: Flashcard[] = [
     reading: "ベトナムご",
     romaji: "Betonamugo",
     meaning: "tiếng Việt",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "25",
@@ -218,6 +270,8 @@ export const initialBai1: Flashcard[] = [
     reading: "にほん",
     romaji: "Nihon",
     meaning: "Nhật Bản",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "26",
@@ -226,6 +280,8 @@ export const initialBai1: Flashcard[] = [
     reading: "かんこく",
     romaji: "Kankoku",
     meaning: "Hàn Quốc",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "27",
@@ -234,6 +290,8 @@ export const initialBai1: Flashcard[] = [
     reading: "ちゅうごく",
     romaji: "Chuugoku",
     meaning: "Trung Quốc",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "28",
@@ -242,6 +300,8 @@ export const initialBai1: Flashcard[] = [
     reading: "アメリカ",
     romaji: "Amerika",
     meaning: "Mỹ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "29",
@@ -250,6 +310,8 @@ export const initialBai1: Flashcard[] = [
     reading: "イギリス",
     romaji: "Igirisu",
     meaning: "Anh",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "30",
@@ -258,6 +320,8 @@ export const initialBai1: Flashcard[] = [
     reading: "～じん",
     romaji: "~jin",
     meaning: "người ~",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "31",
@@ -266,6 +330,8 @@ export const initialBai1: Flashcard[] = [
     reading: "～ご",
     romaji: "~go",
     meaning: "tiếng ~",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "32",
@@ -274,6 +340,8 @@ export const initialBai1: Flashcard[] = [
     reading: "しゅっしん",
     romaji: "shusshin",
     meaning: "xuất thân, quê quán",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "33",
@@ -282,6 +350,8 @@ export const initialBai1: Flashcard[] = [
     reading: "～からきました",
     romaji: "~kara kimashita",
     meaning: "(tôi) đến từ ~",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "34",
@@ -290,6 +360,8 @@ export const initialBai1: Flashcard[] = [
     reading: "はい",
     romaji: "hai",
     meaning: "vâng, dạ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "35",
@@ -298,6 +370,8 @@ export const initialBai1: Flashcard[] = [
     reading: "いいえ",
     romaji: "iie",
     meaning: "không",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "36",
@@ -306,6 +380,8 @@ export const initialBai1: Flashcard[] = [
     reading: "しつれいですが",
     romaji: "shitsurei desu ga",
     meaning: "Xin lỗi,… (dùng khi hỏi thông tin cá nhân)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "37",
@@ -314,6 +390,8 @@ export const initialBai1: Flashcard[] = [
     reading: "おなまえをもういちど",
     romaji: "onamae o mou ichido",
     meaning: "Anh/Chị vui lòng nhắc lại tên một lần nữa",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "38",
@@ -322,6 +400,8 @@ export const initialBai1: Flashcard[] = [
     reading: "おねがいします",
     romaji: "onegaishimasu",
     meaning: "Rất mong được giúp đỡ / Xin vui lòng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "39",
@@ -330,6 +410,8 @@ export const initialBai1: Flashcard[] = [
     reading: "どうぞよろしく",
     romaji: "douzo yoroshiku",
     meaning: "Rất mong được giúp đỡ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "40",
@@ -338,6 +420,8 @@ export const initialBai1: Flashcard[] = [
     reading: "そうですか",
     romaji: "sou desu ka",
     meaning: "Vậy à / Thế à?",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "41",
@@ -346,6 +430,8 @@ export const initialBai1: Flashcard[] = [
     reading: "おしごとはなんですか",
     romaji: "oshigoto wa nan desu ka",
     meaning: "Công việc của anh/chị là gì?",
+    idChapter: 0,
+    uniqueId: ""
   },
 ];
 
@@ -357,6 +443,8 @@ export const initialBai2: Flashcard[] = [
     reading: "これ",
     romaji: "kore",
     meaning: "cái này, đây (vật ở gần người nói)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "2",
@@ -365,6 +453,8 @@ export const initialBai2: Flashcard[] = [
     reading: "それ",
     romaji: "sore",
     meaning: "cái đó, đó (vật ở gần người nghe)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "3",
@@ -373,6 +463,8 @@ export const initialBai2: Flashcard[] = [
     reading: "あれ",
     romaji: "are",
     meaning: "cái kia, kia (vật ở xa cả người nói và người nghe)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "4",
@@ -381,6 +473,8 @@ export const initialBai2: Flashcard[] = [
     reading: "この～",
     romaji: "kono ~",
     meaning: "~ này",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "5",
@@ -389,6 +483,8 @@ export const initialBai2: Flashcard[] = [
     reading: "その～",
     romaji: "sono ~",
     meaning: "~ đó",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "6",
@@ -397,6 +493,8 @@ export const initialBai2: Flashcard[] = [
     reading: "あの～",
     romaji: "ano ~",
     meaning: "~ kia",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "7",
@@ -405,6 +503,8 @@ export const initialBai2: Flashcard[] = [
     reading: "パソコン",
     romaji: "pasokon",
     meaning: "máy tính cá nhân",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "8",
@@ -413,6 +513,8 @@ export const initialBai2: Flashcard[] = [
     reading: "けいたい",
     romaji: "keitai",
     meaning: "điện thoại di động",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "9",
@@ -421,6 +523,8 @@ export const initialBai2: Flashcard[] = [
     reading: "でんわ",
     romaji: "denwa",
     meaning: "điện thoại",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "10",
@@ -429,6 +533,8 @@ export const initialBai2: Flashcard[] = [
     reading: "アイフォン",
     romaji: "aifon",
     meaning: "iPhone",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "11",
@@ -437,6 +543,8 @@ export const initialBai2: Flashcard[] = [
     reading: "じゅうでんき",
     romaji: "juudenki",
     meaning: "sạc pin",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "12",
@@ -445,6 +553,8 @@ export const initialBai2: Flashcard[] = [
     reading: "ヘッドフォン",
     romaji: "heddofon",
     meaning: "tai nghe",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "13",
@@ -453,6 +563,8 @@ export const initialBai2: Flashcard[] = [
     reading: "カメラ",
     romaji: "kamera",
     meaning: "máy ảnh",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "14",
@@ -461,6 +573,8 @@ export const initialBai2: Flashcard[] = [
     reading: "テレビ",
     romaji: "terebi",
     meaning: "tivi",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "15",
@@ -469,6 +583,8 @@ export const initialBai2: Flashcard[] = [
     reading: "くるま",
     romaji: "kuruma",
     meaning: "ô tô, xe hơi",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "16",
@@ -477,6 +593,8 @@ export const initialBai2: Flashcard[] = [
     reading: "とけい",
     romaji: "tokei",
     meaning: "đồng hồ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "17",
@@ -485,6 +603,8 @@ export const initialBai2: Flashcard[] = [
     reading: "ペン",
     romaji: "pen",
     meaning: "bút",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "18",
@@ -493,6 +613,8 @@ export const initialBai2: Flashcard[] = [
     reading: "ボールペン",
     romaji: "boorupen",
     meaning: "bút bi",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "19",
@@ -501,6 +623,8 @@ export const initialBai2: Flashcard[] = [
     reading: "えんぴつ",
     romaji: "enpitsu",
     meaning: "bút chì",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "20",
@@ -509,6 +633,8 @@ export const initialBai2: Flashcard[] = [
     reading: "シャープペンシル",
     romaji: "shaapupenshiru",
     meaning: "bút chì kim",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "21",
@@ -517,6 +643,8 @@ export const initialBai2: Flashcard[] = [
     reading: "けしゴム",
     romaji: "keshigomu",
     meaning: "tẩy",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "22",
@@ -525,6 +653,8 @@ export const initialBai2: Flashcard[] = [
     reading: "ほん",
     romaji: "hon",
     meaning: "sách",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "23",
@@ -533,6 +663,8 @@ export const initialBai2: Flashcard[] = [
     reading: "ノート",
     romaji: "nooto",
     meaning: "vở",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "24",
@@ -541,6 +673,8 @@ export const initialBai2: Flashcard[] = [
     reading: "てちょう",
     romaji: "techou",
     meaning: "sổ tay",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "25",
@@ -549,6 +683,8 @@ export const initialBai2: Flashcard[] = [
     reading: "ことば",
     romaji: "kotoba",
     meaning: "từ vựng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "26",
@@ -557,6 +693,8 @@ export const initialBai2: Flashcard[] = [
     reading: "じしょ",
     romaji: "jisho",
     meaning: "từ điển",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "27",
@@ -565,6 +703,8 @@ export const initialBai2: Flashcard[] = [
     reading: "しんぶん",
     romaji: "shinbun",
     meaning: "báo",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "28",
@@ -573,6 +713,8 @@ export const initialBai2: Flashcard[] = [
     reading: "ざっし",
     romaji: "zasshi",
     meaning: "tạp chí",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "29",
@@ -581,6 +723,8 @@ export const initialBai2: Flashcard[] = [
     reading: "めいし",
     romaji: "meishi",
     meaning: "danh thiếp",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "30",
@@ -589,6 +733,8 @@ export const initialBai2: Flashcard[] = [
     reading: "カード",
     romaji: "kaado",
     meaning: "thẻ, cạc",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "31",
@@ -597,6 +743,8 @@ export const initialBai2: Flashcard[] = [
     reading: "クレジットカード",
     romaji: "kurejittokaado",
     meaning: "thẻ tín dụng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "32",
@@ -605,6 +753,8 @@ export const initialBai2: Flashcard[] = [
     reading: "ぼうし",
     romaji: "boushi",
     meaning: "mũ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "33",
@@ -613,6 +763,8 @@ export const initialBai2: Flashcard[] = [
     reading: "さいふ",
     romaji: "saifu",
     meaning: "ví",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "34",
@@ -621,6 +773,8 @@ export const initialBai2: Flashcard[] = [
     reading: "かばん",
     romaji: "kaban",
     meaning: "cặp sách, túi sách",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "35",
@@ -629,6 +783,8 @@ export const initialBai2: Flashcard[] = [
     reading: "くつ",
     romaji: "kutsu",
     meaning: "giày",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "36",
@@ -637,6 +793,8 @@ export const initialBai2: Flashcard[] = [
     reading: "スリッパ",
     romaji: "surippa",
     meaning: "dép đi trong nhà",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "37",
@@ -645,6 +803,8 @@ export const initialBai2: Flashcard[] = [
     reading: "くつした",
     romaji: "kutsushita",
     meaning: "tất",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "38",
@@ -653,6 +813,8 @@ export const initialBai2: Flashcard[] = [
     reading: "かぎ",
     romaji: "kagi",
     meaning: "chìa khóa",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "39",
@@ -661,6 +823,8 @@ export const initialBai2: Flashcard[] = [
     reading: "かさ",
     romaji: "kasa",
     meaning: "ô, dù",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "40",
@@ -669,6 +833,8 @@ export const initialBai2: Flashcard[] = [
     reading: "つくえ",
     romaji: "tsukue",
     meaning: "bàn",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "41",
@@ -677,6 +843,8 @@ export const initialBai2: Flashcard[] = [
     reading: "いす",
     romaji: "isu",
     meaning: "cái ghế",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "42",
@@ -685,6 +853,8 @@ export const initialBai2: Flashcard[] = [
     reading: "えいご",
     romaji: "eigo",
     meaning: "tiếng Anh",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "43",
@@ -693,6 +863,8 @@ export const initialBai2: Flashcard[] = [
     reading: "なん",
     romaji: "nan",
     meaning: "cái gì (từ để hỏi)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "44",
@@ -701,6 +873,8 @@ export const initialBai2: Flashcard[] = [
     reading: "ちがう",
     romaji: "chigau",
     meaning: "đúng, phải, đúng vậy",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "45",
@@ -709,6 +883,8 @@ export const initialBai2: Flashcard[] = [
     reading: "ちがいます",
     romaji: "chigaimasu",
     meaning: "không phải, sai rồi",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "46",
@@ -717,6 +893,8 @@ export const initialBai2: Flashcard[] = [
     reading: "ほんのきもち",
     romaji: "hon no kimochi",
     meaning: "Đây là chút lòng thành của tôi!",
+    idChapter: 0,
+    uniqueId: ""
   },
 ];
 
@@ -728,6 +906,8 @@ export const initialBai3: Flashcard[] = [
     reading: "ここ",
     romaji: "koko",
     meaning: "chỗ này, đây",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "2",
@@ -736,6 +916,8 @@ export const initialBai3: Flashcard[] = [
     reading: "そこ",
     romaji: "soko",
     meaning: "chỗ đó, đó",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "3",
@@ -744,6 +926,8 @@ export const initialBai3: Flashcard[] = [
     reading: "あそこ",
     romaji: "asoko",
     meaning: "chỗ kia, kia",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "4",
@@ -752,6 +936,8 @@ export const initialBai3: Flashcard[] = [
     reading: "どこ",
     romaji: "doko",
     meaning: "chỗ nào, đâu",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "5",
@@ -760,6 +946,8 @@ export const initialBai3: Flashcard[] = [
     reading: "こちら",
     romaji: "kochira",
     meaning: "phía này (cách nói lịch sự của ここ)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "6",
@@ -768,6 +956,8 @@ export const initialBai3: Flashcard[] = [
     reading: "そちら",
     romaji: "sochira",
     meaning: "phía đó (cách nói lịch sự của そこ)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "7",
@@ -776,6 +966,8 @@ export const initialBai3: Flashcard[] = [
     reading: "あちら",
     romaji: "achira",
     meaning: "phía kia (cách nói lịch sự của あそこ)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "8",
@@ -784,6 +976,8 @@ export const initialBai3: Flashcard[] = [
     reading: "どちら",
     romaji: "dochira",
     meaning: "phía nào (cách nói lịch sự của どこ)",
+    idChapter: 0,
+    uniqueId: ""
   },
 
   {
@@ -793,6 +987,8 @@ export const initialBai3: Flashcard[] = [
     reading: "うけつけ",
     romaji: "uketsuke",
     meaning: "quầy lễ tân (dùng cho công ty, cơ quan)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "10",
@@ -801,6 +997,8 @@ export const initialBai3: Flashcard[] = [
     reading: "フロント",
     romaji: "furonto",
     meaning: "quầy lễ tân (dùng cho khách sạn)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "11",
@@ -809,6 +1007,8 @@ export const initialBai3: Flashcard[] = [
     reading: "かいだん",
     romaji: "kaidan",
     meaning: "cầu thang",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "12",
@@ -817,6 +1017,8 @@ export const initialBai3: Flashcard[] = [
     reading: "エレベーター",
     romaji: "erebeetaa",
     meaning: "thang máy",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "13",
@@ -825,6 +1027,8 @@ export const initialBai3: Flashcard[] = [
     reading: "エスカレーター",
     romaji: "esukareetaa",
     meaning: "thang cuốn",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "14",
@@ -833,6 +1037,8 @@ export const initialBai3: Flashcard[] = [
     reading: "おてあらい",
     romaji: "otearai",
     meaning: "phòng vệ sinh",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "15",
@@ -841,6 +1047,8 @@ export const initialBai3: Flashcard[] = [
     reading: "トイレ",
     romaji: "toire",
     meaning: "phòng vệ sinh",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "16",
@@ -849,6 +1057,8 @@ export const initialBai3: Flashcard[] = [
     reading: "うち",
     romaji: "uchi",
     meaning: "nhà",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "17",
@@ -857,6 +1067,8 @@ export const initialBai3: Flashcard[] = [
     reading: "いえ",
     romaji: "ie",
     meaning: "nhà",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "18",
@@ -865,6 +1077,8 @@ export const initialBai3: Flashcard[] = [
     reading: "へや",
     romaji: "heya",
     meaning: "căn phòng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "19",
@@ -873,6 +1087,8 @@ export const initialBai3: Flashcard[] = [
     reading: "きょうしつ",
     romaji: "kyoushitsu",
     meaning: "phòng học",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "20",
@@ -881,6 +1097,8 @@ export const initialBai3: Flashcard[] = [
     reading: "じむしょ",
     romaji: "jimusho",
     meaning: "văn phòng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "21",
@@ -889,6 +1107,8 @@ export const initialBai3: Flashcard[] = [
     reading: "かいぎしつ",
     romaji: "kaigishitsu",
     meaning: "phòng họp",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "22",
@@ -897,6 +1117,8 @@ export const initialBai3: Flashcard[] = [
     reading: "しょくどう",
     romaji: "shokudou",
     meaning: "nhà ăn",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "23",
@@ -905,6 +1127,8 @@ export const initialBai3: Flashcard[] = [
     reading: "ビル",
     romaji: "biru",
     meaning: "tòa nhà",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "24",
@@ -913,6 +1137,8 @@ export const initialBai3: Flashcard[] = [
     reading: "デパート",
     romaji: "depaato",
     meaning: "trung tâm thương mại",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "25",
@@ -921,6 +1147,8 @@ export const initialBai3: Flashcard[] = [
     reading: "スーパー",
     romaji: "suupaa",
     meaning: "siêu thị",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "26",
@@ -929,6 +1157,8 @@ export const initialBai3: Flashcard[] = [
     reading: "センター",
     romaji: "sentaa",
     meaning: "trung tâm",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "27",
@@ -937,6 +1167,8 @@ export const initialBai3: Flashcard[] = [
     reading: "えいがかん",
     romaji: "eigakan",
     meaning: "rạp chiếu phim",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "28",
@@ -945,6 +1177,8 @@ export const initialBai3: Flashcard[] = [
     reading: "きっさてん",
     romaji: "kissaten",
     meaning: "quán trà, cà phê",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "29",
@@ -953,6 +1187,8 @@ export const initialBai3: Flashcard[] = [
     reading: "としょかん",
     romaji: "toshokan",
     meaning: "thư viện",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "30",
@@ -961,6 +1197,8 @@ export const initialBai3: Flashcard[] = [
     reading: "かいしゃ",
     romaji: "kaisha",
     meaning: "công ty",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "31",
@@ -969,6 +1207,8 @@ export const initialBai3: Flashcard[] = [
     reading: "がっこう",
     romaji: "gakkou",
     meaning: "trường học",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "32",
@@ -977,6 +1217,8 @@ export const initialBai3: Flashcard[] = [
     reading: "ゆうびんきょく",
     romaji: "yuubinkyoku",
     meaning: "bưu điện",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "33",
@@ -985,6 +1227,8 @@ export const initialBai3: Flashcard[] = [
     reading: "ぎんこう",
     romaji: "ginkou",
     meaning: "ngân hàng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "34",
@@ -993,6 +1237,8 @@ export const initialBai3: Flashcard[] = [
     reading: "バスてい",
     romaji: "basutei",
     meaning: "trạm xe bus",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "35",
@@ -1001,6 +1247,8 @@ export const initialBai3: Flashcard[] = [
     reading: "えき",
     romaji: "eki",
     meaning: "nhà ga",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "36",
@@ -1009,6 +1257,8 @@ export const initialBai3: Flashcard[] = [
     reading: "[お] くに",
     romaji: "o-kuni",
     meaning: "đất nước (của anh/chị)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "37",
@@ -1017,6 +1267,8 @@ export const initialBai3: Flashcard[] = [
     reading: "いくら",
     romaji: "ikura",
     meaning: "bao nhiêu tiền",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "38",
@@ -1025,6 +1277,8 @@ export const initialBai3: Flashcard[] = [
     reading: "えん",
     romaji: "en",
     meaning: "yên",
+    idChapter: 0,
+    uniqueId: ""
   },
 ];
 
@@ -1036,6 +1290,8 @@ export const initialBai8: Flashcard[] = [
     reading: "イケメン",
     romaji: "ikemen",
     meaning: "đẹp trai",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "2",
@@ -1044,6 +1300,8 @@ export const initialBai8: Flashcard[] = [
     reading: "きれい",
     romaji: "kirei",
     meaning: "xinh, đẹp, sạch",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "3",
@@ -1052,6 +1310,8 @@ export const initialBai8: Flashcard[] = [
     reading: "しんせつ",
     romaji: "shinsetsu",
     meaning: "tốt bụng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "4",
@@ -1060,6 +1320,8 @@ export const initialBai8: Flashcard[] = [
     reading: "げんき",
     romaji: "genki",
     meaning: "khỏe mạnh",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "5",
@@ -1068,6 +1330,8 @@ export const initialBai8: Flashcard[] = [
     reading: "しずか",
     romaji: "shizuka",
     meaning: "yên tĩnh",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "6",
@@ -1076,6 +1340,8 @@ export const initialBai8: Flashcard[] = [
     reading: "にぎやか",
     romaji: "nigiyaka",
     meaning: "náo nhiệt",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "7",
@@ -1084,6 +1350,8 @@ export const initialBai8: Flashcard[] = [
     reading: "ゆうめい",
     romaji: "yuumei",
     meaning: "nổi tiếng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "8",
@@ -1092,6 +1360,8 @@ export const initialBai8: Flashcard[] = [
     reading: "べんり",
     romaji: "benri",
     meaning: "tiện lợi",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "9",
@@ -1100,6 +1370,8 @@ export const initialBai8: Flashcard[] = [
     reading: "たいせつ",
     romaji: "taisetsu",
     meaning: "quan trọng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "10",
@@ -1108,6 +1380,8 @@ export const initialBai8: Flashcard[] = [
     reading: "ひま",
     romaji: "hima",
     meaning: "rảnh rỗi",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "11",
@@ -1116,6 +1390,8 @@ export const initialBai8: Flashcard[] = [
     reading: "いそがしい",
     romaji: "isogashii",
     meaning: "bận rộn",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "12",
@@ -1124,6 +1400,8 @@ export const initialBai8: Flashcard[] = [
     reading: "おおきい",
     romaji: "ookii",
     meaning: "to, lớn",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "13",
@@ -1132,6 +1410,8 @@ export const initialBai8: Flashcard[] = [
     reading: "ちいさい",
     romaji: "chiisai",
     meaning: "nhỏ, bé",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "14",
@@ -1140,6 +1420,8 @@ export const initialBai8: Flashcard[] = [
     reading: "あたらしい",
     romaji: "atarashii",
     meaning: "mới",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "15",
@@ -1148,6 +1430,8 @@ export const initialBai8: Flashcard[] = [
     reading: "ふるい",
     romaji: "furui",
     meaning: "cũ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "16",
@@ -1156,6 +1440,8 @@ export const initialBai8: Flashcard[] = [
     reading: "いい",
     romaji: "ii",
     meaning: "tốt",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "17",
@@ -1164,6 +1450,8 @@ export const initialBai8: Flashcard[] = [
     reading: "わるい",
     romaji: "warui",
     meaning: "xấu",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "18",
@@ -1172,6 +1460,8 @@ export const initialBai8: Flashcard[] = [
     reading: "あつい",
     romaji: "atsui",
     meaning: "nóng (thời tiết)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "19",
@@ -1180,6 +1470,8 @@ export const initialBai8: Flashcard[] = [
     reading: "さむい",
     romaji: "samui",
     meaning: "lạnh, rét (thời tiết)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "20",
@@ -1188,6 +1480,8 @@ export const initialBai8: Flashcard[] = [
     reading: "あつい",
     romaji: "atsui",
     meaning: "nóng (cảm giác)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "21",
@@ -1196,6 +1490,8 @@ export const initialBai8: Flashcard[] = [
     reading: "つめたい",
     romaji: "tsumetai",
     meaning: "lạnh, buốt (cảm giác)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "22",
@@ -1204,6 +1500,8 @@ export const initialBai8: Flashcard[] = [
     reading: "むずかしい",
     romaji: "muzukashii",
     meaning: "khó",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "23",
@@ -1212,6 +1510,8 @@ export const initialBai8: Flashcard[] = [
     reading: "やさしい",
     romaji: "yasashii",
     meaning: "dễ, hiền lành",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "24",
@@ -1220,6 +1520,8 @@ export const initialBai8: Flashcard[] = [
     reading: "たかい",
     romaji: "takai",
     meaning: "đắt, cao",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "25",
@@ -1228,6 +1530,8 @@ export const initialBai8: Flashcard[] = [
     reading: "やすい",
     romaji: "yasui",
     meaning: "rẻ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "26",
@@ -1236,6 +1540,8 @@ export const initialBai8: Flashcard[] = [
     reading: "ひくい",
     romaji: "hikui",
     meaning: "thấp",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "27",
@@ -1244,6 +1550,8 @@ export const initialBai8: Flashcard[] = [
     reading: "あかるい",
     romaji: "akarui",
     meaning: "sáng sủa, tươi sáng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "28",
@@ -1252,6 +1560,8 @@ export const initialBai8: Flashcard[] = [
     reading: "くらい",
     romaji: "kurai",
     meaning: "tối, u ám",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "29",
@@ -1260,6 +1570,8 @@ export const initialBai8: Flashcard[] = [
     reading: "おもしろい",
     romaji: "omoshiroi",
     meaning: "thú vị",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "30",
@@ -1268,6 +1580,8 @@ export const initialBai8: Flashcard[] = [
     reading: "かわいい",
     romaji: "kawaii",
     meaning: "dễ thương",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "31",
@@ -1276,6 +1590,8 @@ export const initialBai8: Flashcard[] = [
     reading: "おいしい",
     romaji: "oishii",
     meaning: "ngon",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "32",
@@ -1284,6 +1600,8 @@ export const initialBai8: Flashcard[] = [
     reading: "たのしい",
     romaji: "tanoshii",
     meaning: "vui vẻ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "33",
@@ -1292,6 +1610,8 @@ export const initialBai8: Flashcard[] = [
     reading: "しろい",
     romaji: "shiroi",
     meaning: "trắng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "34",
@@ -1300,6 +1620,8 @@ export const initialBai8: Flashcard[] = [
     reading: "あかい",
     romaji: "akai",
     meaning: "đỏ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "35",
@@ -1308,6 +1630,8 @@ export const initialBai8: Flashcard[] = [
     reading: "あおい",
     romaji: "aoi",
     meaning: "xanh",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "36",
@@ -1316,6 +1640,8 @@ export const initialBai8: Flashcard[] = [
     reading: "くろい",
     romaji: "kuroi",
     meaning: "đen",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "37",
@@ -1324,6 +1650,8 @@ export const initialBai8: Flashcard[] = [
     reading: "さびしい",
     romaji: "sabishii",
     meaning: "cô đơn",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "38",
@@ -1332,6 +1660,8 @@ export const initialBai8: Flashcard[] = [
     reading: "はな",
     romaji: "hana",
     meaning: "hoa",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "39",
@@ -1340,6 +1670,8 @@ export const initialBai8: Flashcard[] = [
     reading: "さくら",
     romaji: "sakura",
     meaning: "hoa anh đào",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "40",
@@ -1348,6 +1680,8 @@ export const initialBai8: Flashcard[] = [
     reading: "やま",
     romaji: "yama",
     meaning: "núi",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "41",
@@ -1356,6 +1690,8 @@ export const initialBai8: Flashcard[] = [
     reading: "ふじさん",
     romaji: "fujisan",
     meaning: "núi Phú Sĩ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "42",
@@ -1364,6 +1700,8 @@ export const initialBai8: Flashcard[] = [
     reading: "まち",
     romaji: "machi",
     meaning: "thị trấn, thành phố",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "43",
@@ -1372,6 +1710,8 @@ export const initialBai8: Flashcard[] = [
     reading: "たべもの",
     romaji: "tabemono",
     meaning: "đồ ăn",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "44",
@@ -1380,6 +1720,8 @@ export const initialBai8: Flashcard[] = [
     reading: "きもの",
     romaji: "kimono",
     meaning: "kimono",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "45",
@@ -1388,6 +1730,8 @@ export const initialBai8: Flashcard[] = [
     reading: "きかい",
     romaji: "kikai",
     meaning: "máy móc",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "46",
@@ -1396,6 +1740,8 @@ export const initialBai8: Flashcard[] = [
     reading: "ところ",
     romaji: "tokoro",
     meaning: "nơi, chỗ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "47",
@@ -1404,6 +1750,8 @@ export const initialBai8: Flashcard[] = [
     reading: "べんきょう",
     romaji: "benkyou",
     meaning: "học, việc học",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "48",
@@ -1412,6 +1760,8 @@ export const initialBai8: Flashcard[] = [
     reading: "せいかつ",
     romaji: "seikatsu",
     meaning: "cuộc sống, sinh hoạt, đời sống",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "49",
@@ -1420,6 +1770,8 @@ export const initialBai8: Flashcard[] = [
     reading: "ぶっか",
     romaji: "bukka",
     meaning: "vật giá",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "50",
@@ -1428,6 +1780,8 @@ export const initialBai8: Flashcard[] = [
     reading: "おしごと",
     romaji: "oshigoto",
     meaning: "công việc",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "51",
@@ -1436,6 +1790,8 @@ export const initialBai8: Flashcard[] = [
     reading: "りょうり",
     romaji: "ryouri",
     meaning: "món ăn",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "52",
@@ -1444,6 +1800,8 @@ export const initialBai8: Flashcard[] = [
     reading: "パスポート",
     romaji: "pasupo-to",
     meaning: "hộ chiếu",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "53",
@@ -1452,6 +1810,8 @@ export const initialBai8: Flashcard[] = [
     reading: "どう",
     romaji: "dou",
     meaning: "thế nào",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "54",
@@ -1460,6 +1820,8 @@ export const initialBai8: Flashcard[] = [
     reading: "どんな",
     romaji: "donna",
     meaning: "như thế nào",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "55",
@@ -1468,6 +1830,8 @@ export const initialBai8: Flashcard[] = [
     reading: "どれ",
     romaji: "dore",
     meaning: "cái nào",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "56",
@@ -1476,6 +1840,8 @@ export const initialBai8: Flashcard[] = [
     reading: "とても",
     romaji: "totemo",
     meaning: "rất",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "57",
@@ -1484,6 +1850,8 @@ export const initialBai8: Flashcard[] = [
     reading: "あまり",
     romaji: "amari",
     meaning: "không ~ lắm (dùng với thể phủ định)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "58",
@@ -1492,6 +1860,8 @@ export const initialBai8: Flashcard[] = [
     reading: "そして",
     romaji: "soshite",
     meaning: "hơn nữa, và (dùng để nối 2 câu)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "59",
@@ -1500,6 +1870,8 @@ export const initialBai8: Flashcard[] = [
     reading: "～が、～",
     romaji: "~ ga, ~",
     meaning: "～ nhưng ～",
+    idChapter: 0,
+    uniqueId: ""
   },
 ];
 
@@ -1511,6 +1883,8 @@ export const initialBai4: Flashcard[] = [
     reading: "げつようび",
     romaji: "getsuyoubi",
     meaning: "thứ hai",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "2",
@@ -1519,6 +1893,8 @@ export const initialBai4: Flashcard[] = [
     reading: "かようび",
     romaji: "kayoubi",
     meaning: "thứ ba",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "3",
@@ -1527,6 +1903,8 @@ export const initialBai4: Flashcard[] = [
     reading: "すいようび",
     romaji: "suiyoubi",
     meaning: "thứ tư",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "4",
@@ -1535,6 +1913,8 @@ export const initialBai4: Flashcard[] = [
     reading: "もくようび",
     romaji: "mokuyoubi",
     meaning: "thứ năm",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "5",
@@ -1543,6 +1923,8 @@ export const initialBai4: Flashcard[] = [
     reading: "きんようび",
     romaji: "kinyoubi",
     meaning: "thứ sáu",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "6",
@@ -1551,6 +1933,8 @@ export const initialBai4: Flashcard[] = [
     reading: "どようび",
     romaji: "doyoubi",
     meaning: "thứ bảy",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "7",
@@ -1559,6 +1943,8 @@ export const initialBai4: Flashcard[] = [
     reading: "にちようび",
     romaji: "nichiyoubi",
     meaning: "chủ nhật",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "8",
@@ -1567,6 +1953,8 @@ export const initialBai4: Flashcard[] = [
     reading: "なんようび",
     romaji: "nanyoubi",
     meaning: "thứ mấy",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "9",
@@ -1575,6 +1963,8 @@ export const initialBai4: Flashcard[] = [
     reading: "いま",
     romaji: "ima",
     meaning: "bây giờ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "10",
@@ -1583,6 +1973,8 @@ export const initialBai4: Flashcard[] = [
     reading: "ごぜん",
     romaji: "gozen",
     meaning: "sáng, trước 12 giờ trưa",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "11",
@@ -1591,6 +1983,8 @@ export const initialBai4: Flashcard[] = [
     reading: "ごご",
     romaji: "gogo",
     meaning: "chiều, sau 12 giờ trưa",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "12",
@@ -1599,6 +1993,8 @@ export const initialBai4: Flashcard[] = [
     reading: "はん",
     romaji: "han",
     meaning: "rưỡi, nửa",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "13",
@@ -1607,6 +2003,8 @@ export const initialBai4: Flashcard[] = [
     reading: "あさ",
     romaji: "asa",
     meaning: "buổi sáng, sáng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "14",
@@ -1615,6 +2013,8 @@ export const initialBai4: Flashcard[] = [
     reading: "ひる",
     romaji: "hiru",
     meaning: "buổi trưa, trưa",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "15",
@@ -1623,6 +2023,8 @@ export const initialBai4: Flashcard[] = [
     reading: "ゆうがた",
     romaji: "yuugata",
     meaning: "buổi chiều, chiều",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "16",
@@ -1631,6 +2033,8 @@ export const initialBai4: Flashcard[] = [
     reading: "ばん",
     romaji: "ban",
     meaning: "buổi tối, tối",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "17",
@@ -1639,6 +2043,8 @@ export const initialBai4: Flashcard[] = [
     reading: "よる",
     romaji: "yoru",
     meaning: "đêm, khuya",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "18",
@@ -1647,6 +2053,8 @@ export const initialBai4: Flashcard[] = [
     reading: "おととい",
     romaji: "ototoi",
     meaning: "hôm kia",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "19",
@@ -1655,6 +2063,8 @@ export const initialBai4: Flashcard[] = [
     reading: "きのう",
     romaji: "kinou",
     meaning: "hôm qua",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "20",
@@ -1663,6 +2073,8 @@ export const initialBai4: Flashcard[] = [
     reading: "きょう",
     romaji: "kyou",
     meaning: "hôm nay",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "21",
@@ -1671,6 +2083,8 @@ export const initialBai4: Flashcard[] = [
     reading: "あした",
     romaji: "ashita",
     meaning: "ngày mai",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "22",
@@ -1679,6 +2093,8 @@ export const initialBai4: Flashcard[] = [
     reading: "あさって",
     romaji: "asatte",
     meaning: "ngày kia",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "23",
@@ -1687,6 +2103,8 @@ export const initialBai4: Flashcard[] = [
     reading: "けさ",
     romaji: "kesa",
     meaning: "sáng nay",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "24",
@@ -1695,6 +2113,8 @@ export const initialBai4: Flashcard[] = [
     reading: "こんばん",
     romaji: "konban",
     meaning: "tối nay",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "25",
@@ -1703,6 +2123,8 @@ export const initialBai4: Flashcard[] = [
     reading: "こんや",
     romaji: "konya",
     meaning: "đêm nay",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "26",
@@ -1711,6 +2133,8 @@ export const initialBai4: Flashcard[] = [
     reading: "やすみ",
     romaji: "yasumi",
     meaning: "nghỉ, nghỉ phép, ngày nghỉ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "27",
@@ -1719,6 +2143,8 @@ export const initialBai4: Flashcard[] = [
     reading: "ひるやすみ",
     romaji: "hiruyasumi",
     meaning: "nghỉ trưa",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "28",
@@ -1727,6 +2153,8 @@ export const initialBai4: Flashcard[] = [
     reading: "まいあさ",
     romaji: "maiasa",
     meaning: "mỗi sáng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "29",
@@ -1735,6 +2163,8 @@ export const initialBai4: Flashcard[] = [
     reading: "まいばん",
     romaji: "maiban",
     meaning: "mỗi tối",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "30",
@@ -1743,6 +2173,8 @@ export const initialBai4: Flashcard[] = [
     reading: "まいにち",
     romaji: "mainichi",
     meaning: "mỗi ngày",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "31",
@@ -1751,6 +2183,8 @@ export const initialBai4: Flashcard[] = [
     reading: "なんじ",
     romaji: "nanji",
     meaning: "mấy giờ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "32",
@@ -1759,6 +2193,8 @@ export const initialBai4: Flashcard[] = [
     reading: "なんぷん",
     romaji: "nanpun",
     meaning: "mấy phút",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "33",
@@ -1767,6 +2203,8 @@ export const initialBai4: Flashcard[] = [
     reading: "はたらく",
     romaji: "hataraku",
     meaning: "làm việc",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "34",
@@ -1775,6 +2213,8 @@ export const initialBai4: Flashcard[] = [
     reading: "やすむ",
     romaji: "yasumu",
     meaning: "nghỉ, nghỉ ngơi",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "35",
@@ -1783,6 +2223,8 @@ export const initialBai4: Flashcard[] = [
     reading: "おわる",
     romaji: "owaru",
     meaning: "hết, kết thúc, xong",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "36",
@@ -1791,6 +2233,8 @@ export const initialBai4: Flashcard[] = [
     reading: "おきる",
     romaji: "okiru",
     meaning: "thức dậy",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "37",
@@ -1799,6 +2243,8 @@ export const initialBai4: Flashcard[] = [
     reading: "ねる",
     romaji: "neru",
     meaning: "ngủ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "38",
@@ -1807,6 +2253,8 @@ export const initialBai4: Flashcard[] = [
     reading: "べんきょうする",
     romaji: "benkyou suru",
     meaning: "học",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "39",
@@ -1815,6 +2263,8 @@ export const initialBai4: Flashcard[] = [
     reading: "～から",
     romaji: "~kara",
     meaning: "từ ~",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "40",
@@ -1823,6 +2273,8 @@ export const initialBai4: Flashcard[] = [
     reading: "～まで",
     romaji: "~made",
     meaning: "đến ~",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "41",
@@ -1831,6 +2283,8 @@ export const initialBai4: Flashcard[] = [
     reading: "～と～",
     romaji: "~to~",
     meaning: "~ và ~ (dùng để nối hai danh từ)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "42",
@@ -1839,6 +2293,8 @@ export const initialBai4: Flashcard[] = [
     reading: "しけん",
     romaji: "shiken",
     meaning: "kỳ thi",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "43",
@@ -1847,6 +2303,8 @@ export const initialBai4: Flashcard[] = [
     reading: "かいぎ",
     romaji: "kaigi",
     meaning: "cuộc họp",
+    idChapter: 0,
+    uniqueId: ""
   },
 ];
 
@@ -1858,6 +2316,8 @@ export const initialBai5: Flashcard[] = [
     reading: "ひこうき",
     romaji: "hikouki",
     meaning: "máy bay",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "2",
@@ -1866,6 +2326,8 @@ export const initialBai5: Flashcard[] = [
     reading: "ふね",
     romaji: "fune",
     meaning: "thuyền, tàu thủy",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "3",
@@ -1874,6 +2336,8 @@ export const initialBai5: Flashcard[] = [
     reading: "ちかてつ",
     romaji: "chikatetsu",
     meaning: "tàu điện ngầm",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "4",
@@ -1882,6 +2346,8 @@ export const initialBai5: Flashcard[] = [
     reading: "でんしゃ",
     romaji: "densha",
     meaning: "tàu điện",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "5",
@@ -1890,6 +2356,8 @@ export const initialBai5: Flashcard[] = [
     reading: "バイク",
     romaji: "baiku",
     meaning: "xe máy",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "6",
@@ -1898,6 +2366,8 @@ export const initialBai5: Flashcard[] = [
     reading: "バス",
     romaji: "basu",
     meaning: "xe bus",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "7",
@@ -1906,6 +2376,8 @@ export const initialBai5: Flashcard[] = [
     reading: "タクシー",
     romaji: "takushii",
     meaning: "taxi",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "8",
@@ -1914,6 +2386,8 @@ export const initialBai5: Flashcard[] = [
     reading: "じてんしゃ",
     romaji: "jitensha",
     meaning: "xe đạp",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "9",
@@ -1922,6 +2396,8 @@ export const initialBai5: Flashcard[] = [
     reading: "あるいて",
     romaji: "aruite",
     meaning: "đi bộ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "10",
@@ -1930,6 +2406,8 @@ export const initialBai5: Flashcard[] = [
     reading: "ホテル",
     romaji: "hoteru",
     meaning: "khách sạn",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "11",
@@ -1938,6 +2416,8 @@ export const initialBai5: Flashcard[] = [
     reading: "びじゅつかん",
     romaji: "bijutsukan",
     meaning: "bảo tàng mỹ thuật",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "12",
@@ -1946,6 +2426,8 @@ export const initialBai5: Flashcard[] = [
     reading: "ホーチミンし",
     romaji: "Ho Chi Minh-shi",
     meaning: "Thành phố Hồ Chí Minh",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "13",
@@ -1954,6 +2436,8 @@ export const initialBai5: Flashcard[] = [
     reading: "ハイズオン",
     romaji: "Haizuon",
     meaning: "Hải Dương",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "14",
@@ -1962,6 +2446,8 @@ export const initialBai5: Flashcard[] = [
     reading: "ハロンわん",
     romaji: "Harong Wan",
     meaning: "vịnh Hạ Long",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "15",
@@ -1970,6 +2456,8 @@ export const initialBai5: Flashcard[] = [
     reading: "ともだち",
     romaji: "tomodachi",
     meaning: "bạn, bạn bè",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "16",
@@ -1978,6 +2466,8 @@ export const initialBai5: Flashcard[] = [
     reading: "ひとりで",
     romaji: "hitori de",
     meaning: "một mình",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "17",
@@ -1986,6 +2476,8 @@ export const initialBai5: Flashcard[] = [
     reading: "ひと",
     romaji: "hito",
     meaning: "người",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "18",
@@ -1994,6 +2486,8 @@ export const initialBai5: Flashcard[] = [
     reading: "かぞく",
     romaji: "kazoku",
     meaning: "gia đình",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "19",
@@ -2002,6 +2496,8 @@ export const initialBai5: Flashcard[] = [
     reading: "せんしゅう",
     romaji: "senshuu",
     meaning: "tuần trước",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "20",
@@ -2010,6 +2506,8 @@ export const initialBai5: Flashcard[] = [
     reading: "こんしゅう",
     romaji: "konshuu",
     meaning: "tuần này",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "21",
@@ -2018,6 +2516,8 @@ export const initialBai5: Flashcard[] = [
     reading: "らいしゅう",
     romaji: "raishuu",
     meaning: "tuần sau",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "22",
@@ -2026,6 +2526,8 @@ export const initialBai5: Flashcard[] = [
     reading: "せんげつ",
     romaji: "sengetsu",
     meaning: "tháng trước",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "23",
@@ -2034,6 +2536,8 @@ export const initialBai5: Flashcard[] = [
     reading: "こんげつ",
     romaji: "kongetsu",
     meaning: "tháng này",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "24",
@@ -2042,6 +2546,8 @@ export const initialBai5: Flashcard[] = [
     reading: "らいげつ",
     romaji: "raigetsu",
     meaning: "tháng sau",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "25",
@@ -2050,6 +2556,8 @@ export const initialBai5: Flashcard[] = [
     reading: "きょねん",
     romaji: "kyonen",
     meaning: "năm ngoái",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "26",
@@ -2058,6 +2566,8 @@ export const initialBai5: Flashcard[] = [
     reading: "ことし",
     romaji: "kotoshi",
     meaning: "năm nay",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "27",
@@ -2066,6 +2576,8 @@ export const initialBai5: Flashcard[] = [
     reading: "らいねん",
     romaji: "rainen",
     meaning: "năm sau",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "28",
@@ -2074,6 +2586,8 @@ export const initialBai5: Flashcard[] = [
     reading: "ついたち",
     romaji: "tsuitachi",
     meaning: "mồng 1",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "29",
@@ -2082,6 +2596,8 @@ export const initialBai5: Flashcard[] = [
     reading: "ふつか",
     romaji: "futsuka",
     meaning: "mồng 2",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "30",
@@ -2090,6 +2606,8 @@ export const initialBai5: Flashcard[] = [
     reading: "みっか",
     romaji: "mikka",
     meaning: "mồng 3",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "31",
@@ -2098,6 +2616,8 @@ export const initialBai5: Flashcard[] = [
     reading: "よっか",
     romaji: "yokka",
     meaning: "mồng 4",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "32",
@@ -2106,6 +2626,8 @@ export const initialBai5: Flashcard[] = [
     reading: "いつか",
     romaji: "itsuka",
     meaning: "mồng 5",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "33",
@@ -2114,6 +2636,8 @@ export const initialBai5: Flashcard[] = [
     reading: "むいか",
     romaji: "muika",
     meaning: "mồng 6",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "34",
@@ -2122,6 +2646,8 @@ export const initialBai5: Flashcard[] = [
     reading: "なのか",
     romaji: "nanoka",
     meaning: "mồng 7",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "35",
@@ -2130,6 +2656,8 @@ export const initialBai5: Flashcard[] = [
     reading: "ようか",
     romaji: "youka",
     meaning: "mồng 8",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "36",
@@ -2138,6 +2666,8 @@ export const initialBai5: Flashcard[] = [
     reading: "ここのか",
     romaji: "kokonoka",
     meaning: "mồng 9",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "37",
@@ -2146,6 +2676,8 @@ export const initialBai5: Flashcard[] = [
     reading: "とおか",
     romaji: "tooka",
     meaning: "mồng 10",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "38",
@@ -2154,6 +2686,8 @@ export const initialBai5: Flashcard[] = [
     reading: "じゅうよっか",
     romaji: "juuyokka",
     meaning: "ngày 14",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "39",
@@ -2162,6 +2696,8 @@ export const initialBai5: Flashcard[] = [
     reading: "はつか",
     romaji: "hatsuka",
     meaning: "ngày 20",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "40",
@@ -2170,6 +2706,8 @@ export const initialBai5: Flashcard[] = [
     reading: "にじゅうよっか",
     romaji: "nijuu yokka",
     meaning: "ngày 24",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "41",
@@ -2178,6 +2716,8 @@ export const initialBai5: Flashcard[] = [
     reading: "たんじょうび",
     romaji: "tanjoubi",
     meaning: "sinh nhật",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "42",
@@ -2186,6 +2726,8 @@ export const initialBai5: Flashcard[] = [
     reading: "～ごろ",
     romaji: "~goro",
     meaning: "khoảng ~",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "43",
@@ -2194,6 +2736,8 @@ export const initialBai5: Flashcard[] = [
     reading: "なんにち",
     romaji: "nan nichi",
     meaning: "ngày mấy, ngày bao nhiêu, mấy ngày, bao nhiêu ngày",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "44",
@@ -2202,6 +2746,8 @@ export const initialBai5: Flashcard[] = [
     reading: "なんがつ",
     romaji: "nan gatsu",
     meaning: "tháng mấy",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "45",
@@ -2210,6 +2756,8 @@ export const initialBai5: Flashcard[] = [
     reading: "いつ",
     romaji: "itsu",
     meaning: "bao giờ, khi nào",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "46",
@@ -2218,6 +2766,8 @@ export const initialBai5: Flashcard[] = [
     reading: "いく / いきます",
     romaji: "iku / ikimasu",
     meaning: "đi",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "47",
@@ -2226,6 +2776,8 @@ export const initialBai5: Flashcard[] = [
     reading: "くる / きます",
     romaji: "kuru / kimasu",
     meaning: "đến",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "48",
@@ -2234,6 +2786,8 @@ export const initialBai5: Flashcard[] = [
     reading: "かえる / かえります",
     romaji: "kaeru / kaerimasu",
     meaning: "về",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "49",
@@ -2242,6 +2796,8 @@ export const initialBai5: Flashcard[] = [
     reading: "にっき",
     romaji: "nikki",
     meaning: "Nhật kí",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "50",
@@ -2250,6 +2806,8 @@ export const initialBai5: Flashcard[] = [
     reading: "ほんしゃ",
     romaji: "honsha",
     meaning: "Trụ sở chính",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "51",
@@ -2258,6 +2816,8 @@ export const initialBai5: Flashcard[] = [
     reading: "くうこう",
     romaji: "kuukou",
     meaning: "Sân bay",
+    idChapter: 0,
+    uniqueId: ""
   },
 ];
 
@@ -2270,6 +2830,8 @@ export const initialBai6: Flashcard[] = [
     reading: "チョコレート",
     romaji: "chokoreeto",
     meaning: "sô cô la",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "2",
@@ -2278,6 +2840,8 @@ export const initialBai6: Flashcard[] = [
     reading: "パン",
     romaji: "pan",
     meaning: "bánh mỳ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "3",
@@ -2286,6 +2850,8 @@ export const initialBai6: Flashcard[] = [
     reading: "ごはん",
     romaji: "gohan",
     meaning: "cơm",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "4",
@@ -2294,6 +2860,8 @@ export const initialBai6: Flashcard[] = [
     reading: "たまご",
     romaji: "tamago",
     meaning: "trứng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "5",
@@ -2302,6 +2870,8 @@ export const initialBai6: Flashcard[] = [
     reading: "にく",
     romaji: "niku",
     meaning: "thịt",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "6",
@@ -2310,6 +2880,8 @@ export const initialBai6: Flashcard[] = [
     reading: "ぎゅうにく",
     romaji: "gyuuniku",
     meaning: "thịt bò",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "7",
@@ -2318,6 +2890,8 @@ export const initialBai6: Flashcard[] = [
     reading: "さかな",
     romaji: "sakana",
     meaning: "cá",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "8",
@@ -2326,6 +2900,8 @@ export const initialBai6: Flashcard[] = [
     reading: "やさい",
     romaji: "yasai",
     meaning: "rau củ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "9",
@@ -2334,6 +2910,8 @@ export const initialBai6: Flashcard[] = [
     reading: "くだもの",
     romaji: "kudamono",
     meaning: "hoa quả",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "10",
@@ -2342,6 +2920,8 @@ export const initialBai6: Flashcard[] = [
     reading: "みず",
     romaji: "mizu",
     meaning: "nước",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "11",
@@ -2350,6 +2930,8 @@ export const initialBai6: Flashcard[] = [
     reading: "おちゃ",
     romaji: "ocha",
     meaning: "trà",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "12",
@@ -2358,6 +2940,8 @@ export const initialBai6: Flashcard[] = [
     reading: "コーヒー",
     romaji: "koohii",
     meaning: "cà phê",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "13",
@@ -2366,6 +2950,8 @@ export const initialBai6: Flashcard[] = [
     reading: "ワイン",
     romaji: "wain",
     meaning: "rượu vang",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "14",
@@ -2374,6 +2960,8 @@ export const initialBai6: Flashcard[] = [
     reading: "ジュース",
     romaji: "juusu",
     meaning: "nước hoa quả",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "15",
@@ -2382,6 +2970,8 @@ export const initialBai6: Flashcard[] = [
     reading: "ビール",
     romaji: "biiru",
     meaning: "bia",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "16",
@@ -2390,6 +2980,8 @@ export const initialBai6: Flashcard[] = [
     reading: "おさけ",
     romaji: "osake",
     meaning: "rượu",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "17",
@@ -2398,6 +2990,8 @@ export const initialBai6: Flashcard[] = [
     reading: "たばこ",
     romaji: "tabako",
     meaning: "thuốc lá",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "18",
@@ -2406,6 +3000,8 @@ export const initialBai6: Flashcard[] = [
     reading: "くすり",
     romaji: "kusuri",
     meaning: "thuốc",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "19",
@@ -2414,6 +3010,8 @@ export const initialBai6: Flashcard[] = [
     reading: "てがみ",
     romaji: "tegami",
     meaning: "thư, bức thư",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "20",
@@ -2422,6 +3020,8 @@ export const initialBai6: Flashcard[] = [
     reading: "メール",
     romaji: "meeru",
     meaning: "mail",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "21",
@@ -2430,6 +3030,8 @@ export const initialBai6: Flashcard[] = [
     reading: "レポート",
     romaji: "repooto",
     meaning: "bản báo cáo",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "22",
@@ -2438,6 +3040,8 @@ export const initialBai6: Flashcard[] = [
     reading: "コメント",
     romaji: "komento",
     meaning: "bình luận",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "23",
@@ -2446,6 +3050,8 @@ export const initialBai6: Flashcard[] = [
     reading: "おんがく",
     romaji: "ongaku",
     meaning: "âm nhạc",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "24",
@@ -2454,6 +3060,8 @@ export const initialBai6: Flashcard[] = [
     reading: "えいが",
     romaji: "eiga",
     meaning: "phim, điện ảnh",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "25",
@@ -2462,6 +3070,8 @@ export const initialBai6: Flashcard[] = [
     reading: "しゃしん",
     romaji: "shashin",
     meaning: "ảnh",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "26",
@@ -2470,6 +3080,8 @@ export const initialBai6: Flashcard[] = [
     reading: "しゅくだい",
     romaji: "shukudai",
     meaning: "bài về nhà",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "27",
@@ -2478,6 +3090,8 @@ export const initialBai6: Flashcard[] = [
     reading: "レストラン",
     romaji: "resutoran",
     meaning: "nhà hàng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "28",
@@ -2486,6 +3100,8 @@ export const initialBai6: Flashcard[] = [
     reading: "カフェ",
     romaji: "kafe",
     meaning: "quán cà phê",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "29",
@@ -2494,6 +3110,8 @@ export const initialBai6: Flashcard[] = [
     reading: "にわ",
     romaji: "niwa",
     meaning: "vườn",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "30",
@@ -2502,6 +3120,8 @@ export const initialBai6: Flashcard[] = [
     reading: "みせ",
     romaji: "mise",
     meaning: "cửa hàng, tiệm",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "31",
@@ -2510,6 +3130,8 @@ export const initialBai6: Flashcard[] = [
     reading: "おしょうがつ",
     romaji: "oshougatsu",
     meaning: "Tết, năm mới",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "32",
@@ -2518,6 +3140,8 @@ export const initialBai6: Flashcard[] = [
     reading: "[お]はなみ",
     romaji: "ohanami",
     meaning: "ngắm hoa anh đào",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "33",
@@ -2526,6 +3150,8 @@ export const initialBai6: Flashcard[] = [
     reading: "みんなで",
     romaji: "minnade",
     meaning: "mọi người cùng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "34",
@@ -2534,6 +3160,8 @@ export const initialBai6: Flashcard[] = [
     reading: "なに",
     romaji: "nani",
     meaning: "cái gì, gì",
+    idChapter: 0,
+    uniqueId: ""
   },
 
   // ĐỘNG TỪ NHÓM I
@@ -2544,6 +3172,8 @@ export const initialBai6: Flashcard[] = [
     reading: "よみます",
     romaji: "yomimasu",
     meaning: "đọc",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "36",
@@ -2552,6 +3182,8 @@ export const initialBai6: Flashcard[] = [
     reading: "かきます",
     romaji: "kakimasu",
     meaning: "viết",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "37",
@@ -2560,6 +3192,8 @@ export const initialBai6: Flashcard[] = [
     reading: "かいます",
     romaji: "kaimasu",
     meaning: "mua",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "38",
@@ -2568,6 +3202,8 @@ export const initialBai6: Flashcard[] = [
     reading: "とります",
     romaji: "torimasu",
     meaning: "chụp ảnh",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "39",
@@ -2576,6 +3212,8 @@ export const initialBai6: Flashcard[] = [
     reading: "ききます",
     romaji: "kikimasu",
     meaning: "nghe",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "40",
@@ -2584,6 +3222,8 @@ export const initialBai6: Flashcard[] = [
     reading: "すいます",
     romaji: "suimasu",
     meaning: "hút thuốc",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "41",
@@ -2592,6 +3232,8 @@ export const initialBai6: Flashcard[] = [
     reading: "あいます",
     romaji: "aimasu",
     meaning: "gặp",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "42",
@@ -2600,6 +3242,8 @@ export const initialBai6: Flashcard[] = [
     reading: "のみます",
     romaji: "nomimasu",
     meaning: "uống",
+    idChapter: 0,
+    uniqueId: ""
   },
 
   // ĐỘNG TỪ NHÓM II
@@ -2610,6 +3254,8 @@ export const initialBai6: Flashcard[] = [
     reading: "たべます",
     romaji: "tabemasu",
     meaning: "ăn",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "44",
@@ -2618,6 +3264,8 @@ export const initialBai6: Flashcard[] = [
     reading: "みます",
     romaji: "mimasu",
     meaning: "xem, nhìn, trông",
+    idChapter: 0,
+    uniqueId: ""
   },
 
   // ĐỘNG TỪ NHÓM III
@@ -2628,6 +3276,8 @@ export const initialBai6: Flashcard[] = [
     reading: "します",
     romaji: "shimasu",
     meaning: "làm",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "46",
@@ -2636,6 +3286,8 @@ export const initialBai6: Flashcard[] = [
     reading: "しょくじします",
     romaji: "shokuji shimasu",
     meaning: "dùng bữa",
+    idChapter: 0,
+    uniqueId: ""
   },
 
   // TRẠNG TỪ
@@ -2646,6 +3298,8 @@ export const initialBai6: Flashcard[] = [
     reading: "いっしょに",
     romaji: "issho ni",
     meaning: "cùng nhau",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "48",
@@ -2654,6 +3308,8 @@ export const initialBai6: Flashcard[] = [
     reading: "ちょっと",
     romaji: "chotto",
     meaning: "một chút",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "49",
@@ -2662,6 +3318,8 @@ export const initialBai6: Flashcard[] = [
     reading: "いつも",
     romaji: "itsumo",
     meaning: "luôn luôn, lúc nào cũng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "50",
@@ -2670,6 +3328,8 @@ export const initialBai6: Flashcard[] = [
     reading: "ときどき",
     romaji: "tokidoki",
     meaning: "thỉnh thoảng",
+    idChapter: 0,
+    uniqueId: ""
   },
 ];
 
@@ -2681,6 +3341,8 @@ export const initialBai7: Flashcard[] = [
     reading: "まいしゅう",
     romaji: "maishuu",
     meaning: "mỗi tuần",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "2",
@@ -2689,6 +3351,8 @@ export const initialBai7: Flashcard[] = [
     reading: "まいつき",
     romaji: "maitsuki",
     meaning: "mỗi tháng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "3",
@@ -2697,6 +3361,8 @@ export const initialBai7: Flashcard[] = [
     reading: "まいとし",
     romaji: "maitoshi",
     meaning: "mỗi năm",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "4",
@@ -2705,6 +3371,8 @@ export const initialBai7: Flashcard[] = [
     reading: "ちち",
     romaji: "chichi",
     meaning: "bố (dùng khi nói về bố mình)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "5",
@@ -2713,6 +3381,8 @@ export const initialBai7: Flashcard[] = [
     reading: "はは",
     romaji: "haha",
     meaning: "mẹ (dùng khi nói về mẹ mình)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "6",
@@ -2721,6 +3391,8 @@ export const initialBai7: Flashcard[] = [
     reading: "おとうさん",
     romaji: "otousan",
     meaning: "bố (dùng khi nói về bố người khác hoặc xưng hô với bố mình)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "7",
@@ -2729,6 +3401,8 @@ export const initialBai7: Flashcard[] = [
     reading: "おかあさん",
     romaji: "okaasan",
     meaning: "mẹ (dùng khi nói về mẹ người khác hoặc xưng hô với mẹ mình)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "8",
@@ -2737,6 +3411,8 @@ export const initialBai7: Flashcard[] = [
     reading: "おっと／しゅじん",
     romaji: "otto / shujin",
     meaning: "chồng (của mình)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "9",
@@ -2745,6 +3421,8 @@ export const initialBai7: Flashcard[] = [
     reading: "つま／かない",
     romaji: "tsuma / kanai",
     meaning: "vợ (của mình)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "10",
@@ -2753,6 +3431,8 @@ export const initialBai7: Flashcard[] = [
     reading: "ごしゅじん",
     romaji: "goshujin",
     meaning: "chồng (của người khác)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "11",
@@ -2761,6 +3441,8 @@ export const initialBai7: Flashcard[] = [
     reading: "おくさん",
     romaji: "okusan",
     meaning: "vợ (của người khác)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "12",
@@ -2769,6 +3451,8 @@ export const initialBai7: Flashcard[] = [
     reading: "て",
     romaji: "te",
     meaning: "tay",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "13",
@@ -2777,6 +3461,8 @@ export const initialBai7: Flashcard[] = [
     reading: "はし",
     romaji: "hashi",
     meaning: "đũa",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "14",
@@ -2785,6 +3471,8 @@ export const initialBai7: Flashcard[] = [
     reading: "スプーン",
     romaji: "supuun",
     meaning: "thìa",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "15",
@@ -2793,6 +3481,8 @@ export const initialBai7: Flashcard[] = [
     reading: "フォーク",
     romaji: "fooku",
     meaning: "dĩa, nĩa",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "16",
@@ -2801,6 +3491,8 @@ export const initialBai7: Flashcard[] = [
     reading: "ナイフ",
     romaji: "naifu",
     meaning: "dao",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "17",
@@ -2809,6 +3501,8 @@ export const initialBai7: Flashcard[] = [
     reading: "はさみ",
     romaji: "hasami",
     meaning: "kéo",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "18",
@@ -2817,6 +3511,8 @@ export const initialBai7: Flashcard[] = [
     reading: "かみ",
     romaji: "kami",
     meaning: "giấy",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "19",
@@ -2825,6 +3521,8 @@ export const initialBai7: Flashcard[] = [
     reading: "はな",
     romaji: "hana",
     meaning: "hoa",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "20",
@@ -2833,6 +3531,8 @@ export const initialBai7: Flashcard[] = [
     reading: "シャツ",
     romaji: "shatsu",
     meaning: "áo sơ mi",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "21",
@@ -2841,6 +3541,8 @@ export const initialBai7: Flashcard[] = [
     reading: "プレゼント",
     romaji: "purezento",
     meaning: "quà tặng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "22",
@@ -2849,6 +3551,8 @@ export const initialBai7: Flashcard[] = [
     reading: "きっぷ",
     romaji: "kippu",
     meaning: "vé",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "23",
@@ -2857,6 +3561,8 @@ export const initialBai7: Flashcard[] = [
     reading: "おちゃわん",
     romaji: "ochawan",
     meaning: "bát",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "24",
@@ -2865,6 +3571,8 @@ export const initialBai7: Flashcard[] = [
     reading: "ことば",
     romaji: "kotoba",
     meaning: "từ vựng, ngôn ngữ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "25",
@@ -2873,6 +3581,8 @@ export const initialBai7: Flashcard[] = [
     reading: "おかね",
     romaji: "okane",
     meaning: "tiền",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "26",
@@ -2881,6 +3591,8 @@ export const initialBai7: Flashcard[] = [
     reading: "クリスマス",
     romaji: "kurisumasu",
     meaning: "Giáng sinh",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "27",
@@ -2889,6 +3601,8 @@ export const initialBai7: Flashcard[] = [
     reading: "インターネット",
     romaji: "intaanetto",
     meaning: "Internet",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "28",
@@ -2897,6 +3611,8 @@ export const initialBai7: Flashcard[] = [
     reading: "ニュース",
     romaji: "nyuusu",
     meaning: "tin tức, bản tin",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "29",
@@ -2905,6 +3621,8 @@ export const initialBai7: Flashcard[] = [
     reading: "きる",
     romaji: "kiru",
     meaning: "cắt",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "30",
@@ -2913,6 +3631,8 @@ export const initialBai7: Flashcard[] = [
     reading: "きります",
     romaji: "kirimasu",
     meaning: "cắt (dạng lịch sự)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "31",
@@ -2921,6 +3641,8 @@ export const initialBai7: Flashcard[] = [
     reading: "おくる",
     romaji: "okuru",
     meaning: "gửi",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "32",
@@ -2929,6 +3651,8 @@ export const initialBai7: Flashcard[] = [
     reading: "おくります",
     romaji: "okurimasu",
     meaning: "gửi (dạng lịch sự)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "33",
@@ -2937,6 +3661,8 @@ export const initialBai7: Flashcard[] = [
     reading: "もらう",
     romaji: "morau",
     meaning: "nhận",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "34",
@@ -2945,6 +3671,8 @@ export const initialBai7: Flashcard[] = [
     reading: "もらいます",
     romaji: "moraimasu",
     meaning: "nhận (dạng lịch sự)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "35",
@@ -2953,6 +3681,8 @@ export const initialBai7: Flashcard[] = [
     reading: "ならう",
     romaji: "narau",
     meaning: "học",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "36",
@@ -2961,6 +3691,8 @@ export const initialBai7: Flashcard[] = [
     reading: "ならいます",
     romaji: "naraimasu",
     meaning: "học (dạng lịch sự)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "37",
@@ -2969,6 +3701,8 @@ export const initialBai7: Flashcard[] = [
     reading: "かす",
     romaji: "kasu",
     meaning: "cho mượn",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "38",
@@ -2977,6 +3711,8 @@ export const initialBai7: Flashcard[] = [
     reading: "かします",
     romaji: "kashimasu",
     meaning: "cho mượn (dạng lịch sự)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "39",
@@ -2985,6 +3721,8 @@ export const initialBai7: Flashcard[] = [
     reading: "あげる",
     romaji: "ageru",
     meaning: "cho, tặng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "40",
@@ -2993,6 +3731,8 @@ export const initialBai7: Flashcard[] = [
     reading: "あげます",
     romaji: "agemasu",
     meaning: "cho, tặng (dạng lịch sự)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "41",
@@ -3001,6 +3741,8 @@ export const initialBai7: Flashcard[] = [
     reading: "おしえる",
     romaji: "oshieru",
     meaning: "dạy",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "42",
@@ -3009,6 +3751,8 @@ export const initialBai7: Flashcard[] = [
     reading: "おしえます",
     romaji: "oshiemasu",
     meaning: "dạy (dạng lịch sự)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "43",
@@ -3017,6 +3761,8 @@ export const initialBai7: Flashcard[] = [
     reading: "かける",
     romaji: "kakeru",
     meaning: "gọi điện thoại",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "44",
@@ -3025,6 +3771,8 @@ export const initialBai7: Flashcard[] = [
     reading: "かけます",
     romaji: "kakemasu",
     meaning: "gọi điện thoại (dạng lịch sự)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "45",
@@ -3033,6 +3781,8 @@ export const initialBai7: Flashcard[] = [
     reading: "かりる",
     romaji: "kariru",
     meaning: "vay, mượn",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "46",
@@ -3041,6 +3791,8 @@ export const initialBai7: Flashcard[] = [
     reading: "かります",
     romaji: "karimasu",
     meaning: "vay, mượn (dạng lịch sự)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "47",
@@ -3049,6 +3801,8 @@ export const initialBai7: Flashcard[] = [
     reading: "もう",
     romaji: "mou",
     meaning: "đã",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "48",
@@ -3057,6 +3811,8 @@ export const initialBai7: Flashcard[] = [
     reading: "まだ",
     romaji: "mada",
     meaning: "vẫn, chưa",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "49",
@@ -3065,6 +3821,8 @@ export const initialBai7: Flashcard[] = [
     reading: "これから",
     romaji: "korekara",
     meaning: "từ bây giờ, từ nay",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "50",
@@ -3073,6 +3831,8 @@ export const initialBai7: Flashcard[] = [
     reading: "このあいだ",
     romaji: "kono aida",
     meaning: "vừa rồi, hôm nọ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "51",
@@ -3081,6 +3841,8 @@ export const initialBai7: Flashcard[] = [
     reading: "こいびと",
     romaji: "koibito",
     meaning: "người yêu",
+    idChapter: 0,
+    uniqueId: ""
   },
 ];
 export const initialBai9: Flashcard[] = [
@@ -3091,6 +3853,8 @@ export const initialBai9: Flashcard[] = [
     reading: "すき[な]",
     romaji: "suki",
     meaning: "thích",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "2",
@@ -3099,6 +3863,8 @@ export const initialBai9: Flashcard[] = [
     reading: "きらい[な]",
     romaji: "kirai",
     meaning: "ghét, không thích",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "3",
@@ -3107,6 +3873,8 @@ export const initialBai9: Flashcard[] = [
     reading: "じょうず[な]",
     romaji: "jouzu",
     meaning: "giỏi, khéo",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "4",
@@ -3115,6 +3883,8 @@ export const initialBai9: Flashcard[] = [
     reading: "へた[な]",
     romaji: "heta",
     meaning: "kém",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "5",
@@ -3123,6 +3893,8 @@ export const initialBai9: Flashcard[] = [
     reading: "いたい",
     romaji: "itai",
     meaning: "đau",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "6",
@@ -3131,6 +3903,8 @@ export const initialBai9: Flashcard[] = [
     reading: "おじいさん",
     romaji: "ojiisan",
     meaning: "ông",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "7",
@@ -3139,6 +3913,8 @@ export const initialBai9: Flashcard[] = [
     reading: "おじいちゃん",
     romaji: "ojiichan",
     meaning: "ông",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "8",
@@ -3147,6 +3923,8 @@ export const initialBai9: Flashcard[] = [
     reading: "おばあさん",
     romaji: "obaasan",
     meaning: "bà",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "9",
@@ -3155,6 +3933,8 @@ export const initialBai9: Flashcard[] = [
     reading: "おばあちゃん",
     romaji: "obaachan",
     meaning: "bà",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "10",
@@ -3163,6 +3943,8 @@ export const initialBai9: Flashcard[] = [
     reading: "はいしゃ",
     romaji: "haisha",
     meaning: "nha sĩ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "11",
@@ -3171,6 +3953,8 @@ export const initialBai9: Flashcard[] = [
     reading: "りょうり",
     romaji: "ryouri",
     meaning: "món ăn, việc nấu ăn",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "12",
@@ -3179,6 +3963,8 @@ export const initialBai9: Flashcard[] = [
     reading: "のみもの",
     romaji: "nomimono",
     meaning: "đồ uống",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "13",
@@ -3187,6 +3973,8 @@ export const initialBai9: Flashcard[] = [
     reading: "スポーツ",
     romaji: "supootsu",
     meaning: "thể thao",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "14",
@@ -3195,6 +3983,8 @@ export const initialBai9: Flashcard[] = [
     reading: "やきゅう",
     romaji: "yakyuu",
     meaning: "bóng chày",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "15",
@@ -3203,6 +3993,8 @@ export const initialBai9: Flashcard[] = [
     reading: "ダンス",
     romaji: "dansu",
     meaning: "nhảy, khiêu vũ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "16",
@@ -3211,6 +4003,8 @@ export const initialBai9: Flashcard[] = [
     reading: "カラオケ",
     romaji: "karaoke",
     meaning: "karaoke",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "17",
@@ -3219,6 +4013,8 @@ export const initialBai9: Flashcard[] = [
     reading: "うた",
     romaji: "uta",
     meaning: "bài hát",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "18",
@@ -3227,6 +4023,8 @@ export const initialBai9: Flashcard[] = [
     reading: "かぶき",
     romaji: "kabuki",
     meaning: "kịch kabuki",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "19",
@@ -3235,6 +4033,8 @@ export const initialBai9: Flashcard[] = [
     reading: "え",
     romaji: "e",
     meaning: "tranh, hội họa",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "20",
@@ -3243,6 +4043,8 @@ export const initialBai9: Flashcard[] = [
     reading: "じ",
     romaji: "ji",
     meaning: "chữ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "21",
@@ -3251,6 +4053,8 @@ export const initialBai9: Flashcard[] = [
     reading: "かんじ",
     romaji: "kanji",
     meaning: "chữ Hán",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "22",
@@ -3259,6 +4063,8 @@ export const initialBai9: Flashcard[] = [
     reading: "かぜ 「～をひきます」",
     romaji: "kaze o hikimasu",
     meaning: "cảm, cúm [bị cảm]",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "23",
@@ -3267,6 +4073,8 @@ export const initialBai9: Flashcard[] = [
     reading: "ねつ 「～があります」",
     romaji: "netsu ga arimasu",
     meaning: "sốt [bị sốt]",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "24",
@@ -3275,6 +4083,8 @@ export const initialBai9: Flashcard[] = [
     reading: "じかん",
     romaji: "jikan",
     meaning: "thời gian",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "25",
@@ -3283,6 +4093,8 @@ export const initialBai9: Flashcard[] = [
     reading: "ようじ",
     romaji: "youji",
     meaning: "việc bận, công chuyện",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "26",
@@ -3291,6 +4103,8 @@ export const initialBai9: Flashcard[] = [
     reading: "やくそく",
     romaji: "yakusoku",
     meaning: "cuộc hẹn, lời hứa",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "27",
@@ -3299,6 +4113,8 @@ export const initialBai9: Flashcard[] = [
     reading: "は",
     romaji: "ha",
     meaning: "răng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "28",
@@ -3307,6 +4123,8 @@ export const initialBai9: Flashcard[] = [
     reading: "どうして",
     romaji: "doushite",
     meaning: "tại sao",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "29",
@@ -3315,6 +4133,8 @@ export const initialBai9: Flashcard[] = [
     reading: "わかる",
     romaji: "wakaru",
     meaning: "hiểu, nắm được",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "30",
@@ -3323,6 +4143,8 @@ export const initialBai9: Flashcard[] = [
     reading: "わかります",
     romaji: "wakarimasu",
     meaning: "hiểu, nắm được (lịch sự)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "31",
@@ -3331,6 +4153,8 @@ export const initialBai9: Flashcard[] = [
     reading: "ある",
     romaji: "aru",
     meaning: "có (sở hữu)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "32",
@@ -3339,6 +4163,8 @@ export const initialBai9: Flashcard[] = [
     reading: "あります",
     romaji: "arimasu",
     meaning: "có (sở hữu) (lịch sự)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "33",
@@ -3347,6 +4173,8 @@ export const initialBai9: Flashcard[] = [
     reading: "よく",
     romaji: "yoku",
     meaning: "tốt, rõ (chỉ mức độ), thường",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "34",
@@ -3355,6 +4183,8 @@ export const initialBai9: Flashcard[] = [
     reading: "だいたい",
     romaji: "daitai",
     meaning: "đại khái, đại thể",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "35",
@@ -3363,6 +4193,8 @@ export const initialBai9: Flashcard[] = [
     reading: "たくさん",
     romaji: "takusan",
     meaning: "nhiều",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "36",
@@ -3371,6 +4203,8 @@ export const initialBai9: Flashcard[] = [
     reading: "すこし",
     romaji: "sukoshi",
     meaning: "ít, một ít",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "37",
@@ -3379,6 +4213,8 @@ export const initialBai9: Flashcard[] = [
     reading: "ぜんぜん",
     romaji: "zenzen",
     meaning: "hoàn toàn ~ không",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "38",
@@ -3387,6 +4223,8 @@ export const initialBai9: Flashcard[] = [
     reading: "はやく",
     romaji: "hayaku",
     meaning: "sớm, nhanh",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "39",
@@ -3395,6 +4233,8 @@ export const initialBai9: Flashcard[] = [
     reading: "～から",
     romaji: "~kara",
     meaning: "vì ~",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "40",
@@ -3403,6 +4243,8 @@ export const initialBai9: Flashcard[] = [
     reading: "ほかに",
     romaji: "hokani",
     meaning: "ngoài ra, bên cạnh đó",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "41",
@@ -3411,6 +4253,8 @@ export const initialBai9: Flashcard[] = [
     reading: "ベトナムご",
     romaji: "Betonamugo",
     meaning: "tiếng Việt",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "42",
@@ -3419,6 +4263,8 @@ export const initialBai9: Flashcard[] = [
     reading: "コンサート",
     romaji: "konsaato",
     meaning: "buổi hòa nhạc",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "43",
@@ -3427,6 +4273,8 @@ export const initialBai9: Flashcard[] = [
     reading: "チケット",
     romaji: "chiketto",
     meaning: "vé",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "44",
@@ -3435,6 +4283,8 @@ export const initialBai9: Flashcard[] = [
     reading: "ざんねん",
     romaji: "zannen",
     meaning: "đáng tiếc",
+    idChapter: 0,
+    uniqueId: ""
   },
 ];
 export const initialBai10: Flashcard[] = [
@@ -3445,6 +4295,8 @@ export const initialBai10: Flashcard[] = [
     reading: "いろいろ",
     romaji: "iroiro",
     meaning: "nhiều, đa dạng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "2",
@@ -3453,6 +4305,8 @@ export const initialBai10: Flashcard[] = [
     reading: "おとこのひと",
     romaji: "otoko no hito",
     meaning: "người đàn ông",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "3",
@@ -3461,6 +4315,8 @@ export const initialBai10: Flashcard[] = [
     reading: "おんなのひと",
     romaji: "onna no hito",
     meaning: "người phụ nữ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "4",
@@ -3469,6 +4325,8 @@ export const initialBai10: Flashcard[] = [
     reading: "おとこのこ",
     romaji: "otoko no ko",
     meaning: "cậu bé",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "5",
@@ -3477,6 +4335,8 @@ export const initialBai10: Flashcard[] = [
     reading: "おんなのこ",
     romaji: "onna no ko",
     meaning: "cô bé",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "6",
@@ -3485,6 +4345,8 @@ export const initialBai10: Flashcard[] = [
     reading: "いぬ",
     romaji: "inu",
     meaning: "chó",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "7",
@@ -3493,6 +4355,8 @@ export const initialBai10: Flashcard[] = [
     reading: "ねこ",
     romaji: "neko",
     meaning: "mèo",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "8",
@@ -3501,6 +4365,8 @@ export const initialBai10: Flashcard[] = [
     reading: "き",
     romaji: "ki",
     meaning: "cây, gỗ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "9",
@@ -3509,6 +4375,8 @@ export const initialBai10: Flashcard[] = [
     reading: "もの",
     romaji: "mono",
     meaning: "vật, đồ vật",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "10",
@@ -3517,6 +4385,8 @@ export const initialBai10: Flashcard[] = [
     reading: "はこ",
     romaji: "hako",
     meaning: "hộp",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "11",
@@ -3525,6 +4395,8 @@ export const initialBai10: Flashcard[] = [
     reading: "れいぞうこ",
     romaji: "reizouko",
     meaning: "tủ lạnh",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "12",
@@ -3533,6 +4405,8 @@ export const initialBai10: Flashcard[] = [
     reading: "テーブル",
     romaji: "teeburu",
     meaning: "bàn",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "13",
@@ -3541,6 +4415,8 @@ export const initialBai10: Flashcard[] = [
     reading: "ベッド",
     romaji: "beddo",
     meaning: "giường",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "14",
@@ -3549,6 +4425,8 @@ export const initialBai10: Flashcard[] = [
     reading: "こうえん",
     romaji: "kouen",
     meaning: "công viên",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "15",
@@ -3557,6 +4435,8 @@ export const initialBai10: Flashcard[] = [
     reading: "ほんや",
     romaji: "honya",
     meaning: "hiệu sách",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "16",
@@ -3565,6 +4445,8 @@ export const initialBai10: Flashcard[] = [
     reading: "いけ",
     romaji: "ike",
     meaning: "cái ao",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "17",
@@ -3573,6 +4455,8 @@ export const initialBai10: Flashcard[] = [
     reading: "～や",
     romaji: "~ya",
     meaning: "hiệu ~, cửa hàng ~",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "18",
@@ -3581,6 +4465,8 @@ export const initialBai10: Flashcard[] = [
     reading: "ちか",
     romaji: "chika",
     meaning: "tầng hầm",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "19",
@@ -3589,6 +4475,8 @@ export const initialBai10: Flashcard[] = [
     reading: "うえ",
     romaji: "ue",
     meaning: "trên",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "20",
@@ -3597,6 +4485,8 @@ export const initialBai10: Flashcard[] = [
     reading: "した",
     romaji: "shita",
     meaning: "dưới",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "21",
@@ -3605,6 +4495,8 @@ export const initialBai10: Flashcard[] = [
     reading: "まえ",
     romaji: "mae",
     meaning: "trước",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "22",
@@ -3613,6 +4505,8 @@ export const initialBai10: Flashcard[] = [
     reading: "うしろ",
     romaji: "ushiro",
     meaning: "sau",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "23",
@@ -3621,6 +4515,8 @@ export const initialBai10: Flashcard[] = [
     reading: "みぎ",
     romaji: "migi",
     meaning: "phải",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "24",
@@ -3629,6 +4525,8 @@ export const initialBai10: Flashcard[] = [
     reading: "ひだり",
     romaji: "hidari",
     meaning: "trái",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "25",
@@ -3637,6 +4535,8 @@ export const initialBai10: Flashcard[] = [
     reading: "なか",
     romaji: "naka",
     meaning: "trong, giữa",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "26",
@@ -3645,6 +4545,8 @@ export const initialBai10: Flashcard[] = [
     reading: "そと",
     romaji: "soto",
     meaning: "ngoài",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "27",
@@ -3653,6 +4555,8 @@ export const initialBai10: Flashcard[] = [
     reading: "となり",
     romaji: "tonari",
     meaning: "bên cạnh",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "28",
@@ -3661,6 +4565,8 @@ export const initialBai10: Flashcard[] = [
     reading: "ちかく",
     romaji: "chikaku",
     meaning: "gần",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "29",
@@ -3669,6 +4575,8 @@ export const initialBai10: Flashcard[] = [
     reading: "あいだ",
     romaji: "aida",
     meaning: "giữa",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "30",
@@ -3677,6 +4585,8 @@ export const initialBai10: Flashcard[] = [
     reading: "ある",
     romaji: "aru",
     meaning: "có (tồn tại, dùng cho đồ vật)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "31",
@@ -3685,6 +4595,8 @@ export const initialBai10: Flashcard[] = [
     reading: "いる",
     romaji: "iru",
     meaning: "có, ở (tồn tại, dùng cho người và động vật)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "32",
@@ -3693,6 +4605,8 @@ export const initialBai10: Flashcard[] = [
     reading: "～や～など",
     romaji: "~ya~nado",
     meaning: "~ và ~, v.v.",
+    idChapter: 0,
+    uniqueId: ""
   },
 ];
 export const initialBai11: Flashcard[] = [
@@ -3703,6 +4617,8 @@ export const initialBai11: Flashcard[] = [
     reading: "こいびと",
     romaji: "koibito",
     meaning: "người yêu",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "2",
@@ -3711,6 +4627,8 @@ export const initialBai11: Flashcard[] = [
     reading: "あに",
     romaji: "ani",
     meaning: "anh trai (mình)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "3",
@@ -3719,6 +4637,8 @@ export const initialBai11: Flashcard[] = [
     reading: "おにいさん",
     romaji: "oniisan",
     meaning: "anh trai (của người khác hoặc xưng hô với anh trai mình)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "4",
@@ -3727,6 +4647,8 @@ export const initialBai11: Flashcard[] = [
     reading: "あね",
     romaji: "ane",
     meaning: "chị gái (mình)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "5",
@@ -3735,6 +4657,8 @@ export const initialBai11: Flashcard[] = [
     reading: "おねえさん",
     romaji: "oneesan",
     meaning: "chị gái (của người khác hoặc xưng hô với chị gái mình)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "6",
@@ -3743,6 +4667,8 @@ export const initialBai11: Flashcard[] = [
     reading: "おとうと",
     romaji: "otouto",
     meaning: "em trai (mình)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "7",
@@ -3751,6 +4677,8 @@ export const initialBai11: Flashcard[] = [
     reading: "いもうと",
     romaji: "imouto",
     meaning: "em gái (mình)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "8",
@@ -3759,6 +4687,8 @@ export const initialBai11: Flashcard[] = [
     reading: "きょうだい",
     romaji: "kyoudai",
     meaning: "anh em",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "9",
@@ -3767,6 +4697,8 @@ export const initialBai11: Flashcard[] = [
     reading: "こども",
     romaji: "kodomo",
     meaning: "trẻ con, trẻ em",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "10",
@@ -3775,6 +4707,8 @@ export const initialBai11: Flashcard[] = [
     reading: "アイスクリーム",
     romaji: "aisukuriimu",
     meaning: "kem",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "11",
@@ -3783,6 +4717,8 @@ export const initialBai11: Flashcard[] = [
     reading: "はがき",
     romaji: "hagaki",
     meaning: "bưu thiếp",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "12",
@@ -3791,6 +4727,8 @@ export const initialBai11: Flashcard[] = [
     reading: "おく",
     romaji: "oku",
     meaning: "bên trong cùng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "13",
@@ -3799,6 +4737,8 @@ export const initialBai11: Flashcard[] = [
     reading: "ほんだな",
     romaji: "hondana",
     meaning: "giá sách",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "14",
@@ -3807,6 +4747,8 @@ export const initialBai11: Flashcard[] = [
     reading: "りょう",
     romaji: "ryou",
     meaning: "kí túc xá",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "15",
@@ -3815,6 +4757,8 @@ export const initialBai11: Flashcard[] = [
     reading: "いなか",
     romaji: "inaka",
     meaning: "quê, nông thôn",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "16",
@@ -3823,6 +4767,8 @@ export const initialBai11: Flashcard[] = [
     reading: "がいこく",
     romaji: "gaikoku",
     meaning: "nước ngoài",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "17",
@@ -3831,6 +4777,8 @@ export const initialBai11: Flashcard[] = [
     reading: "どうぶつ",
     romaji: "doubutsu",
     meaning: "động vật",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "18",
@@ -3839,6 +4787,8 @@ export const initialBai11: Flashcard[] = [
     reading: "ひるね",
     romaji: "hirune",
     meaning: "ngủ trưa",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "19",
@@ -3847,6 +4797,8 @@ export const initialBai11: Flashcard[] = [
     reading: "ひとつ",
     romaji: "hitotsu",
     meaning: "một cái",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "20",
@@ -3855,6 +4807,8 @@ export const initialBai11: Flashcard[] = [
     reading: "ふたつ",
     romaji: "futatsu",
     meaning: "hai cái",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "21",
@@ -3863,6 +4817,8 @@ export const initialBai11: Flashcard[] = [
     reading: "みっつ",
     romaji: "mittsu",
     meaning: "ba cái",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "22",
@@ -3871,6 +4827,8 @@ export const initialBai11: Flashcard[] = [
     reading: "よっつ",
     romaji: "yottsu",
     meaning: "bốn cái",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "23",
@@ -3879,6 +4837,8 @@ export const initialBai11: Flashcard[] = [
     reading: "いつつ",
     romaji: "itsutsu",
     meaning: "năm cái",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "24",
@@ -3887,6 +4847,8 @@ export const initialBai11: Flashcard[] = [
     reading: "むっつ",
     romaji: "muttsu",
     meaning: "sáu cái",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "25",
@@ -3895,6 +4857,8 @@ export const initialBai11: Flashcard[] = [
     reading: "ななつ",
     romaji: "nanatsu",
     meaning: "bảy cái",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "26",
@@ -3903,6 +4867,8 @@ export const initialBai11: Flashcard[] = [
     reading: "やっつ",
     romaji: "yattsu",
     meaning: "tám cái",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "27",
@@ -3911,6 +4877,8 @@ export const initialBai11: Flashcard[] = [
     reading: "ここのつ",
     romaji: "kokonotsu",
     meaning: "chín cái",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "28",
@@ -3919,6 +4887,8 @@ export const initialBai11: Flashcard[] = [
     reading: "とお",
     romaji: "too",
     meaning: "mười cái",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "29",
@@ -3927,6 +4897,8 @@ export const initialBai11: Flashcard[] = [
     reading: "ひとり",
     romaji: "hitori",
     meaning: "một người",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "30",
@@ -3935,6 +4907,8 @@ export const initialBai11: Flashcard[] = [
     reading: "ふたり",
     romaji: "futari",
     meaning: "hai người",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "31",
@@ -3943,6 +4917,8 @@ export const initialBai11: Flashcard[] = [
     reading: "いる",
     romaji: "iru",
     meaning: "có (dùng với người, con)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "32",
@@ -3951,6 +4927,8 @@ export const initialBai11: Flashcard[] = [
     reading: "います",
     romaji: "imasu",
     meaning: "có (dùng với người, con) - cách nói lịch sự",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "33",
@@ -3959,6 +4937,8 @@ export const initialBai11: Flashcard[] = [
     reading: "やすむ",
     romaji: "yasumu",
     meaning: "nghỉ, nghỉ ngơi",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "34",
@@ -3967,6 +4947,8 @@ export const initialBai11: Flashcard[] = [
     reading: "やすみます",
     romaji: "yasumimasu",
     meaning: "nghỉ, nghỉ ngơi - cách nói lịch sự",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "35",
@@ -3975,6 +4957,8 @@ export const initialBai11: Flashcard[] = [
     reading: "やきます",
     romaji: "yakimasu",
     meaning: "nướng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "36",
@@ -3983,6 +4967,8 @@ export const initialBai11: Flashcard[] = [
     reading: "とおくに",
     romaji: "tooku ni",
     meaning: "ở đằng xa",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "37",
@@ -3991,6 +4977,8 @@ export const initialBai11: Flashcard[] = [
     reading: "ひつよう",
     romaji: "hitsuyou",
     meaning: "cần thiết",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "38",
@@ -3999,6 +4987,8 @@ export const initialBai11: Flashcard[] = [
     reading: "りょうしん",
     romaji: "ryoushin",
     meaning: "bố mẹ",
+    idChapter: 0,
+    uniqueId: ""
   },
 ];
 
@@ -4010,6 +5000,8 @@ export const initialBai12: Flashcard[] = [
     reading: "かんたん",
     romaji: "kantan",
     meaning: "đơn giản, dễ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "2",
@@ -4018,6 +5010,8 @@ export const initialBai12: Flashcard[] = [
     reading: "ちかい",
     romaji: "chikai",
     meaning: "gần",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "3",
@@ -4026,6 +5020,8 @@ export const initialBai12: Flashcard[] = [
     reading: "とおい",
     romaji: "tooi",
     meaning: "xa",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "4",
@@ -4034,6 +5030,8 @@ export const initialBai12: Flashcard[] = [
     reading: "はやい",
     romaji: "hayai",
     meaning: "sớm, nhanh",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "5",
@@ -4042,6 +5040,8 @@ export const initialBai12: Flashcard[] = [
     reading: "おそい",
     romaji: "osoi",
     meaning: "muộn, chậm",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "6",
@@ -4050,6 +5050,8 @@ export const initialBai12: Flashcard[] = [
     reading: "おおい",
     romaji: "ooi",
     meaning: "nhiều [người]",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "7",
@@ -4058,6 +5060,8 @@ export const initialBai12: Flashcard[] = [
     reading: "すくない",
     romaji: "sukunai",
     meaning: "ít [người]",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "8",
@@ -4066,6 +5070,8 @@ export const initialBai12: Flashcard[] = [
     reading: "あたたかい",
     romaji: "atatakai",
     meaning: "ấm",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "9",
@@ -4074,6 +5080,8 @@ export const initialBai12: Flashcard[] = [
     reading: "すずしい",
     romaji: "suzushii",
     meaning: "mát",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "10",
@@ -4082,6 +5090,8 @@ export const initialBai12: Flashcard[] = [
     reading: "あまい",
     romaji: "amai",
     meaning: "ngọt",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "11",
@@ -4090,6 +5100,8 @@ export const initialBai12: Flashcard[] = [
     reading: "からい",
     romaji: "karai",
     meaning: "cay",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "12",
@@ -4098,6 +5110,8 @@ export const initialBai12: Flashcard[] = [
     reading: "おもい",
     romaji: "omoi",
     meaning: "nặng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "13",
@@ -4106,6 +5120,8 @@ export const initialBai12: Flashcard[] = [
     reading: "かるい",
     romaji: "karui",
     meaning: "nhẹ",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "14",
@@ -4114,6 +5130,8 @@ export const initialBai12: Flashcard[] = [
     reading: "いい",
     romaji: "ii",
     meaning: "thích, chọn, dùng [ví dụ: chọn cafe, thích cafe]",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "15",
@@ -4122,6 +5140,8 @@ export const initialBai12: Flashcard[] = [
     reading: "せがたかい",
     romaji: "se ga takai",
     meaning: "cao (dùng cho người)",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "16",
@@ -4130,6 +5150,8 @@ export const initialBai12: Flashcard[] = [
     reading: "きせつ",
     romaji: "kisetsu",
     meaning: "mùa",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "17",
@@ -4138,6 +5160,8 @@ export const initialBai12: Flashcard[] = [
     reading: "はる",
     romaji: "haru",
     meaning: "mùa xuân",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "18",
@@ -4146,6 +5170,8 @@ export const initialBai12: Flashcard[] = [
     reading: "なつ",
     romaji: "natsu",
     meaning: "mùa hè",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "19",
@@ -4154,6 +5180,8 @@ export const initialBai12: Flashcard[] = [
     reading: "あき",
     romaji: "aki",
     meaning: "mùa thu",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "20",
@@ -4162,6 +5190,8 @@ export const initialBai12: Flashcard[] = [
     reading: "ふゆ",
     romaji: "fuyu",
     meaning: "mùa đông",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "21",
@@ -4170,6 +5200,8 @@ export const initialBai12: Flashcard[] = [
     reading: "てんき",
     romaji: "tenki",
     meaning: "thời tiết",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "22",
@@ -4178,6 +5210,8 @@ export const initialBai12: Flashcard[] = [
     reading: "あめ",
     romaji: "ame",
     meaning: "mưa",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "23",
@@ -4186,6 +5220,8 @@ export const initialBai12: Flashcard[] = [
     reading: "ゆき",
     romaji: "yuki",
     meaning: "tuyết",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "24",
@@ -4194,6 +5230,8 @@ export const initialBai12: Flashcard[] = [
     reading: "くもり",
     romaji: "kumori",
     meaning: "trời âm u",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "25",
@@ -4202,6 +5240,8 @@ export const initialBai12: Flashcard[] = [
     reading: "くうこう",
     romaji: "kuukou",
     meaning: "sân bay",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "26",
@@ -4210,6 +5250,8 @@ export const initialBai12: Flashcard[] = [
     reading: "うみ",
     romaji: "umi",
     meaning: "biển, đại dương",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "27",
@@ -4218,6 +5260,8 @@ export const initialBai12: Flashcard[] = [
     reading: "せかい",
     romaji: "sekai",
     meaning: "thế giới",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "28",
@@ -4226,6 +5270,8 @@ export const initialBai12: Flashcard[] = [
     reading: "まつり",
     romaji: "matsuri",
     meaning: "lễ hội",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "29",
@@ -4234,6 +5280,8 @@ export const initialBai12: Flashcard[] = [
     reading: "パーティー",
     romaji: "paatii",
     meaning: "tiệc",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "30",
@@ -4242,6 +5290,8 @@ export const initialBai12: Flashcard[] = [
     reading: "スピーチ",
     romaji: "supiichi",
     meaning: "bài diễn thuyết, bài phát biểu",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "31",
@@ -4250,6 +5300,8 @@ export const initialBai12: Flashcard[] = [
     reading: "テスト",
     romaji: "tesuto",
     meaning: "bài kiểm tra",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "32",
@@ -4258,6 +5310,8 @@ export const initialBai12: Flashcard[] = [
     reading: "しけん",
     romaji: "shiken",
     meaning: "kỳ thi, bài thi",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "33",
@@ -4266,6 +5320,8 @@ export const initialBai12: Flashcard[] = [
     reading: "いちばん",
     romaji: "ichiban",
     meaning: "nhất",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "34",
@@ -4274,6 +5330,8 @@ export const initialBai12: Flashcard[] = [
     reading: "どちら",
     romaji: "dochira",
     meaning: "cái nào",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "35",
@@ -4282,6 +5340,8 @@ export const initialBai12: Flashcard[] = [
     reading: "どちらも",
     romaji: "dochiramo",
     meaning: "cả hai, cái nào cũng",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "36",
@@ -4290,6 +5350,8 @@ export const initialBai12: Flashcard[] = [
     reading: "ずっと",
     romaji: "zutto",
     meaning: "(hơn) hẳn, dùng để nhấn mạnh sự khác biệt",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "37",
@@ -4298,6 +5360,8 @@ export const initialBai12: Flashcard[] = [
     reading: "はじめて",
     romaji: "hajimete",
     meaning: "lần đầu tiên",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "38",
@@ -4306,6 +5370,8 @@ export const initialBai12: Flashcard[] = [
     reading: "にほんしゅ",
     romaji: "nihonshu",
     meaning: "Rượu Nhật",
+    idChapter: 0,
+    uniqueId: ""
   },
   {
     id: "39",
@@ -4314,535 +5380,2213 @@ export const initialBai12: Flashcard[] = [
     reading: "いっしょうけんめい",
     romaji: "isshoukenmei",
     meaning: "sự cố gắng hết sức",
+    idChapter: 0,
+    uniqueId: ""
   },
 ];
 
 export const initialBai13: Flashcard[] = [
-  { id: "1", word: "遊びます", type: "(I)", reading: "あそびます", romaji: "asobimasu", meaning: "chơi" },
-  { id: "2", word: "泳ぎます", type: "(I)", reading: "およぎます", romaji: "oyogimasu", meaning: "bơi" },
-  { id: "3", word: "迎えます", type: "(II)", reading: "むかえます", romaji: "mukaemasu", meaning: "đón" },
-  { id: "4", word: "疲れます", type: "(II)", reading: "つかれます", romaji: "tsukaremasu", meaning: "mệt" },
-  { id: "5", word: "出します", type: "(I)", reading: "だします", romaji: "dashimasu", meaning: "gửi (thư)" },
-  { id: "6", word: "入ります", type: "(I)", reading: "はいります", romaji: "hairimasu", meaning: "vào (quán)" },
-  { id: "7", word: "出ます", type: "(II)", reading: "でます", romaji: "demasu", meaning: "ra, rời khỏi" },
-  { id: "8", word: "結婚します", type: "(III)", reading: "けっこんします", romaji: "kekkon shimasu", meaning: "kết hôn" },
-  { id: "9", word: "買い物します", type: "(III)", reading: "かいものします", romaji: "kaimono shimasu", meaning: "mua sắm" },
-  { id: "10", word: "食事します", type: "(III)", reading: "しょくじします", romaji: "shokuji shimasu", meaning: "ăn cơm" },
-  { id: "11", word: "散歩します", type: "(III)", reading: "さんぽします", romaji: "sanpo shimasu", meaning: "đi dạo" },
+  {
+    id: "1", word: "遊びます", type: "(I)", reading: "あそびます", romaji: "asobimasu", meaning: "chơi",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "2", word: "泳ぎます", type: "(I)", reading: "およぎます", romaji: "oyogimasu", meaning: "bơi",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "3", word: "迎えます", type: "(II)", reading: "むかえます", romaji: "mukaemasu", meaning: "đón",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "4", word: "疲れます", type: "(II)", reading: "つかれます", romaji: "tsukaremasu", meaning: "mệt",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "5", word: "出します", type: "(I)", reading: "だします", romaji: "dashimasu", meaning: "gửi (thư)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "6", word: "入ります", type: "(I)", reading: "はいります", romaji: "hairimasu", meaning: "vào (quán)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "7", word: "出ます", type: "(II)", reading: "でます", romaji: "demasu", meaning: "ra, rời khỏi",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "8", word: "結婚します", type: "(III)", reading: "けっこんします", romaji: "kekkon shimasu", meaning: "kết hôn",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "9", word: "買い物します", type: "(III)", reading: "かいものします", romaji: "kaimono shimasu", meaning: "mua sắm",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "10", word: "食事します", type: "(III)", reading: "しょくじします", romaji: "shokuji shimasu", meaning: "ăn cơm",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "11", word: "散歩します", type: "(III)", reading: "さんぽします", romaji: "sanpo shimasu", meaning: "đi dạo",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "12", word: "大変", type: "(Adj-na)", reading: "たいへん", romaji: "taihen", meaning: "vất vả, khó khăn" },
-  { id: "13", word: "欲しい", type: "(Adj-i)", reading: "ほしい", romaji: "hoshii", meaning: "muốn có" },
-  { id: "14", word: "寂しい", type: "(Adj-i)", reading: "さびしい", romaji: "sabishii", meaning: "cô đơn" },
-  { id: "15", word: "広い", type: "(Adj-i)", reading: "ひろい", romaji: "hiroi", meaning: "rộng" },
-  { id: "16", word: "狭い", type: "(Adj-i)", reading: "せまい", romaji: "semai", meaning: "chật, hẹp" },
+  {
+    id: "12", word: "大変", type: "(Adj-na)", reading: "たいへん", romaji: "taihen", meaning: "vất vả, khó khăn",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "13", word: "欲しい", type: "(Adj-i)", reading: "ほしい", romaji: "hoshii", meaning: "muốn có",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "14", word: "寂しい", type: "(Adj-i)", reading: "さびしい", romaji: "sabishii", meaning: "cô đơn",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "15", word: "広い", type: "(Adj-i)", reading: "ひろい", romaji: "hiroi", meaning: "rộng",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "16", word: "狭い", type: "(Adj-i)", reading: "せまい", romaji: "semai", meaning: "chật, hẹp",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "17", word: "市役所", type: "(N)", reading: "しやくしょ", romaji: "shiyakusho", meaning: "tòa thị chính" },
-  { id: "18", word: "プール", type: "(N)", reading: "プール", romaji: "puuru", meaning: "hồ bơi" },
-  { id: "19", word: "川", type: "(N)", reading: "かわ", romaji: "kawa", meaning: "sông" },
-  { id: "20", word: "経済", type: "(N)", reading: "けいざい", romaji: "keizai", meaning: "kinh tế" },
-  { id: "21", word: "美術", type: "(N)", reading: "びじゅつ", romaji: "bijutsu", meaning: "mỹ thuật" },
-  { id: "22", word: "釣り", type: "(N)", reading: "つり", romaji: "tsuri", meaning: "câu cá" },
-  { id: "23", word: "スキー", type: "(N)", reading: "スキー", romaji: "sukii", meaning: "trượt tuyết" },
-  { id: "24", word: "会議", type: "(N)", reading: "かいぎ", romaji: "kaigi", meaning: "cuộc họp" },
-  { id: "25", word: "登録", type: "(N)", reading: "とうろく", romaji: "touroku", meaning: "đăng ký" },
-  { id: "26", word: "週末", type: "(N)", reading: "しゅうまつ", romaji: "shuumatsu", meaning: "cuối tuần" },
+  {
+    id: "17", word: "市役所", type: "(N)", reading: "しやくしょ", romaji: "shiyakusho", meaning: "tòa thị chính",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "18", word: "プール", type: "(N)", reading: "プール", romaji: "puuru", meaning: "hồ bơi",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "19", word: "川", type: "(N)", reading: "かわ", romaji: "kawa", meaning: "sông",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "20", word: "経済", type: "(N)", reading: "けいざい", romaji: "keizai", meaning: "kinh tế",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "21", word: "美術", type: "(N)", reading: "びじゅつ", romaji: "bijutsu", meaning: "mỹ thuật",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "22", word: "釣り", type: "(N)", reading: "つり", romaji: "tsuri", meaning: "câu cá",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "23", word: "スキー", type: "(N)", reading: "スキー", romaji: "sukii", meaning: "trượt tuyết",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "24", word: "会議", type: "(N)", reading: "かいぎ", romaji: "kaigi", meaning: "cuộc họp",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "25", word: "登録", type: "(N)", reading: "とうろく", romaji: "touroku", meaning: "đăng ký",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "26", word: "週末", type: "(N)", reading: "しゅうまつ", romaji: "shuumatsu", meaning: "cuối tuần",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "27", word: "～ごろ", type: "(Adv)", reading: "～ごろ", romaji: "~goro", meaning: "khoảng (thời gian)" },
-  { id: "28", word: "何か", type: "(Pron)", reading: "なにか", romaji: "nanika", meaning: "cái gì đó" },
-  { id: "29", word: "どこか", type: "(Pron)", reading: "どこか", romaji: "dokoka", meaning: "đâu đó" },
+  {
+    id: "27", word: "～ごろ", type: "(Adv)", reading: "～ごろ", romaji: "~goro", meaning: "khoảng (thời gian)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "28", word: "何か", type: "(Pron)", reading: "なにか", romaji: "nanika", meaning: "cái gì đó",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "29", word: "どこか", type: "(Pron)", reading: "どこか", romaji: "dokoka", meaning: "đâu đó",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "30", word: "おなかがすきました", type: "(Expr)", reading: "", romaji: "", meaning: "tôi đói rồi" },
-  { id: "31", word: "おなかがいっぱいです", type: "(Expr)", reading: "", romaji: "", meaning: "tôi no rồi" },
-  { id: "32", word: "のどがかわきました", type: "(Expr)", reading: "", romaji: "", meaning: "tôi khát" },
+  {
+    id: "30", word: "おなかがすきました", type: "(Expr)", reading: "", romaji: "", meaning: "tôi đói rồi",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "31", word: "おなかがいっぱいです", type: "(Expr)", reading: "", romaji: "", meaning: "tôi no rồi",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "32", word: "のどがかわきました", type: "(Expr)", reading: "", romaji: "", meaning: "tôi khát",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "33", word: "そうですね", type: "(Expr)", reading: "", romaji: "", meaning: "đúng thế" },
-  { id: "34", word: "そうしましょう", type: "(Expr)", reading: "", romaji: "", meaning: "chúng ta thống nhất vậy" },
+  {
+    id: "33", word: "そうですね", type: "(Expr)", reading: "", romaji: "", meaning: "đúng thế",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "34", word: "そうしましょう", type: "(Expr)", reading: "", romaji: "", meaning: "chúng ta thống nhất vậy",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "35", word: "ご注文は？", type: "(Expr)", reading: "ごちゅうもんは？", romaji: "gochuumon wa?", meaning: "quý khách dùng gì?" },
-  { id: "36", word: "定食", type: "(N)", reading: "ていしょく", romaji: "teishoku", meaning: "cơm suất" },
-  { id: "37", word: "牛どん", type: "(N)", reading: "ぎゅうどん", romaji: "gyuudon", meaning: "cơm bò" },
-  { id: "38", word: "少々お待ちください", type: "(Expr)", reading: "しょうしょうおまちください", romaji: "shoushou omachi kudasai", meaning: "vui lòng đợi một chút" },
-  { id: "39", word: "別々に", type: "(Adv)", reading: "べつべつに", romaji: "betsubetsu ni", meaning: "riêng ra" },
-  { id: "40", word: "ロシア", type: "(N)", reading: "ロシア", romaji: "roshia", meaning: "Nga" },
+  {
+    id: "35", word: "ご注文は？", type: "(Expr)", reading: "ごちゅうもんは？", romaji: "gochuumon wa?", meaning: "quý khách dùng gì?",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "36", word: "定食", type: "(N)", reading: "ていしょく", romaji: "teishoku", meaning: "cơm suất",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "37", word: "牛どん", type: "(N)", reading: "ぎゅうどん", romaji: "gyuudon", meaning: "cơm bò",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "38", word: "少々お待ちください", type: "(Expr)", reading: "しょうしょうおまちください", romaji: "shoushou omachi kudasai", meaning: "vui lòng đợi một chút",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "39", word: "別々に", type: "(Adv)", reading: "べつべつに", romaji: "betsubetsu ni", meaning: "riêng ra",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "40", word: "ロシア", type: "(N)", reading: "ロシア", romaji: "roshia", meaning: "Nga",
+    idChapter: 0,
+    uniqueId: ""
+  },
 ];
 
 
 export const initialBai14: Flashcard[] = [
-  { id: "1", word: "つけます", type: "(II)", reading: "つけます", romaji: "tsukemasu", meaning: "bật (điện, điều hòa)" },
-  { id: "2", word: "消します", type: "(I)", reading: "けします", romaji: "keshimasu", meaning: "tắt" },
-  { id: "3", word: "開けます", type: "(II)", reading: "あけます", romaji: "akemasu", meaning: "mở" },
-  { id: "4", word: "閉めます", type: "(II)", reading: "しめます", romaji: "shimemasu", meaning: "đóng" },
-  { id: "5", word: "急ぎます", type: "(I)", reading: "いそぎます", romaji: "isogimasu", meaning: "vội" },
-  { id: "6", word: "待ちます", type: "(I)", reading: "まちます", romaji: "machimasu", meaning: "đợi" },
-  { id: "7", word: "止めます", type: "(II)", reading: "とめます", romaji: "tomemasu", meaning: "dừng, đỗ" },
-  { id: "8", word: "曲がります", type: "(I)", reading: "まがります", romaji: "magarimasu", meaning: "rẽ (phải/trái)" },
-  { id: "9", word: "持ちます", type: "(I)", reading: "もちます", romaji: "mochimasu", meaning: "cầm, mang" },
-  { id: "10", word: "取ります", type: "(I)", reading: "とります", romaji: "torimasu", meaning: "lấy" },
-  { id: "11", word: "手伝います", type: "(I)", reading: "てつだいます", romaji: "tetsudaimasu", meaning: "giúp đỡ" },
-  { id: "12", word: "呼びます", type: "(I)", reading: "よびます", romaji: "yobimasu", meaning: "gọi" },
-  { id: "13", word: "話します", type: "(I)", reading: "はなします", romaji: "hanashimasu", meaning: "nói chuyện" },
-  { id: "14", word: "見せます", type: "(II)", reading: "みせます", romaji: "misemasu", meaning: "cho xem" },
-  { id: "15", word: "教えます", type: "(II)", reading: "おしえます", romaji: "oshiemasu", meaning: "chỉ, cho biết" },
-  { id: "16", word: "始めます", type: "(II)", reading: "はじめます", romaji: "hajimemasu", meaning: "bắt đầu" },
-  { id: "17", word: "降ります", type: "(I)", reading: "ふります", romaji: "furimasu", meaning: "rơi (mưa, tuyết)" },
-  { id: "18", word: "コピーします", type: "(III)", reading: "コピーします", romaji: "kopii shimasu", meaning: "copy" },
+  {
+    id: "1", word: "つけます", type: "(II)", reading: "つけます", romaji: "tsukemasu", meaning: "bật (điện, điều hòa)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "2", word: "消します", type: "(I)", reading: "けします", romaji: "keshimasu", meaning: "tắt",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "3", word: "開けます", type: "(II)", reading: "あけます", romaji: "akemasu", meaning: "mở",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "4", word: "閉めます", type: "(II)", reading: "しめます", romaji: "shimemasu", meaning: "đóng",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "5", word: "急ぎます", type: "(I)", reading: "いそぎます", romaji: "isogimasu", meaning: "vội",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "6", word: "待ちます", type: "(I)", reading: "まちます", romaji: "machimasu", meaning: "đợi",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "7", word: "止めます", type: "(II)", reading: "とめます", romaji: "tomemasu", meaning: "dừng, đỗ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "8", word: "曲がります", type: "(I)", reading: "まがります", romaji: "magarimasu", meaning: "rẽ (phải/trái)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "9", word: "持ちます", type: "(I)", reading: "もちます", romaji: "mochimasu", meaning: "cầm, mang",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "10", word: "取ります", type: "(I)", reading: "とります", romaji: "torimasu", meaning: "lấy",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "11", word: "手伝います", type: "(I)", reading: "てつだいます", romaji: "tetsudaimasu", meaning: "giúp đỡ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "12", word: "呼びます", type: "(I)", reading: "よびます", romaji: "yobimasu", meaning: "gọi",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "13", word: "話します", type: "(I)", reading: "はなします", romaji: "hanashimasu", meaning: "nói chuyện",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "14", word: "見せます", type: "(II)", reading: "みせます", romaji: "misemasu", meaning: "cho xem",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "15", word: "教えます", type: "(II)", reading: "おしえます", romaji: "oshiemasu", meaning: "chỉ, cho biết",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "16", word: "始めます", type: "(II)", reading: "はじめます", romaji: "hajimemasu", meaning: "bắt đầu",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "17", word: "降ります", type: "(I)", reading: "ふります", romaji: "furimasu", meaning: "rơi (mưa, tuyết)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "18", word: "コピーします", type: "(III)", reading: "コピーします", romaji: "kopii shimasu", meaning: "copy",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "19", word: "エアコン", type: "(N)", reading: "エアコン", romaji: "eakon", meaning: "máy điều hòa" },
-  { id: "20", word: "パスポート", type: "(N)", reading: "パスポート", romaji: "pasupooto", meaning: "hộ chiếu" },
-  { id: "21", word: "名前", type: "(N)", reading: "なまえ", romaji: "namae", meaning: "tên" },
-  { id: "22", word: "住所", type: "(N)", reading: "じゅうしょ", romaji: "juusho", meaning: "địa chỉ" },
-  { id: "23", word: "地図", type: "(N)", reading: "ちず", romaji: "chizu", meaning: "bản đồ" },
-  { id: "24", word: "塩", type: "(N)", reading: "しお", romaji: "shio", meaning: "muối" },
-  { id: "25", word: "砂糖", type: "(N)", reading: "さとう", romaji: "satou", meaning: "đường" },
-  { id: "26", word: "読み方", type: "(N)", reading: "よみかた", romaji: "yomikata", meaning: "cách đọc" },
-  { id: "27", word: "～方", type: "(Suffix)", reading: "～かた", romaji: "~kata", meaning: "cách ~" },
+  {
+    id: "19", word: "エアコン", type: "(N)", reading: "エアコン", romaji: "eakon", meaning: "máy điều hòa",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "20", word: "パスポート", type: "(N)", reading: "パスポート", romaji: "pasupooto", meaning: "hộ chiếu",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "21", word: "名前", type: "(N)", reading: "なまえ", romaji: "namae", meaning: "tên",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "22", word: "住所", type: "(N)", reading: "じゅうしょ", romaji: "juusho", meaning: "địa chỉ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "23", word: "地図", type: "(N)", reading: "ちず", romaji: "chizu", meaning: "bản đồ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "24", word: "塩", type: "(N)", reading: "しお", romaji: "shio", meaning: "muối",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "25", word: "砂糖", type: "(N)", reading: "さとう", romaji: "satou", meaning: "đường",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "26", word: "読み方", type: "(N)", reading: "よみかた", romaji: "yomikata", meaning: "cách đọc",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "27", word: "～方", type: "(Suffix)", reading: "～かた", romaji: "~kata", meaning: "cách ~",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "28", word: "ゆっくり", type: "(Adv)", reading: "ゆっくり", romaji: "yukkuri", meaning: "chậm rãi" },
-  { id: "29", word: "すぐ", type: "(Adv)", reading: "すぐ", romaji: "sugu", meaning: "ngay lập tức" },
-  { id: "30", word: "また", type: "(Adv)", reading: "また", romaji: "mata", meaning: "lại" },
-  { id: "31", word: "あとで", type: "(Adv)", reading: "あとで", romaji: "ato de", meaning: "sau" },
-  { id: "32", word: "もう少し", type: "(Adv)", reading: "もうすこし", romaji: "mou sukoshi", meaning: "thêm một chút" },
-  { id: "33", word: "もう～", type: "(Adv)", reading: "もう～", romaji: "mou~", meaning: "thêm ~" },
+  {
+    id: "28", word: "ゆっくり", type: "(Adv)", reading: "ゆっくり", romaji: "yukkuri", meaning: "chậm rãi",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "29", word: "すぐ", type: "(Adv)", reading: "すぐ", romaji: "sugu", meaning: "ngay lập tức",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "30", word: "また", type: "(Adv)", reading: "また", romaji: "mata", meaning: "lại",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "31", word: "あとで", type: "(Adv)", reading: "あとで", romaji: "ato de", meaning: "sau",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "32", word: "もう少し", type: "(Adv)", reading: "もうすこし", romaji: "mou sukoshi", meaning: "thêm một chút",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "33", word: "もう～", type: "(Adv)", reading: "もう～", romaji: "mou~", meaning: "thêm ~",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "34", word: "いいですよ", type: "(Expr)", reading: "", romaji: "", meaning: "được thôi" },
-  { id: "35", word: "さあ", type: "(Expr)", reading: "", romaji: "", meaning: "nào, thôi" },
-  { id: "36", word: "あれ？", type: "(Expr)", reading: "", romaji: "", meaning: "ơ?" },
+  {
+    id: "34", word: "いいですよ", type: "(Expr)", reading: "", romaji: "", meaning: "được thôi",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "35", word: "さあ", type: "(Expr)", reading: "", romaji: "", meaning: "nào, thôi",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "36", word: "あれ？", type: "(Expr)", reading: "", romaji: "", meaning: "ơ?",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "37", word: "信号を右へ曲がってください", type: "(Expr)", reading: "しんごうをみぎへまがってください", romaji: "shingou o migi e magatte kudasai", meaning: "rẽ phải ở đèn giao thông" },
-  { id: "38", word: "まっすぐ", type: "(Adv)", reading: "まっすぐ", romaji: "massugu", meaning: "đi thẳng" },
+  {
+    id: "37", word: "信号を右へ曲がってください", type: "(Expr)", reading: "しんごうをみぎへまがってください", romaji: "shingou o migi e magatte kudasai", meaning: "rẽ phải ở đèn giao thông",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "38", word: "まっすぐ", type: "(Adv)", reading: "まっすぐ", romaji: "massugu", meaning: "đi thẳng",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "39", word: "これでお願いします", type: "(Expr)", reading: "", romaji: "", meaning: "gửi bạn số tiền này" },
-  { id: "40", word: "お釣り", type: "(N)", reading: "おつり", romaji: "otsuri", meaning: "tiền thừa" },
-  { id: "41", word: "梅田", type: "(N)", reading: "うめだ", romaji: "umeda", meaning: "Umeda (Osaka)" },
+  {
+    id: "39", word: "これでお願いします", type: "(Expr)", reading: "", romaji: "", meaning: "gửi bạn số tiền này",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "40", word: "お釣り", type: "(N)", reading: "おつり", romaji: "otsuri", meaning: "tiền thừa",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "41", word: "梅田", type: "(N)", reading: "うめだ", romaji: "umeda", meaning: "Umeda (Osaka)",
+    idChapter: 0,
+    uniqueId: ""
+  },
 ];
 
 export const initialBai15: Flashcard[] = [
-  { id: "1", word: "立ちます", type: "(I)", reading: "たちます", romaji: "tachimasu", meaning: "đứng" },
-  { id: "2", word: "座ります", type: "(I)", reading: "すわります", romaji: "suwarimasu", meaning: "ngồi" },
-  { id: "3", word: "使います", type: "(I)", reading: "つかいます", romaji: "tsukaimasu", meaning: "sử dụng" },
-  { id: "4", word: "置きます", type: "(II)", reading: "おきます", romaji: "okimasu", meaning: "đặt, để" },
-  { id: "5", word: "作ります", type: "(I)", reading: "つくります", romaji: "tsukurimasu", meaning: "làm, chế tạo" },
-  { id: "6", word: "売ります", type: "(I)", reading: "うります", romaji: "urimasu", meaning: "bán" },
-  { id: "7", word: "知ります", type: "(I)", reading: "しります", romaji: "shirimasu", meaning: "biết (lần đầu)" },
-  { id: "8", word: "住みます", type: "(II)", reading: "すみます", romaji: "sumimasu", meaning: "sống, ở" },
-  { id: "9", word: "研究します", type: "(III)", reading: "けんきゅうします", romaji: "kenkyuu shimasu", meaning: "nghiên cứu" },
+  {
+    id: "1", word: "立ちます", type: "(I)", reading: "たちます", romaji: "tachimasu", meaning: "đứng",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "2", word: "座ります", type: "(I)", reading: "すわります", romaji: "suwarimasu", meaning: "ngồi",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "3", word: "使います", type: "(I)", reading: "つかいます", romaji: "tsukaimasu", meaning: "sử dụng",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "4", word: "置きます", type: "(II)", reading: "おきます", romaji: "okimasu", meaning: "đặt, để",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "5", word: "作ります", type: "(I)", reading: "つくります", romaji: "tsukurimasu", meaning: "làm, chế tạo",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "6", word: "売ります", type: "(I)", reading: "うります", romaji: "urimasu", meaning: "bán",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "7", word: "知ります", type: "(I)", reading: "しります", romaji: "shirimasu", meaning: "biết (lần đầu)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "8", word: "住みます", type: "(II)", reading: "すみます", romaji: "sumimasu", meaning: "sống, ở",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "9", word: "研究します", type: "(III)", reading: "けんきゅうします", romaji: "kenkyuu shimasu", meaning: "nghiên cứu",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "10", word: "知っています", type: "(Expr)", reading: "しっています", romaji: "shitteimasu", meaning: "đã biết" },
-  { id: "11", word: "住んでいます", type: "(Expr)", reading: "すんでいます", romaji: "sundeimasu", meaning: "đang sống" },
+  {
+    id: "10", word: "知っています", type: "(Expr)", reading: "しっています", romaji: "shitteimasu", meaning: "đã biết",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "11", word: "住んでいます", type: "(Expr)", reading: "すんでいます", romaji: "sundeimasu", meaning: "đang sống",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "12", word: "資料", type: "(N)", reading: "しりょう", romaji: "shiryou", meaning: "tài liệu" },
-  { id: "13", word: "カタログ", type: "(N)", reading: "カタログ", romaji: "katarogu", meaning: "catalog" },
-  { id: "14", word: "時刻表", type: "(N)", reading: "じこくひょう", romaji: "jikokuhyou", meaning: "bảng giờ tàu" },
-  { id: "15", word: "服", type: "(N)", reading: "ふく", romaji: "fuku", meaning: "quần áo" },
-  { id: "16", word: "製品", type: "(N)", reading: "せいひん", romaji: "seihin", meaning: "sản phẩm" },
-  { id: "17", word: "ソフト", type: "(N)", reading: "ソフト", romaji: "sofuto", meaning: "phần mềm" },
-  { id: "18", word: "専門", type: "(N)", reading: "せんもん", romaji: "senmon", meaning: "chuyên môn" },
-  { id: "19", word: "歯医者", type: "(N)", reading: "はいしゃ", romaji: "haisha", meaning: "nha sĩ" },
-  { id: "20", word: "床屋", type: "(N)", reading: "とこや", romaji: "tokoya", meaning: "tiệm cắt tóc" },
-  { id: "21", word: "プレイガイド", type: "(N)", reading: "プレイガイド", romaji: "pureigaido", meaning: "quầy bán vé" },
-  { id: "22", word: "独身", type: "(N)", reading: "どくしん", romaji: "dokushin", meaning: "độc thân" },
+  {
+    id: "12", word: "資料", type: "(N)", reading: "しりょう", romaji: "shiryou", meaning: "tài liệu",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "13", word: "カタログ", type: "(N)", reading: "カタログ", romaji: "katarogu", meaning: "catalog",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "14", word: "時刻表", type: "(N)", reading: "じこくひょう", romaji: "jikokuhyou", meaning: "bảng giờ tàu",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "15", word: "服", type: "(N)", reading: "ふく", romaji: "fuku", meaning: "quần áo",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "16", word: "製品", type: "(N)", reading: "せいひん", romaji: "seihin", meaning: "sản phẩm",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "17", word: "ソフト", type: "(N)", reading: "ソフト", romaji: "sofuto", meaning: "phần mềm",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "18", word: "専門", type: "(N)", reading: "せんもん", romaji: "senmon", meaning: "chuyên môn",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "19", word: "歯医者", type: "(N)", reading: "はいしゃ", romaji: "haisha", meaning: "nha sĩ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "20", word: "床屋", type: "(N)", reading: "とこや", romaji: "tokoya", meaning: "tiệm cắt tóc",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "21", word: "プレイガイド", type: "(N)", reading: "プレイガイド", romaji: "pureigaido", meaning: "quầy bán vé",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "22", word: "独身", type: "(N)", reading: "どくしん", romaji: "dokushin", meaning: "độc thân",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "23", word: "特に", type: "(Adv)", reading: "とくに", romaji: "tokuni", meaning: "đặc biệt" },
-  { id: "24", word: "思い出します", type: "(I)", reading: "おもいだします", romaji: "omoidasimasu", meaning: "nhớ lại" },
+  {
+    id: "23", word: "特に", type: "(Adv)", reading: "とくに", romaji: "tokuni", meaning: "đặc biệt",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "24", word: "思い出します", type: "(I)", reading: "おもいだします", romaji: "omoidasimasu", meaning: "nhớ lại",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "25", word: "ご家族", type: "(N)", reading: "ごかぞく", romaji: "gokazoku", meaning: "gia đình (người khác)" },
-  { id: "26", word: "いらっしゃいます", type: "(Honorific)", reading: "", romaji: "irasshaimasu", meaning: "có (kính ngữ của います)" },
+  {
+    id: "25", word: "ご家族", type: "(N)", reading: "ごかぞく", romaji: "gokazoku", meaning: "gia đình (người khác)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "26", word: "いらっしゃいます", type: "(Honorific)", reading: "", romaji: "irasshaimasu", meaning: "có (kính ngữ của います)",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "27", word: "高校", type: "(N)", reading: "こうこう", romaji: "koukou", meaning: "trường THPT" },
-  { id: "28", word: "日本橋", type: "(N)", reading: "にっぽんばし", romaji: "nipponbashi", meaning: "Nipponbashi (Osaka)" },
+  {
+    id: "27", word: "高校", type: "(N)", reading: "こうこう", romaji: "koukou", meaning: "trường THPT",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "28", word: "日本橋", type: "(N)", reading: "にっぽんばし", romaji: "nipponbashi", meaning: "Nipponbashi (Osaka)",
+    idChapter: 0,
+    uniqueId: ""
+  },
 ];
 
 export const initialBai16: Flashcard[] = [
-  { id: "1", word: "乗ります", type: "(I)", reading: "のります", romaji: "norimasu", meaning: "lên (tàu)" },
-  { id: "2", word: "降ります", type: "(II)", reading: "おります", romaji: "orimasu", meaning: "xuống (tàu)" },
-  { id: "3", word: "乗り換えます", type: "(II)", reading: "のりかえます", romaji: "norikaemasu", meaning: "chuyển tàu" },
-  { id: "4", word: "浴びます", type: "(II)", reading: "あびます", romaji: "abimasu", meaning: "tắm (vòi sen)" },
-  { id: "5", word: "入れます", type: "(II)", reading: "いれます", romaji: "iremasu", meaning: "cho vào" },
-  { id: "6", word: "出します", type: "(I)", reading: "だします", romaji: "dashimasu", meaning: "lấy ra, rút (tiền)" },
-  { id: "7", word: "入ります", type: "(I)", reading: "はいります", romaji: "hairimasu", meaning: "vào (đại học)" },
-  { id: "8", word: "出ます", type: "(II)", reading: "でます", romaji: "demasu", meaning: "ra, tốt nghiệp" },
-  { id: "9", word: "やめます", type: "(II)", reading: "やめます", romaji: "yamemasu", meaning: "bỏ, nghỉ (việc)" },
-  { id: "10", word: "押します", type: "(I)", reading: "おします", romaji: "oshimasu", meaning: "ấn, bấm" },
+  {
+    id: "1", word: "乗ります", type: "(I)", reading: "のります", romaji: "norimasu", meaning: "lên (tàu)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "2", word: "降ります", type: "(II)", reading: "おります", romaji: "orimasu", meaning: "xuống (tàu)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "3", word: "乗り換えます", type: "(II)", reading: "のりかえます", romaji: "norikaemasu", meaning: "chuyển tàu",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "4", word: "浴びます", type: "(II)", reading: "あびます", romaji: "abimasu", meaning: "tắm (vòi sen)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "5", word: "入れます", type: "(II)", reading: "いれます", romaji: "iremasu", meaning: "cho vào",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "6", word: "出します", type: "(I)", reading: "だします", romaji: "dashimasu", meaning: "lấy ra, rút (tiền)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "7", word: "入ります", type: "(I)", reading: "はいります", romaji: "hairimasu", meaning: "vào (đại học)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "8", word: "出ます", type: "(II)", reading: "でます", romaji: "demasu", meaning: "ra, tốt nghiệp",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "9", word: "やめます", type: "(II)", reading: "やめます", romaji: "yamemasu", meaning: "bỏ, nghỉ (việc)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "10", word: "押します", type: "(I)", reading: "おします", romaji: "oshimasu", meaning: "ấn, bấm",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "11", word: "若い", type: "(Adj-i)", reading: "わかい", romaji: "wakai", meaning: "trẻ" },
-  { id: "12", word: "長い", type: "(Adj-i)", reading: "ながい", romaji: "nagai", meaning: "dài" },
-  { id: "13", word: "短い", type: "(Adj-i)", reading: "みじかい", romaji: "mijikai", meaning: "ngắn" },
-  { id: "14", word: "明るい", type: "(Adj-i)", reading: "あかるい", romaji: "akarui", meaning: "sáng" },
-  { id: "15", word: "暗い", type: "(Adj-i)", reading: "くらい", romaji: "kurai", meaning: "tối" },
-  { id: "16", word: "背が高い", type: "(Expr)", reading: "せがたかい", romaji: "segatakai", meaning: "cao (người)" },
-  { id: "17", word: "頭がいい", type: "(Expr)", reading: "あたまがいい", romaji: "atama ga ii", meaning: "thông minh" },
+  {
+    id: "11", word: "若い", type: "(Adj-i)", reading: "わかい", romaji: "wakai", meaning: "trẻ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "12", word: "長い", type: "(Adj-i)", reading: "ながい", romaji: "nagai", meaning: "dài",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "13", word: "短い", type: "(Adj-i)", reading: "みじかい", romaji: "mijikai", meaning: "ngắn",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "14", word: "明るい", type: "(Adj-i)", reading: "あかるい", romaji: "akarui", meaning: "sáng",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "15", word: "暗い", type: "(Adj-i)", reading: "くらい", romaji: "kurai", meaning: "tối",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "16", word: "背が高い", type: "(Expr)", reading: "せがたかい", romaji: "segatakai", meaning: "cao (người)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "17", word: "頭がいい", type: "(Expr)", reading: "あたまがいい", romaji: "atama ga ii", meaning: "thông minh",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "18", word: "体", type: "(N)", reading: "からだ", romaji: "karada", meaning: "cơ thể" },
-  { id: "19", word: "頭", type: "(N)", reading: "あたま", romaji: "atama", meaning: "đầu" },
-  { id: "20", word: "髪", type: "(N)", reading: "かみ", romaji: "kami", meaning: "tóc" },
-  { id: "21", word: "顔", type: "(N)", reading: "かお", romaji: "kao", meaning: "mặt" },
-  { id: "22", word: "目", type: "(N)", reading: "め", romaji: "me", meaning: "mắt" },
-  { id: "23", word: "耳", type: "(N)", reading: "みみ", romaji: "mimi", meaning: "tai" },
-  { id: "24", word: "口", type: "(N)", reading: "くち", romaji: "kuchi", meaning: "miệng" },
-  { id: "25", word: "歯", type: "(N)", reading: "は", romaji: "ha", meaning: "răng" },
-  { id: "26", word: "おなか", type: "(N)", reading: "おなか", romaji: "onaka", meaning: "bụng" },
-  { id: "27", word: "足", type: "(N)", reading: "あし", romaji: "ashi", meaning: "chân" },
+  {
+    id: "18", word: "体", type: "(N)", reading: "からだ", romaji: "karada", meaning: "cơ thể",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "19", word: "頭", type: "(N)", reading: "あたま", romaji: "atama", meaning: "đầu",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "20", word: "髪", type: "(N)", reading: "かみ", romaji: "kami", meaning: "tóc",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "21", word: "顔", type: "(N)", reading: "かお", romaji: "kao", meaning: "mặt",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "22", word: "目", type: "(N)", reading: "め", romaji: "me", meaning: "mắt",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "23", word: "耳", type: "(N)", reading: "みみ", romaji: "mimi", meaning: "tai",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "24", word: "口", type: "(N)", reading: "くち", romaji: "kuchi", meaning: "miệng",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "25", word: "歯", type: "(N)", reading: "は", romaji: "ha", meaning: "răng",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "26", word: "おなか", type: "(N)", reading: "おなか", romaji: "onaka", meaning: "bụng",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "27", word: "足", type: "(N)", reading: "あし", romaji: "ashi", meaning: "chân",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "28", word: "サービス", type: "(N)", reading: "サービス", romaji: "saabisu", meaning: "dịch vụ" },
-  { id: "29", word: "ジョギング", type: "(N)", reading: "ジョギング", romaji: "jogingu", meaning: "chạy bộ" },
-  { id: "30", word: "シャワー", type: "(N)", reading: "シャワー", romaji: "shawaa", meaning: "vòi sen" },
-  { id: "31", word: "緑", type: "(N)", reading: "みどり", romaji: "midori", meaning: "màu xanh lá" },
-  { id: "32", word: "お寺", type: "(N)", reading: "おてら", romaji: "otera", meaning: "chùa" },
-  { id: "33", word: "神社", type: "(N)", reading: "じんじゃ", romaji: "jinja", meaning: "đền (Thần đạo)" },
-  { id: "34", word: "留学生", type: "(N)", reading: "りゅうがくせい", romaji: "ryuugakusei", meaning: "du học sinh" },
-  { id: "35", word: "一番", type: "(N)", reading: "いちばん", romaji: "ichiban", meaning: "số 1, nhất" },
+  {
+    id: "28", word: "サービス", type: "(N)", reading: "サービス", romaji: "saabisu", meaning: "dịch vụ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "29", word: "ジョギング", type: "(N)", reading: "ジョギング", romaji: "jogingu", meaning: "chạy bộ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "30", word: "シャワー", type: "(N)", reading: "シャワー", romaji: "shawaa", meaning: "vòi sen",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "31", word: "緑", type: "(N)", reading: "みどり", romaji: "midori", meaning: "màu xanh lá",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "32", word: "お寺", type: "(N)", reading: "おてら", romaji: "otera", meaning: "chùa",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "33", word: "神社", type: "(N)", reading: "じんじゃ", romaji: "jinja", meaning: "đền (Thần đạo)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "34", word: "留学生", type: "(N)", reading: "りゅうがくせい", romaji: "ryuugakusei", meaning: "du học sinh",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "35", word: "一番", type: "(N)", reading: "いちばん", romaji: "ichiban", meaning: "số 1, nhất",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "36", word: "どうやって", type: "(Adv)", reading: "どうやって", romaji: "douyatte", meaning: "làm thế nào" },
-  { id: "37", word: "どの～", type: "(Pron)", reading: "どの～", romaji: "dono~", meaning: "cái nào (>=3)" },
+  {
+    id: "36", word: "どうやって", type: "(Adv)", reading: "どうやって", romaji: "douyatte", meaning: "làm thế nào",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "37", word: "どの～", type: "(Pron)", reading: "どの～", romaji: "dono~", meaning: "cái nào (>=3)",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "38", word: "まだまだです", type: "(Expr)", reading: "", romaji: "", meaning: "tôi còn kém" },
-  { id: "39", word: "お引出しですか", type: "(Expr)", reading: "おひきだしですか", romaji: "ohikidashi desu ka", meaning: "bạn rút tiền à?" },
+  {
+    id: "38", word: "まだまだです", type: "(Expr)", reading: "", romaji: "", meaning: "tôi còn kém",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "39", word: "お引出しですか", type: "(Expr)", reading: "おひきだしですか", romaji: "ohikidashi desu ka", meaning: "bạn rút tiền à?",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "40", word: "まず", type: "(Adv)", reading: "まず", romaji: "mazu", meaning: "trước hết" },
-  { id: "41", word: "キャッシュカード", type: "(N)", reading: "キャッシュカード", romaji: "kyasshu kaado", meaning: "thẻ ATM" },
-  { id: "42", word: "暗証番号", type: "(N)", reading: "あんしょうばんごう", romaji: "anshou bangou", meaning: "mật khẩu" },
-  { id: "43", word: "次に", type: "(Adv)", reading: "つぎに", romaji: "tsugi ni", meaning: "tiếp theo" },
-  { id: "44", word: "金額", type: "(N)", reading: "きんがく", romaji: "kingaku", meaning: "số tiền" },
-  { id: "45", word: "確認", type: "(N)", reading: "かくにん", romaji: "kakunin", meaning: "xác nhận" },
-  { id: "46", word: "ボタン", type: "(N)", reading: "ボタン", romaji: "botan", meaning: "nút" },
+  {
+    id: "40", word: "まず", type: "(Adv)", reading: "まず", romaji: "mazu", meaning: "trước hết",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "41", word: "キャッシュカード", type: "(N)", reading: "キャッシュカード", romaji: "kyasshu kaado", meaning: "thẻ ATM",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "42", word: "暗証番号", type: "(N)", reading: "あんしょうばんごう", romaji: "anshou bangou", meaning: "mật khẩu",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "43", word: "次に", type: "(Adv)", reading: "つぎに", romaji: "tsugi ni", meaning: "tiếp theo",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "44", word: "金額", type: "(N)", reading: "きんがく", romaji: "kingaku", meaning: "số tiền",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "45", word: "確認", type: "(N)", reading: "かくにん", romaji: "kakunin", meaning: "xác nhận",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "46", word: "ボタン", type: "(N)", reading: "ボタン", romaji: "botan", meaning: "nút",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "47", word: "JR", type: "(N)", reading: "ジェーアール", romaji: "jeearu", meaning: "đường sắt Nhật" },
-  { id: "48", word: "アジア", type: "(N)", reading: "アジア", romaji: "ajia", meaning: "châu Á" },
-  { id: "49", word: "バンドン", type: "(N)", reading: "バンドン", romaji: "bandon", meaning: "Bandung" },
-  { id: "50", word: "ベラクルス", type: "(N)", reading: "ベラクルス", romaji: "berakurusu", meaning: "Veracruz" },
-  { id: "51", word: "フランケン", type: "(N)", reading: "フランケン", romaji: "furanken", meaning: "Franken" },
-  { id: "52", word: "ベトナム", type: "(N)", reading: "ベトナム", romaji: "betonamu", meaning: "Việt Nam" },
-  { id: "53", word: "フェ", type: "(N)", reading: "フェ", romaji: "fe", meaning: "Huế" },
+  {
+    id: "47", word: "JR", type: "(N)", reading: "ジェーアール", romaji: "jeearu", meaning: "đường sắt Nhật",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "48", word: "アジア", type: "(N)", reading: "アジア", romaji: "ajia", meaning: "châu Á",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "49", word: "バンドン", type: "(N)", reading: "バンドン", romaji: "bandon", meaning: "Bandung",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "50", word: "ベラクルス", type: "(N)", reading: "ベラクルス", romaji: "berakurusu", meaning: "Veracruz",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "51", word: "フランケン", type: "(N)", reading: "フランケン", romaji: "furanken", meaning: "Franken",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "52", word: "ベトナム", type: "(N)", reading: "ベトナム", romaji: "betonamu", meaning: "Việt Nam",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "53", word: "フェ", type: "(N)", reading: "フェ", romaji: "fe", meaning: "Huế",
+    idChapter: 0,
+    uniqueId: ""
+  },
 ];
 
 export const initialBai17: Flashcard[] = [
-  { id: "1", word: "覚えます", type: "(II)", reading: "おぼえます", romaji: "oboemasu", meaning: "nhớ" },
-  { id: "2", word: "忘れます", type: "(II)", reading: "わすれます", romaji: "wasuremasu", meaning: "quên" },
-  { id: "3", word: "なくします", type: "(I)", reading: "なくします", romaji: "nakushimasu", meaning: "làm mất" },
-  { id: "4", word: "出します", type: "(I)", reading: "だします", romaji: "dashimasu", meaning: "nộp (báo cáo)" },
-  { id: "5", word: "払います", type: "(I)", reading: "はらいます", romaji: "haraimasu", meaning: "trả tiền" },
-  { id: "6", word: "返します", type: "(I)", reading: "かえします", romaji: "kaeshimasu", meaning: "trả lại" },
-  { id: "7", word: "出かけます", type: "(II)", reading: "でかけます", romaji: "dekakemasu", meaning: "ra ngoài" },
-  { id: "8", word: "脱ぎます", type: "(I)", reading: "ぬぎます", romaji: "nugimasu", meaning: "cởi (quần áo)" },
-  { id: "9", word: "持って行きます", type: "(I)", reading: "もっていきます", romaji: "motte ikimasu", meaning: "mang đi" },
-  { id: "10", word: "持って来ます", type: "(III)", reading: "もってきます", romaji: "motte kimasu", meaning: "mang đến" },
-  { id: "11", word: "心配します", type: "(III)", reading: "しんぱいします", romaji: "shinpai shimasu", meaning: "lo lắng" },
-  { id: "12", word: "残業します", type: "(III)", reading: "ざんぎょうします", romaji: "zangyou shimasu", meaning: "làm thêm giờ" },
-  { id: "13", word: "出張します", type: "(III)", reading: "しゅっちょうします", romaji: "shucchou shimasu", meaning: "đi công tác" },
-  { id: "14", word: "飲みます", type: "(I)", reading: "のみます", romaji: "nomimasu", meaning: "uống (thuốc)" },
-  { id: "15", word: "入ります", type: "(I)", reading: "はいります", romaji: "hairimasu", meaning: "vào (bồn tắm)" },
+  {
+    id: "1", word: "覚えます", type: "(II)", reading: "おぼえます", romaji: "oboemasu", meaning: "nhớ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "2", word: "忘れます", type: "(II)", reading: "わすれます", romaji: "wasuremasu", meaning: "quên",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "3", word: "なくします", type: "(I)", reading: "なくします", romaji: "nakushimasu", meaning: "làm mất",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "4", word: "出します", type: "(I)", reading: "だします", romaji: "dashimasu", meaning: "nộp (báo cáo)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "5", word: "払います", type: "(I)", reading: "はらいます", romaji: "haraimasu", meaning: "trả tiền",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "6", word: "返します", type: "(I)", reading: "かえします", romaji: "kaeshimasu", meaning: "trả lại",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "7", word: "出かけます", type: "(II)", reading: "でかけます", romaji: "dekakemasu", meaning: "ra ngoài",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "8", word: "脱ぎます", type: "(I)", reading: "ぬぎます", romaji: "nugimasu", meaning: "cởi (quần áo)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "9", word: "持って行きます", type: "(I)", reading: "もっていきます", romaji: "motte ikimasu", meaning: "mang đi",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "10", word: "持って来ます", type: "(III)", reading: "もってきます", romaji: "motte kimasu", meaning: "mang đến",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "11", word: "心配します", type: "(III)", reading: "しんぱいします", romaji: "shinpai shimasu", meaning: "lo lắng",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "12", word: "残業します", type: "(III)", reading: "ざんぎょうします", romaji: "zangyou shimasu", meaning: "làm thêm giờ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "13", word: "出張します", type: "(III)", reading: "しゅっちょうします", romaji: "shucchou shimasu", meaning: "đi công tác",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "14", word: "飲みます", type: "(I)", reading: "のみます", romaji: "nomimasu", meaning: "uống (thuốc)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "15", word: "入ります", type: "(I)", reading: "はいります", romaji: "hairimasu", meaning: "vào (bồn tắm)",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "16", word: "大切", type: "(Adj-na)", reading: "たいせつ", romaji: "taisetsu", meaning: "quan trọng" },
-  { id: "17", word: "大丈夫", type: "(Adj-na)", reading: "だいじょうぶ", romaji: "daijoubu", meaning: "không sao" },
-  { id: "18", word: "危ない", type: "(Adj-i)", reading: "あぶない", romaji: "abunai", meaning: "nguy hiểm" },
+  {
+    id: "16", word: "大切", type: "(Adj-na)", reading: "たいせつ", romaji: "taisetsu", meaning: "quan trọng",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "17", word: "大丈夫", type: "(Adj-na)", reading: "だいじょうぶ", romaji: "daijoubu", meaning: "không sao",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "18", word: "危ない", type: "(Adj-i)", reading: "あぶない", romaji: "abunai", meaning: "nguy hiểm",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "19", word: "問題", type: "(N)", reading: "もんだい", romaji: "mondai", meaning: "vấn đề" },
-  { id: "20", word: "答え", type: "(N)", reading: "こたえ", romaji: "kotae", meaning: "câu trả lời" },
-  { id: "21", word: "禁煙", type: "(N)", reading: "きんえん", romaji: "kin'en", meaning: "cấm hút thuốc" },
-  { id: "22", word: "保険証", type: "(N)", reading: "ほけんしょう", romaji: "hokenshou", meaning: "thẻ bảo hiểm" },
-  { id: "23", word: "かぜ", type: "(N)", reading: "かぜ", romaji: "kaze", meaning: "cảm cúm" },
-  { id: "24", word: "熱", type: "(N)", reading: "ねつ", romaji: "netsu", meaning: "sốt" },
-  { id: "25", word: "病気", type: "(N)", reading: "びょうき", romaji: "byouki", meaning: "bệnh" },
-  { id: "26", word: "薬", type: "(N)", reading: "くすり", romaji: "kusuri", meaning: "thuốc" },
-  { id: "27", word: "おふろ", type: "(N)", reading: "おふろ", romaji: "ofuro", meaning: "bồn tắm" },
-  { id: "28", word: "上着", type: "(N)", reading: "うわぎ", romaji: "uwagi", meaning: "áo khoác" },
-  { id: "29", word: "下着", type: "(N)", reading: "したぎ", romaji: "shitagi", meaning: "đồ lót" },
-  { id: "30", word: "先生", type: "(N)", reading: "せんせい", romaji: "sensei", meaning: "bác sĩ" },
+  {
+    id: "19", word: "問題", type: "(N)", reading: "もんだい", romaji: "mondai", meaning: "vấn đề",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "20", word: "答え", type: "(N)", reading: "こたえ", romaji: "kotae", meaning: "câu trả lời",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "21", word: "禁煙", type: "(N)", reading: "きんえん", romaji: "kin'en", meaning: "cấm hút thuốc",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "22", word: "保険証", type: "(N)", reading: "ほけんしょう", romaji: "hokenshou", meaning: "thẻ bảo hiểm",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "23", word: "かぜ", type: "(N)", reading: "かぜ", romaji: "kaze", meaning: "cảm cúm",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "24", word: "熱", type: "(N)", reading: "ねつ", romaji: "netsu", meaning: "sốt",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "25", word: "病気", type: "(N)", reading: "びょうき", romaji: "byouki", meaning: "bệnh",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "26", word: "薬", type: "(N)", reading: "くすり", romaji: "kusuri", meaning: "thuốc",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "27", word: "おふろ", type: "(N)", reading: "おふろ", romaji: "ofuro", meaning: "bồn tắm",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "28", word: "上着", type: "(N)", reading: "うわぎ", romaji: "uwagi", meaning: "áo khoác",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "29", word: "下着", type: "(N)", reading: "したぎ", romaji: "shitagi", meaning: "đồ lót",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "30", word: "先生", type: "(N)", reading: "せんせい", romaji: "sensei", meaning: "bác sĩ",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "31", word: "２，３日", type: "(N)", reading: "にさんにち", romaji: "ni-san nichi", meaning: "vài ngày" },
-  { id: "32", word: "２，３～", type: "(Prefix)", reading: "にさん～", romaji: "ni-san ~", meaning: "vài ~" },
-  { id: "33", word: "～までに", type: "(Grammar)", reading: "～までに", romaji: "~made ni", meaning: "trước (deadline)" },
+  {
+    id: "31", word: "２，３日", type: "(N)", reading: "にさんにち", romaji: "ni-san nichi", meaning: "vài ngày",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "32", word: "２，３～", type: "(Prefix)", reading: "にさん～", romaji: "ni-san ~", meaning: "vài ~",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "33", word: "～までに", type: "(Grammar)", reading: "～までに", romaji: "~made ni", meaning: "trước (deadline)",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "34", word: "ですから", type: "(Conj)", reading: "ですから", romaji: "desukara", meaning: "vì thế" },
-  { id: "35", word: "どうしましたか", type: "(Expr)", reading: "", romaji: "", meaning: "bạn bị sao vậy?" },
-  { id: "36", word: "～が痛いです", type: "(Expr)", reading: "～がいたいです", romaji: "~ ga itai desu", meaning: "bị đau ~" },
-  { id: "37", word: "のど", type: "(N)", reading: "のど", romaji: "nodo", meaning: "họng" },
-  { id: "38", word: "お大事に", type: "(Expr)", reading: "おだいじに", romaji: "odaiji ni", meaning: "mau khỏe nhé" },
+  {
+    id: "34", word: "ですから", type: "(Conj)", reading: "ですから", romaji: "desukara", meaning: "vì thế",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "35", word: "どうしましたか", type: "(Expr)", reading: "", romaji: "", meaning: "bạn bị sao vậy?",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "36", word: "～が痛いです", type: "(Expr)", reading: "～がいたいです", romaji: "~ ga itai desu", meaning: "bị đau ~",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "37", word: "のど", type: "(N)", reading: "のど", romaji: "nodo", meaning: "họng",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "38", word: "お大事に", type: "(Expr)", reading: "おだいじに", romaji: "odaiji ni", meaning: "mau khỏe nhé",
+    idChapter: 0,
+    uniqueId: ""
+  },
 ];
 
 export const initialBai18: Flashcard[] = [
-  { id: "1", word: "できます", type: "(II)", reading: "できます", romaji: "dekimasu", meaning: "có thể" },
-  { id: "2", word: "洗います", type: "(I)", reading: "あらいます", romaji: "araimasu", meaning: "rửa" },
-  { id: "3", word: "弾きます", type: "(I)", reading: "ひきます", romaji: "hikimasu", meaning: "chơi (nhạc cụ)" },
-  { id: "4", word: "歌います", type: "(I)", reading: "うたいます", romaji: "utaimasu", meaning: "hát" },
-  { id: "5", word: "集めます", type: "(II)", reading: "あつめます", romaji: "atsumemasu", meaning: "sưu tầm" },
-  { id: "6", word: "捨てます", type: "(II)", reading: "すてます", romaji: "sutemasu", meaning: "vứt đi" },
-  { id: "7", word: "換えます", type: "(II)", reading: "かえます", romaji: "kaemasu", meaning: "đổi" },
-  { id: "8", word: "運転します", type: "(III)", reading: "うんてんします", romaji: "unten shimasu", meaning: "lái xe" },
-  { id: "9", word: "予約します", type: "(III)", reading: "よやくします", romaji: "yoyaku shimasu", meaning: "đặt chỗ" },
-  { id: "10", word: "見学します", type: "(III)", reading: "けんがくします", romaji: "kengaku shimasu", meaning: "tham quan (học tập)" },
+  {
+    id: "1", word: "できます", type: "(II)", reading: "できます", romaji: "dekimasu", meaning: "có thể",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "2", word: "洗います", type: "(I)", reading: "あらいます", romaji: "araimasu", meaning: "rửa",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "3", word: "弾きます", type: "(I)", reading: "ひきます", romaji: "hikimasu", meaning: "chơi (nhạc cụ)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "4", word: "歌います", type: "(I)", reading: "うたいます", romaji: "utaimasu", meaning: "hát",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "5", word: "集めます", type: "(II)", reading: "あつめます", romaji: "atsumemasu", meaning: "sưu tầm",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "6", word: "捨てます", type: "(II)", reading: "すてます", romaji: "sutemasu", meaning: "vứt đi",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "7", word: "換えます", type: "(II)", reading: "かえます", romaji: "kaemasu", meaning: "đổi",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "8", word: "運転します", type: "(III)", reading: "うんてんします", romaji: "unten shimasu", meaning: "lái xe",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "9", word: "予約します", type: "(III)", reading: "よやくします", romaji: "yoyaku shimasu", meaning: "đặt chỗ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "10", word: "見学します", type: "(III)", reading: "けんがくします", romaji: "kengaku shimasu", meaning: "tham quan (học tập)",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "11", word: "ピアノ", type: "(N)", reading: "ピアノ", romaji: "piano", meaning: "đàn piano" },
-  { id: "12", word: "～メートル", type: "(Counter)", reading: "～メートル", romaji: "~ meetoru", meaning: "~ mét" },
-  { id: "13", word: "国際～", type: "(Prefix)", reading: "こくさい～", romaji: "kokusai~", meaning: "~ quốc tế" },
-  { id: "14", word: "現金", type: "(N)", reading: "げんきん", romaji: "genkin", meaning: "tiền mặt" },
-  { id: "15", word: "趣味", type: "(N)", reading: "しゅみ", romaji: "shumi", meaning: "sở thích" },
-  { id: "16", word: "日記", type: "(N)", reading: "にっき", romaji: "nikki", meaning: "nhật ký" },
-  { id: "17", word: "お祈り", type: "(N)", reading: "おいのり", romaji: "oinori", meaning: "cầu nguyện" },
-  { id: "18", word: "課長", type: "(N)", reading: "かちょう", romaji: "kachou", meaning: "trưởng nhóm" },
-  { id: "19", word: "部長", type: "(N)", reading: "ぶちょう", romaji: "buchou", meaning: "trưởng phòng" },
-  { id: "20", word: "社長", type: "(N)", reading: "しゃちょう", romaji: "shachou", meaning: "giám đốc" },
-  { id: "21", word: "動物", type: "(N)", reading: "どうぶつ", romaji: "doubutsu", meaning: "động vật" },
-  { id: "22", word: "鳥", type: "(N)", reading: "とり", romaji: "tori", meaning: "chim" },
+  {
+    id: "11", word: "ピアノ", type: "(N)", reading: "ピアノ", romaji: "piano", meaning: "đàn piano",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "12", word: "～メートル", type: "(Counter)", reading: "～メートル", romaji: "~ meetoru", meaning: "~ mét",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "13", word: "国際～", type: "(Prefix)", reading: "こくさい～", romaji: "kokusai~", meaning: "~ quốc tế",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "14", word: "現金", type: "(N)", reading: "げんきん", romaji: "genkin", meaning: "tiền mặt",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "15", word: "趣味", type: "(N)", reading: "しゅみ", romaji: "shumi", meaning: "sở thích",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "16", word: "日記", type: "(N)", reading: "にっき", romaji: "nikki", meaning: "nhật ký",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "17", word: "お祈り", type: "(N)", reading: "おいのり", romaji: "oinori", meaning: "cầu nguyện",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "18", word: "課長", type: "(N)", reading: "かちょう", romaji: "kachou", meaning: "trưởng nhóm",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "19", word: "部長", type: "(N)", reading: "ぶちょう", romaji: "buchou", meaning: "trưởng phòng",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "20", word: "社長", type: "(N)", reading: "しゃちょう", romaji: "shachou", meaning: "giám đốc",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "21", word: "動物", type: "(N)", reading: "どうぶつ", romaji: "doubutsu", meaning: "động vật",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "22", word: "鳥", type: "(N)", reading: "とり", romaji: "tori", meaning: "chim",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "23", word: "へえ", type: "(Expr)", reading: "", romaji: "hee", meaning: "thế à!" },
-  { id: "24", word: "それはおもしろいですね", type: "(Expr)", reading: "", romaji: "", meaning: "hay thật nhỉ" },
-  { id: "25", word: "なかなか", type: "(Adv)", reading: "なかなか", romaji: "nakanaka", meaning: "khó mà (phủ định)" },
-  { id: "26", word: "牧場", type: "(N)", reading: "ぼくじょう", romaji: "bokujou", meaning: "trang trại" },
-  { id: "27", word: "本当ですか", type: "(Expr)", reading: "ほんとうですか", romaji: "hontou desu ka", meaning: "thật không?" },
-  { id: "28", word: "ぜひ", type: "(Adv)", reading: "ぜひ", romaji: "zehi", meaning: "nhất định" },
+  {
+    id: "23", word: "へえ", type: "(Expr)", reading: "", romaji: "hee", meaning: "thế à!",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "24", word: "それはおもしろいですね", type: "(Expr)", reading: "", romaji: "", meaning: "hay thật nhỉ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "25", word: "なかなか", type: "(Adv)", reading: "なかなか", romaji: "nakanaka", meaning: "khó mà (phủ định)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "26", word: "牧場", type: "(N)", reading: "ぼくじょう", romaji: "bokujou", meaning: "trang trại",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "27", word: "本当ですか", type: "(Expr)", reading: "ほんとうですか", romaji: "hontou desu ka", meaning: "thật không?",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "28", word: "ぜひ", type: "(Adv)", reading: "ぜひ", romaji: "zehi", meaning: "nhất định",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "29", word: "ビートルズ", type: "(N)", reading: "ビートルズ", romaji: "biitoruzu", meaning: "The Beatles" },
+  {
+    id: "29", word: "ビートルズ", type: "(N)", reading: "ビートルズ", romaji: "biitoruzu", meaning: "The Beatles",
+    idChapter: 0,
+    uniqueId: ""
+  },
 ];
 
 export const initialBai19: Flashcard[] = [
-  { id: "1", word: "登ります", type: "(I)", reading: "のぼります", romaji: "noborimasu", meaning: "leo (núi)" },
-  { id: "2", word: "泊まります", type: "(I)", reading: "とまります", romaji: "tomarimasu", meaning: "trọ (khách sạn)" },
-  { id: "3", word: "掃除します", type: "(III)", reading: "そうじします", romaji: "souji shimasu", meaning: "dọn vệ sinh" },
-  { id: "4", word: "洗濯します", type: "(III)", reading: "せんたくします", romaji: "sentaku shimasu", meaning: "giặt" },
-  { id: "5", word: "練習します", type: "(III)", reading: "れんしゅうします", romaji: "renshuu shimasu", meaning: "luyện tập" },
-  { id: "6", word: "なります", type: "(I)", reading: "なります", romaji: "narimasu", meaning: "trở nên" },
+  {
+    id: "1", word: "登ります", type: "(I)", reading: "のぼります", romaji: "noborimasu", meaning: "leo (núi)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "2", word: "泊まります", type: "(I)", reading: "とまります", romaji: "tomarimasu", meaning: "trọ (khách sạn)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "3", word: "掃除します", type: "(III)", reading: "そうじします", romaji: "souji shimasu", meaning: "dọn vệ sinh",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "4", word: "洗濯します", type: "(III)", reading: "せんたくします", romaji: "sentaku shimasu", meaning: "giặt",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "5", word: "練習します", type: "(III)", reading: "れんしゅうします", romaji: "renshuu shimasu", meaning: "luyện tập",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "6", word: "なります", type: "(I)", reading: "なります", romaji: "narimasu", meaning: "trở nên",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "7", word: "眠い", type: "(Adj-i)", reading: "ねむい", romaji: "nemui", meaning: "buồn ngủ" },
-  { id: "8", word: "強い", type: "(Adj-i)", reading: "つよい", romaji: "tsuyoi", meaning: "mạnh" },
-  { id: "9", word: "弱い", type: "(Adj-i)", reading: "よわい", romaji: "yowai", meaning: "yếu" },
-  { id: "10", word: "調子がいい", type: "(Expr)", reading: "ちょうしがいい", romaji: "choushi ga ii", meaning: "tình trạng tốt" },
-  { id: "11", word: "調子が悪い", type: "(Expr)", reading: "ちょうしがわるい", romaji: "choushi ga warui", meaning: "tình trạng xấu" },
+  {
+    id: "7", word: "眠い", type: "(Adj-i)", reading: "ねむい", romaji: "nemui", meaning: "buồn ngủ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "8", word: "強い", type: "(Adj-i)", reading: "つよい", romaji: "tsuyoi", meaning: "mạnh",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "9", word: "弱い", type: "(Adj-i)", reading: "よわい", romaji: "yowai", meaning: "yếu",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "10", word: "調子がいい", type: "(Expr)", reading: "ちょうしがいい", romaji: "choushi ga ii", meaning: "tình trạng tốt",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "11", word: "調子が悪い", type: "(Expr)", reading: "ちょうしがわるい", romaji: "choushi ga warui", meaning: "tình trạng xấu",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "12", word: "調子", type: "(N)", reading: "ちょうし", romaji: "choushi", meaning: "tình trạng" },
-  { id: "13", word: "ゴルフ", type: "(N)", reading: "ゴルフ", romaji: "gorufu", meaning: "golf" },
-  { id: "14", word: "相撲", type: "(N)", reading: "すもう", romaji: "sumou", meaning: "sumo" },
-  { id: "15", word: "パチンコ", type: "(N)", reading: "パチンコ", romaji: "pachinko", meaning: "pachinko" },
-  { id: "16", word: "お茶", type: "(N)", reading: "おちゃ", romaji: "ocha", meaning: "trà" },
-  { id: "17", word: "日", type: "(N)", reading: "ひ", romaji: "hi", meaning: "ngày" },
-  { id: "18", word: "一度", type: "(Adv)", reading: "いちど", romaji: "ichido", meaning: "một lần" },
-  { id: "19", word: "一度も", type: "(Adv)", reading: "いちども", romaji: "ichidomo", meaning: "chưa lần nào" },
+  {
+    id: "12", word: "調子", type: "(N)", reading: "ちょうし", romaji: "choushi", meaning: "tình trạng",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "13", word: "ゴルフ", type: "(N)", reading: "ゴルフ", romaji: "gorufu", meaning: "golf",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "14", word: "相撲", type: "(N)", reading: "すもう", romaji: "sumou", meaning: "sumo",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "15", word: "パチンコ", type: "(N)", reading: "パチンコ", romaji: "pachinko", meaning: "pachinko",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "16", word: "お茶", type: "(N)", reading: "おちゃ", romaji: "ocha", meaning: "trà",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "17", word: "日", type: "(N)", reading: "ひ", romaji: "hi", meaning: "ngày",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "18", word: "一度", type: "(Adv)", reading: "いちど", romaji: "ichido", meaning: "một lần",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "19", word: "一度も", type: "(Adv)", reading: "いちども", romaji: "ichidomo", meaning: "chưa lần nào",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "20", word: "だんだん", type: "(Adv)", reading: "だんだん", romaji: "dandan", meaning: "dần dần" },
-  { id: "21", word: "もうすぐ", type: "(Adv)", reading: "もうすぐ", romaji: "mousugu", meaning: "sắp" },
+  {
+    id: "20", word: "だんだん", type: "(Adv)", reading: "だんだん", romaji: "dandan", meaning: "dần dần",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "21", word: "もうすぐ", type: "(Adv)", reading: "もうすぐ", romaji: "mousugu", meaning: "sắp",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "22", word: "おかげさまで", type: "(Expr)", reading: "", romaji: "okagesama de", meaning: "nhờ ơn (cảm ơn)" },
-  { id: "23", word: "乾杯", type: "(Expr)", reading: "かんぱい", romaji: "kanpai", meaning: "cạn ly" },
-  { id: "24", word: "実は", type: "(Adv)", reading: "じつは", romaji: "jitsu wa", meaning: "thật ra" },
+  {
+    id: "22", word: "おかげさまで", type: "(Expr)", reading: "", romaji: "okagesama de", meaning: "nhờ ơn (cảm ơn)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "23", word: "乾杯", type: "(Expr)", reading: "かんぱい", romaji: "kanpai", meaning: "cạn ly",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "24", word: "実は", type: "(Adv)", reading: "じつは", romaji: "jitsu wa", meaning: "thật ra",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "25", word: "ダイエット", type: "(N)", reading: "ダイエット", romaji: "daietto", meaning: "ăn kiêng" },
-  { id: "26", word: "何回も", type: "(Adv)", reading: "なんかいも", romaji: "nankai mo", meaning: "nhiều lần" },
-  { id: "27", word: "しかし", type: "(Conj)", reading: "しかし", romaji: "shikashi", meaning: "tuy nhiên" },
-  { id: "28", word: "無理", type: "(Adj-na)", reading: "むり", romaji: "muri", meaning: "quá sức" },
-  { id: "29", word: "体にいい", type: "(Expr)", reading: "からだにいい", romaji: "karada ni ii", meaning: "tốt cho sức khỏe" },
+  {
+    id: "25", word: "ダイエット", type: "(N)", reading: "ダイエット", romaji: "daietto", meaning: "ăn kiêng",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "26", word: "何回も", type: "(Adv)", reading: "なんかいも", romaji: "nankai mo", meaning: "nhiều lần",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "27", word: "しかし", type: "(Conj)", reading: "しかし", romaji: "shikashi", meaning: "tuy nhiên",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "28", word: "無理", type: "(Adj-na)", reading: "むり", romaji: "muri", meaning: "quá sức",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "29", word: "体にいい", type: "(Expr)", reading: "からだにいい", romaji: "karada ni ii", meaning: "tốt cho sức khỏe",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "30", word: "ケーキ", type: "(N)", reading: "ケーキ", romaji: "keeki", meaning: "bánh ngọt" },
-  { id: "31", word: "葛飾北斎", type: "(N)", reading: "かつしかほくさい", romaji: "katsushika hokusai", meaning: "Hokusai (họa sĩ)" },
+  {
+    id: "30", word: "ケーキ", type: "(N)", reading: "ケーキ", romaji: "keeki", meaning: "bánh ngọt",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "31", word: "葛飾北斎", type: "(N)", reading: "かつしかほくさい", romaji: "katsushika hokusai", meaning: "Hokusai (họa sĩ)",
+    idChapter: 0,
+    uniqueId: ""
+  },
 ];
 
 export const initialBai20: Flashcard[] = [
-  { id: "1", word: "要ります", type: "(I)", reading: "いります", romaji: "irimasu", meaning: "cần (visa, tiền...)" },
-  { id: "2", word: "調べます", type: "(II)", reading: "しらべます", romaji: "shirabemasu", meaning: "tìm hiểu, tra cứu" },
-  { id: "3", word: "直します", type: "(I)", reading: "なおします", romaji: "naoshimasu", meaning: "sửa" },
-  { id: "4", word: "修理します", type: "(III)", reading: "しゅうりします", romaji: "shuuri shimasu", meaning: "sửa chữa" },
-  { id: "5", word: "電話します", type: "(III)", reading: "でんわします", romaji: "denwa shimasu", meaning: "gọi điện" },
+  {
+    id: "1", word: "要ります", type: "(I)", reading: "いります", romaji: "irimasu", meaning: "cần (visa, tiền...)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "2", word: "調べます", type: "(II)", reading: "しらべます", romaji: "shirabemasu", meaning: "tìm hiểu, tra cứu",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "3", word: "直します", type: "(I)", reading: "なおします", romaji: "naoshimasu", meaning: "sửa",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "4", word: "修理します", type: "(III)", reading: "しゅうりします", romaji: "shuuri shimasu", meaning: "sửa chữa",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "5", word: "電話します", type: "(III)", reading: "でんわします", romaji: "denwa shimasu", meaning: "gọi điện",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "6", word: "僕", type: "(Pron)", reading: "ぼく", romaji: "boku", meaning: "tôi (nam, thân mật)" },
-  { id: "7", word: "君", type: "(Pron)", reading: "きみ", romaji: "kimi", meaning: "bạn (thân mật)" },
-  { id: "8", word: "～君", type: "(Suffix)", reading: "～くん", romaji: "~kun", meaning: "cách gọi thân mật (nam)" },
+  {
+    id: "6", word: "僕", type: "(Pron)", reading: "ぼく", romaji: "boku", meaning: "tôi (nam, thân mật)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "7", word: "君", type: "(Pron)", reading: "きみ", romaji: "kimi", meaning: "bạn (thân mật)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "8", word: "～君", type: "(Suffix)", reading: "～くん", romaji: "~kun", meaning: "cách gọi thân mật (nam)",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "9", word: "うん", type: "(Expr)", reading: "", romaji: "un", meaning: "ừ" },
-  { id: "10", word: "ううん", type: "(Expr)", reading: "", romaji: "uun", meaning: "không" },
+  {
+    id: "9", word: "うん", type: "(Expr)", reading: "", romaji: "un", meaning: "ừ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "10", word: "ううん", type: "(Expr)", reading: "", romaji: "uun", meaning: "không",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "11", word: "サラリーマン", type: "(N)", reading: "サラリーマン", romaji: "sarariman", meaning: "nhân viên công ty" },
-  { id: "12", word: "ことば", type: "(N)", reading: "ことば", romaji: "kotoba", meaning: "từ, ngôn ngữ" },
-  { id: "13", word: "物価", type: "(N)", reading: "ぶっか", romaji: "bukka", meaning: "giá cả" },
-  { id: "14", word: "着物", type: "(N)", reading: "きもの", romaji: "kimono", meaning: "kimono" },
-  { id: "15", word: "ビザ", type: "(N)", reading: "ビザ", romaji: "biza", meaning: "visa" },
-  { id: "16", word: "初め", type: "(N)", reading: "はじめ", romaji: "hajime", meaning: "ban đầu" },
-  { id: "17", word: "終わり", type: "(N)", reading: "おわり", romaji: "owari", meaning: "kết thúc" },
+  {
+    id: "11", word: "サラリーマン", type: "(N)", reading: "サラリーマン", romaji: "sarariman", meaning: "nhân viên công ty",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "12", word: "ことば", type: "(N)", reading: "ことば", romaji: "kotoba", meaning: "từ, ngôn ngữ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "13", word: "物価", type: "(N)", reading: "ぶっか", romaji: "bukka", meaning: "giá cả",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "14", word: "着物", type: "(N)", reading: "きもの", romaji: "kimono", meaning: "kimono",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "15", word: "ビザ", type: "(N)", reading: "ビザ", romaji: "biza", meaning: "visa",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "16", word: "初め", type: "(N)", reading: "はじめ", romaji: "hajime", meaning: "ban đầu",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "17", word: "終わり", type: "(N)", reading: "おわり", romaji: "owari", meaning: "kết thúc",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "18", word: "こっち", type: "(Pron)", reading: "こっち", romaji: "kocchi", meaning: "phía này (casual)" },
-  { id: "19", word: "そっち", type: "(Pron)", reading: "そっち", romaji: "socchi", meaning: "phía đó (casual)" },
-  { id: "20", word: "あっち", type: "(Pron)", reading: "あっち", romaji: "acchi", meaning: "phía kia (casual)" },
-  { id: "21", word: "どっち", type: "(Pron)", reading: "どっち", romaji: "docchi", meaning: "đâu, cái nào (casual)" },
+  {
+    id: "18", word: "こっち", type: "(Pron)", reading: "こっち", romaji: "kocchi", meaning: "phía này (casual)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "19", word: "そっち", type: "(Pron)", reading: "そっち", romaji: "socchi", meaning: "phía đó (casual)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "20", word: "あっち", type: "(Pron)", reading: "あっち", romaji: "acchi", meaning: "phía kia (casual)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "21", word: "どっち", type: "(Pron)", reading: "どっち", romaji: "docchi", meaning: "đâu, cái nào (casual)",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "22", word: "この間", type: "(Adv)", reading: "このあいだ", romaji: "kono aida", meaning: "hôm nọ" },
-  { id: "23", word: "みんなで", type: "(Adv)", reading: "みんなで", romaji: "minna de", meaning: "cùng nhau" },
-  { id: "24", word: "～けど", type: "(Grammar)", reading: "～けど", romaji: "~kedo", meaning: "nhưng (casual)" },
+  {
+    id: "22", word: "この間", type: "(Adv)", reading: "このあいだ", romaji: "kono aida", meaning: "hôm nọ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "23", word: "みんなで", type: "(Adv)", reading: "みんなで", romaji: "minna de", meaning: "cùng nhau",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "24", word: "～けど", type: "(Grammar)", reading: "～けど", romaji: "~kedo", meaning: "nhưng (casual)",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "25", word: "国へ帰るの？", type: "(Expr)", reading: "くにへかえるの？", romaji: "kuni e kaeru no?", meaning: "về nước à?" },
-  { id: "26", word: "どうするの？", type: "(Expr)", reading: "", romaji: "dou suru no?", meaning: "bạn định làm gì?" },
-  { id: "27", word: "どうしようかな", type: "(Expr)", reading: "", romaji: "dou shiyou kana", meaning: "làm sao nhỉ" },
-  { id: "28", word: "よかったら", type: "(Expr)", reading: "", romaji: "yokattara", meaning: "nếu bạn muốn" },
+  {
+    id: "25", word: "国へ帰るの？", type: "(Expr)", reading: "くにへかえるの？", romaji: "kuni e kaeru no?", meaning: "về nước à?",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "26", word: "どうするの？", type: "(Expr)", reading: "", romaji: "dou suru no?", meaning: "bạn định làm gì?",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "27", word: "どうしようかな", type: "(Expr)", reading: "", romaji: "dou shiyou kana", meaning: "làm sao nhỉ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "28", word: "よかったら", type: "(Expr)", reading: "", romaji: "yokattara", meaning: "nếu bạn muốn",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "29", word: "いろいろ", type: "(Adv)", reading: "いろいろ", romaji: "iroiro", meaning: "nhiều thứ" },
+  {
+    id: "29", word: "いろいろ", type: "(Adv)", reading: "いろいろ", romaji: "iroiro", meaning: "nhiều thứ",
+    idChapter: 0,
+    uniqueId: ""
+  },
 ];
 
 export const initialBai21: Flashcard[] = [
-  { id: "1", word: "思います", type: "(I)", reading: "おもいます", romaji: "omoimasu", meaning: "nghĩ" },
-  { id: "2", word: "言います", type: "(I)", reading: "いいます", romaji: "iimasu", meaning: "nói" },
-  { id: "3", word: "足ります", type: "(II)", reading: "たります", romaji: "tarimasu", meaning: "đủ" },
-  { id: "4", word: "勝ちます", type: "(I)", reading: "かちます", romaji: "kachimasu", meaning: "thắng" },
-  { id: "5", word: "負けます", type: "(II)", reading: "まけます", romaji: "makemasu", meaning: "thua" },
-  { id: "6", word: "あります", type: "(I)", reading: "あります", romaji: "arimasu", meaning: "diễn ra, có (lễ hội...)" },
-  { id: "7", word: "役に立ちます", type: "(I)", reading: "やくにたちます", romaji: "yaku ni tachimasu", meaning: "có ích" },
+  {
+    id: "1", word: "思います", type: "(I)", reading: "おもいます", romaji: "omoimasu", meaning: "nghĩ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "2", word: "言います", type: "(I)", reading: "いいます", romaji: "iimasu", meaning: "nói",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "3", word: "足ります", type: "(II)", reading: "たります", romaji: "tarimasu", meaning: "đủ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "4", word: "勝ちます", type: "(I)", reading: "かちます", romaji: "kachimasu", meaning: "thắng",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "5", word: "負けます", type: "(II)", reading: "まけます", romaji: "makemasu", meaning: "thua",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "6", word: "あります", type: "(I)", reading: "あります", romaji: "arimasu", meaning: "diễn ra, có (lễ hội...)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "7", word: "役に立ちます", type: "(I)", reading: "やくにたちます", romaji: "yaku ni tachimasu", meaning: "có ích",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "8", word: "無駄", type: "(Adj-na)", reading: "むだ", romaji: "muda", meaning: "lãng phí, vô ích" },
-  { id: "9", word: "不便", type: "(Adj-na)", reading: "ふべん", romaji: "fuben", meaning: "bất tiện" },
-  { id: "10", word: "同じ", type: "(Adj-na)", reading: "おなじ", romaji: "onaji", meaning: "giống" },
-  { id: "11", word: "すごい", type: "(Expr)", reading: "", romaji: "sugoi", meaning: "ghê, giỏi thật" },
+  {
+    id: "8", word: "無駄", type: "(Adj-na)", reading: "むだ", romaji: "muda", meaning: "lãng phí, vô ích",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "9", word: "不便", type: "(Adj-na)", reading: "ふべん", romaji: "fuben", meaning: "bất tiện",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "10", word: "同じ", type: "(Adj-na)", reading: "おなじ", romaji: "onaji", meaning: "giống",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "11", word: "すごい", type: "(Expr)", reading: "", romaji: "sugoi", meaning: "ghê, giỏi thật",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "12", word: "首相", type: "(N)", reading: "しゅしょう", romaji: "shushou", meaning: "thủ tướng" },
-  { id: "13", word: "大統領", type: "(N)", reading: "だいとうりょう", romaji: "daitouryou", meaning: "tổng thống" },
-  { id: "14", word: "政治", type: "(N)", reading: "せいじ", romaji: "seiji", meaning: "chính trị" },
-  { id: "15", word: "ニュース", type: "(N)", reading: "ニュース", romaji: "nyuusu", meaning: "tin tức" },
-  { id: "16", word: "スピーチ", type: "(N)", reading: "スピーチ", romaji: "supiichi", meaning: "bài phát biểu" },
-  { id: "17", word: "試合", type: "(N)", reading: "しあい", romaji: "shiai", meaning: "trận đấu" },
-  { id: "18", word: "アルバイト", type: "(N)", reading: "アルバイト", romaji: "arubaito", meaning: "việc làm thêm" },
-  { id: "19", word: "意見", type: "(N)", reading: "いけん", romaji: "iken", meaning: "ý kiến" },
-  { id: "20", word: "お話", type: "(N)", reading: "おはなし", romaji: "ohanashi", meaning: "câu chuyện, bài nói" },
-  { id: "21", word: "ユーモア", type: "(N)", reading: "ユーモア", romaji: "yuumoa", meaning: "hài hước" },
-  { id: "22", word: "デザイン", type: "(N)", reading: "デザイン", romaji: "dezain", meaning: "thiết kế" },
-  { id: "23", word: "交通", type: "(N)", reading: "こうつう", romaji: "koutsuu", meaning: "giao thông" },
-  { id: "24", word: "ラッシュ", type: "(N)", reading: "ラッシュ", romaji: "rasshu", meaning: "giờ cao điểm" },
+  {
+    id: "12", word: "首相", type: "(N)", reading: "しゅしょう", romaji: "shushou", meaning: "thủ tướng",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "13", word: "大統領", type: "(N)", reading: "だいとうりょう", romaji: "daitouryou", meaning: "tổng thống",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "14", word: "政治", type: "(N)", reading: "せいじ", romaji: "seiji", meaning: "chính trị",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "15", word: "ニュース", type: "(N)", reading: "ニュース", romaji: "nyuusu", meaning: "tin tức",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "16", word: "スピーチ", type: "(N)", reading: "スピーチ", romaji: "supiichi", meaning: "bài phát biểu",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "17", word: "試合", type: "(N)", reading: "しあい", romaji: "shiai", meaning: "trận đấu",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "18", word: "アルバイト", type: "(N)", reading: "アルバイト", romaji: "arubaito", meaning: "việc làm thêm",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "19", word: "意見", type: "(N)", reading: "いけん", romaji: "iken", meaning: "ý kiến",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "20", word: "お話", type: "(N)", reading: "おはなし", romaji: "ohanashi", meaning: "câu chuyện, bài nói",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "21", word: "ユーモア", type: "(N)", reading: "ユーモア", romaji: "yuumoa", meaning: "hài hước",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "22", word: "デザイン", type: "(N)", reading: "デザイン", romaji: "dezain", meaning: "thiết kế",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "23", word: "交通", type: "(N)", reading: "こうつう", romaji: "koutsuu", meaning: "giao thông",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "24", word: "ラッシュ", type: "(N)", reading: "ラッシュ", romaji: "rasshu", meaning: "giờ cao điểm",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "25", word: "最近", type: "(Adv)", reading: "さいきん", romaji: "saikin", meaning: "gần đây" },
-  { id: "26", word: "たぶん", type: "(Adv)", reading: "たぶん", romaji: "tabun", meaning: "có lẽ" },
-  { id: "27", word: "きっと", type: "(Adv)", reading: "きっと", romaji: "kitto", meaning: "chắc chắn" },
-  { id: "28", word: "本当に", type: "(Adv)", reading: "ほんとうに", romaji: "hontou ni", meaning: "thật sự" },
-  { id: "29", word: "そんなに", type: "(Adv)", reading: "そんなに", romaji: "sonna ni", meaning: "(không) đến mức đó" },
+  {
+    id: "25", word: "最近", type: "(Adv)", reading: "さいきん", romaji: "saikin", meaning: "gần đây",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "26", word: "たぶん", type: "(Adv)", reading: "たぶん", romaji: "tabun", meaning: "có lẽ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "27", word: "きっと", type: "(Adv)", reading: "きっと", romaji: "kitto", meaning: "chắc chắn",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "28", word: "本当に", type: "(Adv)", reading: "ほんとうに", romaji: "hontou ni", meaning: "thật sự",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "29", word: "そんなに", type: "(Adv)", reading: "そんなに", romaji: "sonna ni", meaning: "(không) đến mức đó",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "30", word: "～について", type: "(Grammar)", reading: "～について", romaji: "~ ni tsuite", meaning: "về ~" },
+  {
+    id: "30", word: "～について", type: "(Grammar)", reading: "～について", romaji: "~ ni tsuite", meaning: "về ~",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "31", word: "しかたがありません", type: "(Expr)", reading: "", romaji: "shikata ga arimasen", meaning: "đành chịu" },
-  { id: "32", word: "しばらくですね", type: "(Expr)", reading: "", romaji: "shibaraku desu ne", meaning: "lâu không gặp" },
-  { id: "33", word: "～でも飲みませんか", type: "(Expr)", reading: "", romaji: "~ demo nomimasen ka", meaning: "uống ~ nhé?" },
-  { id: "34", word: "見ないと", type: "(Grammar)", reading: "みないと", romaji: "minai to", meaning: "phải làm ~" },
-  { id: "35", word: "もちろん", type: "(Adv)", reading: "もちろん", romaji: "mochiron", meaning: "tất nhiên" },
+  {
+    id: "31", word: "しかたがありません", type: "(Expr)", reading: "", romaji: "shikata ga arimasen", meaning: "đành chịu",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "32", word: "しばらくですね", type: "(Expr)", reading: "", romaji: "shibaraku desu ne", meaning: "lâu không gặp",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "33", word: "～でも飲みませんか", type: "(Expr)", reading: "", romaji: "~ demo nomimasen ka", meaning: "uống ~ nhé?",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "34", word: "見ないと", type: "(Grammar)", reading: "みないと", romaji: "minai to", meaning: "phải làm ~",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "35", word: "もちろん", type: "(Adv)", reading: "もちろん", romaji: "mochiron", meaning: "tất nhiên",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "36", word: "カンガルー", type: "(N)", reading: "カンガルー", romaji: "kangaruu", meaning: "kangaroo" },
-  { id: "37", word: "キャプテン・クック", type: "(N)", reading: "", romaji: "Captain Cook", meaning: "thuyền trưởng Cook" },
+  {
+    id: "36", word: "カンガルー", type: "(N)", reading: "カンガルー", romaji: "kangaruu", meaning: "kangaroo",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "37", word: "キャプテン・クック", type: "(N)", reading: "", romaji: "Captain Cook", meaning: "thuyền trưởng Cook",
+    idChapter: 0,
+    uniqueId: ""
+  },
 ];
 
 export const initialBai22: Flashcard[] = [
-  { id: "1", word: "着ます", type: "(II)", reading: "きます", romaji: "kimasu", meaning: "mặc (áo)" },
-  { id: "2", word: "履きます", type: "(I)", reading: "はきます", romaji: "hakimasu", meaning: "mặc/đi (giày, quần)" },
-  { id: "3", word: "かぶります", type: "(I)", reading: "かぶります", romaji: "kaburimasu", meaning: "đội (mũ)" },
-  { id: "4", word: "かけます", type: "(II)", reading: "かけます", romaji: "kakemasu", meaning: "đeo (kính)" },
-  { id: "5", word: "生まれます", type: "(II)", reading: "うまれます", romaji: "umaremasu", meaning: "sinh ra" },
+  {
+    id: "1", word: "着ます", type: "(II)", reading: "きます", romaji: "kimasu", meaning: "mặc (áo)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "2", word: "履きます", type: "(I)", reading: "はきます", romaji: "hakimasu", meaning: "mặc/đi (giày, quần)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "3", word: "かぶります", type: "(I)", reading: "かぶります", romaji: "kaburimasu", meaning: "đội (mũ)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "4", word: "かけます", type: "(II)", reading: "かけます", romaji: "kakemasu", meaning: "đeo (kính)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "5", word: "生まれます", type: "(II)", reading: "うまれます", romaji: "umaremasu", meaning: "sinh ra",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "6", word: "コート", type: "(N)", reading: "コート", romaji: "kooto", meaning: "áo khoác" },
-  { id: "7", word: "スーツ", type: "(N)", reading: "スーツ", romaji: "suutsu", meaning: "com-lê" },
-  { id: "8", word: "セーター", type: "(N)", reading: "セーター", romaji: "seetaa", meaning: "áo len" },
-  { id: "9", word: "帽子", type: "(N)", reading: "ぼうし", romaji: "boushi", meaning: "mũ" },
-  { id: "10", word: "眼鏡", type: "(N)", reading: "めがね", romaji: "megane", meaning: "kính" },
+  {
+    id: "6", word: "コート", type: "(N)", reading: "コート", romaji: "kooto", meaning: "áo khoác",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "7", word: "スーツ", type: "(N)", reading: "スーツ", romaji: "suutsu", meaning: "com-lê",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "8", word: "セーター", type: "(N)", reading: "セーター", romaji: "seetaa", meaning: "áo len",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "9", word: "帽子", type: "(N)", reading: "ぼうし", romaji: "boushi", meaning: "mũ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "10", word: "眼鏡", type: "(N)", reading: "めがね", romaji: "megane", meaning: "kính",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "11", word: "よく", type: "(Adv)", reading: "よく", romaji: "yoku", meaning: "thường xuyên" },
-  { id: "12", word: "おめでとうございます", type: "(Expr)", reading: "", romaji: "omedetou gozaimasu", meaning: "chúc mừng" },
-  { id: "13", word: "こちら", type: "(Pron)", reading: "こちら", romaji: "kochira", meaning: "cái này (lịch sự)" },
-  { id: "14", word: "家賃", type: "(N)", reading: "やちん", romaji: "yachin", meaning: "tiền thuê nhà" },
-  { id: "15", word: "うーん", type: "(Expr)", reading: "", romaji: "uun", meaning: "ừm..., để xem" },
+  {
+    id: "11", word: "よく", type: "(Adv)", reading: "よく", romaji: "yoku", meaning: "thường xuyên",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "12", word: "おめでとうございます", type: "(Expr)", reading: "", romaji: "omedetou gozaimasu", meaning: "chúc mừng",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "13", word: "こちら", type: "(Pron)", reading: "こちら", romaji: "kochira", meaning: "cái này (lịch sự)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "14", word: "家賃", type: "(N)", reading: "やちん", romaji: "yachin", meaning: "tiền thuê nhà",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "15", word: "うーん", type: "(Expr)", reading: "", romaji: "uun", meaning: "ừm..., để xem",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "16", word: "ダイニングキッチン", type: "(N)", reading: "ダイニングキッチン", romaji: "dainingu kicchin", meaning: "bếp + phòng ăn" },
-  { id: "17", word: "和室", type: "(N)", reading: "わしつ", romaji: "washitsu", meaning: "phòng kiểu Nhật" },
-  { id: "18", word: "押し入れ", type: "(N)", reading: "おしいれ", romaji: "oshiire", meaning: "tủ chăn futon" },
-  { id: "19", word: "布団", type: "(N)", reading: "ふとん", romaji: "futon", meaning: "chăn đệm" },
-  { id: "20", word: "アパート", type: "(N)", reading: "アパート", romaji: "apaato", meaning: "căn hộ" },
+  {
+    id: "16", word: "ダイニングキッチン", type: "(N)", reading: "ダイニングキッチン", romaji: "dainingu kicchin", meaning: "bếp + phòng ăn",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "17", word: "和室", type: "(N)", reading: "わしつ", romaji: "washitsu", meaning: "phòng kiểu Nhật",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "18", word: "押し入れ", type: "(N)", reading: "おしいれ", romaji: "oshiire", meaning: "tủ chăn futon",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "19", word: "布団", type: "(N)", reading: "ふとん", romaji: "futon", meaning: "chăn đệm",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "20", word: "アパート", type: "(N)", reading: "アパート", romaji: "apaato", meaning: "căn hộ",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "21", word: "パリ", type: "(N)", reading: "パリ", romaji: "pari", meaning: "Paris" },
-  { id: "22", word: "万里の長城", type: "(N)", reading: "ばんりのちょうじょう", romaji: "banri no choujou", meaning: "Vạn Lý Trường Thành" },
-  { id: "23", word: "余暇開発センター", type: "(N)", reading: "よかかいはつセンター", romaji: "yoka kaihatsu sentaa", meaning: "trung tâm phát triển giải trí" },
-  { id: "24", word: "レジャー白書", type: "(N)", reading: "レジャーはくしょ", romaji: "rejaa hakusho", meaning: "sách trắng về giải trí" },
+  {
+    id: "21", word: "パリ", type: "(N)", reading: "パリ", romaji: "pari", meaning: "Paris",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "22", word: "万里の長城", type: "(N)", reading: "ばんりのちょうじょう", romaji: "banri no choujou", meaning: "Vạn Lý Trường Thành",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "23", word: "余暇開発センター", type: "(N)", reading: "よかかいはつセンター", romaji: "yoka kaihatsu sentaa", meaning: "trung tâm phát triển giải trí",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "24", word: "レジャー白書", type: "(N)", reading: "レジャーはくしょ", romaji: "rejaa hakusho", meaning: "sách trắng về giải trí",
+    idChapter: 0,
+    uniqueId: ""
+  },
 ];
 
 export const initialBai23: Flashcard[] = [
-  { id: "1", word: "聞きます", type: "(I)", reading: "ききます", romaji: "kikimasu", meaning: "hỏi, nghe" },
-  { id: "2", word: "回します", type: "(I)", reading: "まわします", romaji: "mawashimasu", meaning: "vặn" },
-  { id: "3", word: "引きます", type: "(I)", reading: "ひきます", romaji: "hikimasu", meaning: "kéo" },
-  { id: "4", word: "変えます", type: "(II)", reading: "かえます", romaji: "kaemasu", meaning: "thay đổi" },
-  { id: "5", word: "触ります", type: "(I)", reading: "さわります", romaji: "sawarimasu", meaning: "chạm vào" },
+  {
+    id: "1", word: "聞きます", type: "(I)", reading: "ききます", romaji: "kikimasu", meaning: "hỏi, nghe",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "2", word: "回します", type: "(I)", reading: "まわします", romaji: "mawashimasu", meaning: "vặn",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "3", word: "引きます", type: "(I)", reading: "ひきます", romaji: "hikimasu", meaning: "kéo",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "4", word: "変えます", type: "(II)", reading: "かえます", romaji: "kaemasu", meaning: "thay đổi",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "5", word: "触ります", type: "(I)", reading: "さわります", romaji: "sawarimasu", meaning: "chạm vào",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "6", word: "出ます", type: "(II)", reading: "でます", romaji: "demasu", meaning: "ra (tiền thừa...)" },
-  { id: "7", word: "動きます", type: "(I)", reading: "うごきます", romaji: "ugokimasu", meaning: "chạy, hoạt động" },
-  { id: "8", word: "歩きます", type: "(I)", reading: "あるきます", romaji: "arukimasu", meaning: "đi bộ" },
-  { id: "9", word: "渡ります", type: "(I)", reading: "わたります", romaji: "watarimasu", meaning: "băng qua" },
-  { id: "10", word: "気をつけます", type: "(II)", reading: "きをつけます", romaji: "ki o tsukemasu", meaning: "cẩn thận" },
+  {
+    id: "6", word: "出ます", type: "(II)", reading: "でます", romaji: "demasu", meaning: "ra (tiền thừa...)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "7", word: "動きます", type: "(I)", reading: "うごきます", romaji: "ugokimasu", meaning: "chạy, hoạt động",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "8", word: "歩きます", type: "(I)", reading: "あるきます", romaji: "arukimasu", meaning: "đi bộ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "9", word: "渡ります", type: "(I)", reading: "わたります", romaji: "watarimasu", meaning: "băng qua",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "10", word: "気をつけます", type: "(II)", reading: "きをつけます", romaji: "ki o tsukemasu", meaning: "cẩn thận",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "11", word: "引っ越します", type: "(III)", reading: "ひっこしします", romaji: "hikkoshi shimasu", meaning: "chuyển nhà" },
+  {
+    id: "11", word: "引っ越します", type: "(III)", reading: "ひっこしします", romaji: "hikkoshi shimasu", meaning: "chuyển nhà",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "12", word: "電気屋", type: "(N)", reading: "でんきや", romaji: "denkiya", meaning: "cửa hàng điện" },
-  { id: "13", word: "～屋", type: "(Suffix)", reading: "～や", romaji: "~ya", meaning: "cửa hàng ~" },
-  { id: "14", word: "サイズ", type: "(N)", reading: "サイズ", romaji: "saizu", meaning: "kích thước" },
-  { id: "15", word: "音", type: "(N)", reading: "おと", romaji: "oto", meaning: "âm thanh" },
-  { id: "16", word: "機械", type: "(N)", reading: "きかい", romaji: "kikai", meaning: "máy móc" },
-  { id: "17", word: "つまみ", type: "(N)", reading: "つまみ", romaji: "tsumami", meaning: "núm vặn" },
-  { id: "18", word: "故障", type: "(N)", reading: "こしょう", romaji: "koshou", meaning: "hỏng" },
+  {
+    id: "12", word: "電気屋", type: "(N)", reading: "でんきや", romaji: "denkiya", meaning: "cửa hàng điện",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "13", word: "～屋", type: "(Suffix)", reading: "～や", romaji: "~ya", meaning: "cửa hàng ~",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "14", word: "サイズ", type: "(N)", reading: "サイズ", romaji: "saizu", meaning: "kích thước",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "15", word: "音", type: "(N)", reading: "おと", romaji: "oto", meaning: "âm thanh",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "16", word: "機械", type: "(N)", reading: "きかい", romaji: "kikai", meaning: "máy móc",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "17", word: "つまみ", type: "(N)", reading: "つまみ", romaji: "tsumami", meaning: "núm vặn",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "18", word: "故障", type: "(N)", reading: "こしょう", romaji: "koshou", meaning: "hỏng",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "19", word: "道", type: "(N)", reading: "みち", romaji: "michi", meaning: "đường" },
-  { id: "20", word: "交差点", type: "(N)", reading: "こうさてん", romaji: "kousaten", meaning: "ngã tư" },
-  { id: "21", word: "信号", type: "(N)", reading: "しんごう", romaji: "shingou", meaning: "đèn giao thông" },
-  { id: "22", word: "角", type: "(N)", reading: "かど", romaji: "kado", meaning: "góc" },
-  { id: "23", word: "橋", type: "(N)", reading: "はし", romaji: "hashi", meaning: "cầu" },
-  { id: "24", word: "駐車場", type: "(N)", reading: "ちゅうしゃじょう", romaji: "chuushajou", meaning: "bãi đỗ xe" },
+  {
+    id: "19", word: "道", type: "(N)", reading: "みち", romaji: "michi", meaning: "đường",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "20", word: "交差点", type: "(N)", reading: "こうさてん", romaji: "kousaten", meaning: "ngã tư",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "21", word: "信号", type: "(N)", reading: "しんごう", romaji: "shingou", meaning: "đèn giao thông",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "22", word: "角", type: "(N)", reading: "かど", romaji: "kado", meaning: "góc",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "23", word: "橋", type: "(N)", reading: "はし", romaji: "hashi", meaning: "cầu",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "24", word: "駐車場", type: "(N)", reading: "ちゅうしゃじょう", romaji: "chuushajou", meaning: "bãi đỗ xe",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "25", word: "～目", type: "(Suffix)", reading: "～め", romaji: "~me", meaning: "thứ ~" },
-  { id: "26", word: "お正月", type: "(N)", reading: "おしょうがつ", romaji: "oshougatsu", meaning: "Tết" },
+  {
+    id: "25", word: "～目", type: "(Suffix)", reading: "～め", romaji: "~me", meaning: "thứ ~",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "26", word: "お正月", type: "(N)", reading: "おしょうがつ", romaji: "oshougatsu", meaning: "Tết",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "27", word: "ごちそうさまでした", type: "(Expr)", reading: "", romaji: "gochisousama deshita", meaning: "cảm ơn bữa ăn" },
+  {
+    id: "27", word: "ごちそうさまでした", type: "(Expr)", reading: "", romaji: "gochisousama deshita", meaning: "cảm ơn bữa ăn",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "28", word: "建物", type: "(N)", reading: "たてもの", romaji: "tatemono", meaning: "tòa nhà" },
-  { id: "29", word: "外国人登録証", type: "(N)", reading: "がいこくじんとうろくしょう", romaji: "gaikokujin tourokushou", meaning: "thẻ ngoại kiều" },
+  {
+    id: "28", word: "建物", type: "(N)", reading: "たてもの", romaji: "tatemono", meaning: "tòa nhà",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "29", word: "外国人登録証", type: "(N)", reading: "がいこくじんとうろくしょう", romaji: "gaikokujin tourokushou", meaning: "thẻ ngoại kiều",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "30", word: "聖徳太子", type: "(N)", reading: "しょうとくたいし", romaji: "shoutoku taishi", meaning: "Thái tử Shotoku" },
-  { id: "31", word: "法隆寺", type: "(N)", reading: "ほうりゅうじ", romaji: "houryuuji", meaning: "chùa Horyuji" },
+  {
+    id: "30", word: "聖徳太子", type: "(N)", reading: "しょうとくたいし", romaji: "shoutoku taishi", meaning: "Thái tử Shotoku",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "31", word: "法隆寺", type: "(N)", reading: "ほうりゅうじ", romaji: "houryuuji", meaning: "chùa Horyuji",
+    idChapter: 0,
+    uniqueId: ""
+  },
 ];
 
 export const initialBai24: Flashcard[] = [
-  { id: "1", word: "くれます", type: "(II)", reading: "くれます", romaji: "kuremasu", meaning: "cho, tặng (cho tôi)" },
-  { id: "2", word: "連れて行きます", type: "(I)", reading: "つれていきます", romaji: "tsurete ikimasu", meaning: "dẫn đi" },
-  { id: "3", word: "連れて来ます", type: "(III)", reading: "つれてきます", romaji: "tsurete kimasu", meaning: "dẫn đến" },
-  { id: "4", word: "送ります", type: "(I)", reading: "おくります", romaji: "okurimasu", meaning: "đưa, tiễn (người)" },
+  {
+    id: "1", word: "くれます", type: "(II)", reading: "くれます", romaji: "kuremasu", meaning: "cho, tặng (cho tôi)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "2", word: "連れて行きます", type: "(I)", reading: "つれていきます", romaji: "tsurete ikimasu", meaning: "dẫn đi",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "3", word: "連れて来ます", type: "(III)", reading: "つれてきます", romaji: "tsurete kimasu", meaning: "dẫn đến",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "4", word: "送ります", type: "(I)", reading: "おくります", romaji: "okurimasu", meaning: "đưa, tiễn (người)",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "5", word: "紹介します", type: "(III)", reading: "しょうかいします", romaji: "shoukai shimasu", meaning: "giới thiệu" },
-  { id: "6", word: "案内します", type: "(III)", reading: "あんないします", romaji: "annai shimasu", meaning: "hướng dẫn" },
-  { id: "7", word: "説明します", type: "(III)", reading: "せつめいします", romaji: "setsumei shimasu", meaning: "giải thích" },
+  {
+    id: "5", word: "紹介します", type: "(III)", reading: "しょうかいします", romaji: "shoukai shimasu", meaning: "giới thiệu",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "6", word: "案内します", type: "(III)", reading: "あんないします", romaji: "annai shimasu", meaning: "hướng dẫn",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "7", word: "説明します", type: "(III)", reading: "せつめいします", romaji: "setsumei shimasu", meaning: "giải thích",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "8", word: "入れます", type: "(II)", reading: "いれます", romaji: "iremasu", meaning: "pha, cho vào" },
+  {
+    id: "8", word: "入れます", type: "(II)", reading: "いれます", romaji: "iremasu", meaning: "pha, cho vào",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "9", word: "おじいさん", type: "(N)", reading: "おじいさん", romaji: "ojiisan", meaning: "ông" },
-  { id: "10", word: "おじいちゃん", type: "(N)", reading: "おじいちゃん", romaji: "ojiichan", meaning: "ông (thân mật)" },
-  { id: "11", word: "おばあさん", type: "(N)", reading: "おばあさん", romaji: "obaasan", meaning: "bà" },
-  { id: "12", word: "おばあちゃん", type: "(N)", reading: "おばあちゃん", romaji: "obaachan", meaning: "bà (thân mật)" },
+  {
+    id: "9", word: "おじいさん", type: "(N)", reading: "おじいさん", romaji: "ojiisan", meaning: "ông",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "10", word: "おじいちゃん", type: "(N)", reading: "おじいちゃん", romaji: "ojiichan", meaning: "ông (thân mật)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "11", word: "おばあさん", type: "(N)", reading: "おばあさん", romaji: "obaasan", meaning: "bà",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "12", word: "おばあちゃん", type: "(N)", reading: "おばあちゃん", romaji: "obaachan", meaning: "bà (thân mật)",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "13", word: "準備", type: "(N)", reading: "じゅんび", romaji: "junbi", meaning: "chuẩn bị" },
-  { id: "14", word: "意味", type: "(N)", reading: "いみ", romaji: "imi", meaning: "ý nghĩa" },
-  { id: "15", word: "お菓子", type: "(N)", reading: "おかし", romaji: "okashi", meaning: "bánh kẹo" },
+  {
+    id: "13", word: "準備", type: "(N)", reading: "じゅんび", romaji: "junbi", meaning: "chuẩn bị",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "14", word: "意味", type: "(N)", reading: "いみ", romaji: "imi", meaning: "ý nghĩa",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "15", word: "お菓子", type: "(N)", reading: "おかし", romaji: "okashi", meaning: "bánh kẹo",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "16", word: "全部", type: "(Adv)", reading: "ぜんぶ", romaji: "zenbu", meaning: "tất cả" },
-  { id: "17", word: "自分で", type: "(Adv)", reading: "じぶんで", romaji: "jibun de", meaning: "tự mình" },
-  { id: "18", word: "ほかに", type: "(Adv)", reading: "ほかに", romaji: "hoka ni", meaning: "ngoài ra" },
+  {
+    id: "16", word: "全部", type: "(Adv)", reading: "ぜんぶ", romaji: "zenbu", meaning: "tất cả",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "17", word: "自分で", type: "(Adv)", reading: "じぶんで", romaji: "jibun de", meaning: "tự mình",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "18", word: "ほかに", type: "(Adv)", reading: "ほかに", romaji: "hoka ni", meaning: "ngoài ra",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "19", word: "ワゴン車", type: "(N)", reading: "ワゴンしゃ", romaji: "wagonsha", meaning: "xe wagon" },
-  { id: "20", word: "お弁当", type: "(N)", reading: "おべんとう", romaji: "obentou", meaning: "cơm hộp" },
-  { id: "21", word: "母の日", type: "(N)", reading: "ははのひ", romaji: "haha no hi", meaning: "ngày của mẹ" },
+  {
+    id: "19", word: "ワゴン車", type: "(N)", reading: "ワゴンしゃ", romaji: "wagonsha", meaning: "xe wagon",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "20", word: "お弁当", type: "(N)", reading: "おべんとう", romaji: "obentou", meaning: "cơm hộp",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "21", word: "母の日", type: "(N)", reading: "ははのひ", romaji: "haha no hi", meaning: "ngày của mẹ",
+    idChapter: 0,
+    uniqueId: ""
+  },
 ];
 
 export const initialBai25: Flashcard[] = [
-  { id: "1", word: "考えます", type: "(II)", reading: "かんがえます", romaji: "kangaemasu", meaning: "suy nghĩ" },
-  { id: "2", word: "着きます", type: "(I)", reading: "つきます", romaji: "tsukimasu", meaning: "đến (ga...)" },
-  { id: "3", word: "留学します", type: "(III)", reading: "りゅうがくします", romaji: "ryuugaku shimasu", meaning: "du học" },
-  { id: "4", word: "取ります", type: "(I)", reading: "とります", romaji: "torimasu", meaning: "thêm (tuổi)" },
+  {
+    id: "1", word: "考えます", type: "(II)", reading: "かんがえます", romaji: "kangaemasu", meaning: "suy nghĩ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "2", word: "着きます", type: "(I)", reading: "つきます", romaji: "tsukimasu", meaning: "đến (ga...)",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "3", word: "留学します", type: "(III)", reading: "りゅうがくします", romaji: "ryuugaku shimasu", meaning: "du học",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "4", word: "取ります", type: "(I)", reading: "とります", romaji: "torimasu", meaning: "thêm (tuổi)",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "5", word: "田舎", type: "(N)", reading: "いなか", romaji: "inaka", meaning: "nông thôn" },
-  { id: "6", word: "大使館", type: "(N)", reading: "たいしかん", romaji: "taishikan", meaning: "đại sứ quán" },
-  { id: "7", word: "グループ", type: "(N)", reading: "グループ", romaji: "guruupu", meaning: "nhóm" },
-  { id: "8", word: "チャンス", type: "(N)", reading: "チャンス", romaji: "chansu", meaning: "cơ hội" },
-  { id: "9", word: "億", type: "(Counter)", reading: "おく", romaji: "oku", meaning: "100 triệu" },
+  {
+    id: "5", word: "田舎", type: "(N)", reading: "いなか", romaji: "inaka", meaning: "nông thôn",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "6", word: "大使館", type: "(N)", reading: "たいしかん", romaji: "taishikan", meaning: "đại sứ quán",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "7", word: "グループ", type: "(N)", reading: "グループ", romaji: "guruupu", meaning: "nhóm",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "8", word: "チャンス", type: "(N)", reading: "チャンス", romaji: "chansu", meaning: "cơ hội",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "9", word: "億", type: "(Counter)", reading: "おく", romaji: "oku", meaning: "100 triệu",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "10", word: "もし～たら", type: "(Grammar)", reading: "もし～たら", romaji: "moshi ~tara", meaning: "nếu ~ thì" },
-  { id: "11", word: "いくら～ても", type: "(Grammar)", reading: "いくら～ても", romaji: "ikura ~temo", meaning: "dù ~ thế nào" },
+  {
+    id: "10", word: "もし～たら", type: "(Grammar)", reading: "もし～たら", romaji: "moshi ~tara", meaning: "nếu ~ thì",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "11", word: "いくら～ても", type: "(Grammar)", reading: "いくら～ても", romaji: "ikura ~temo", meaning: "dù ~ thế nào",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "12", word: "転勤", type: "(N)", reading: "てんきん", romaji: "tenkin", meaning: "chuyển công tác" },
-  { id: "13", word: "こと", type: "(Grammar)", reading: "こと", romaji: "koto", meaning: "việc (~)" },
+  {
+    id: "12", word: "転勤", type: "(N)", reading: "てんきん", romaji: "tenkin", meaning: "chuyển công tác",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "13", word: "こと", type: "(Grammar)", reading: "こと", romaji: "koto", meaning: "việc (~)",
+    idChapter: 0,
+    uniqueId: ""
+  },
 
-  { id: "14", word: "一杯飲みましょう", type: "(Expr)", reading: "いっぱいのみましょう", romaji: "ippai nomimashou", meaning: "cùng uống nhé" },
-  { id: "15", word: "お世話になりました", type: "(Expr)", reading: "おせわになりました", romaji: "osewa ni narimashita", meaning: "cảm ơn vì đã giúp đỡ" },
-  { id: "16", word: "頑張ります", type: "(I)", reading: "がんばります", romaji: "ganbarimasu", meaning: "cố gắng" },
-  { id: "17", word: "どうぞお元気で", type: "(Expr)", reading: "どうぞおげんきで", romaji: "douzo ogenki de", meaning: "chúc bạn khỏe" },
+  {
+    id: "14", word: "一杯飲みましょう", type: "(Expr)", reading: "いっぱいのみましょう", romaji: "ippai nomimashou", meaning: "cùng uống nhé",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "15", word: "お世話になりました", type: "(Expr)", reading: "おせわになりました", romaji: "osewa ni narimashita", meaning: "cảm ơn vì đã giúp đỡ",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "16", word: "頑張ります", type: "(I)", reading: "がんばります", romaji: "ganbarimasu", meaning: "cố gắng",
+    idChapter: 0,
+    uniqueId: ""
+  },
+  {
+    id: "17", word: "どうぞお元気で", type: "(Expr)", reading: "どうぞおげんきで", romaji: "douzo ogenki de", meaning: "chúc bạn khỏe",
+    idChapter: 0,
+    uniqueId: ""
+  },
 ];
