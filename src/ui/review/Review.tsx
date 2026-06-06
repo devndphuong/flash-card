@@ -4,7 +4,7 @@ import {
   Flashcard,
 } from "@/data/flashcard";
 import Link from "next/link";
-import LoadingPage from "./loading/LoadingPage";
+import LoadingPage from "../loading/LoadingPage";
 import { allDataFlashCards } from "@/data/comon";
 import { fisherYatesShuffle } from "@/utils/handle";
 
@@ -76,6 +76,9 @@ const ReviewPage: React.FC = () => {
 
   // toggle hiển thị danh sách chưa thuộc
   const [showUnknownList, setShowUnknownList] = useState(false);
+
+  // Hiển thị danh sách chapter để chọn
+  const [showChapters, setShowChapters] = useState(false);
 
   // Reset trạng thái khi đổi flashcards hoặc đổi chapter
   useEffect(() => {
@@ -209,26 +212,26 @@ const ReviewPage: React.FC = () => {
   // kiểm tra đã học hết chưa
   const isFinished = pos >= order.length;
 
-  // Reset về dữ liệu mặc định
+  // Reset phiên học (giữ nguyên các bài đang chọn)
   const handleResetFlashcards = () => {
-    // setFlashcards(initialBai1);
-    const savedId = localStorage.getItem("selectedChapterId");
-    const id = Number(savedId);
-    const found = allDataFlashCards.find((item) => item.id === id);
-    if (savedId && found) {
-      setSelectedChapter(found);
-    } else {
-      setSelectedChapter(allDataFlashCards[0]);
-    };
-   
+    // Reset vị trí học
     setPos(0);
+
+    // Reset trạng thái học
     setKnownSet([]);
     setunKnownSet([]);
+    setHistory([]);
+    setFlipped(false);
+
+    // Reset order về toàn bộ flashcards hiện tại
+    setOrder(flashcards.map((_, index) => index));
+
+    // Reset hiển thị field
     setVisibleFields({
       word: true,
       reading: false,
       romaji: false,
-      type: false
+      type: false,
     });
   };
 
@@ -757,14 +760,14 @@ const relearnAll = () => {
 
             <Link
               href="/kanji"
-              className="px-3 py-2 bg-green-500 text-white rounded-md text-sm text-center"
+              className="hidden px-3 py-2 bg-green-500 text-white rounded-md text-sm text-center"
             >
               漢 Kanji
             </Link>
 
             <Link
               href="/radical"
-              className="px-3 py-2 bg-purple-500 text-white rounded-md text-sm text-center"
+              className="hidden px-3 py-2 bg-purple-500 text-white rounded-md text-sm text-center"
             >
               ⿰ Bộ thủ
             </Link>
@@ -772,35 +775,67 @@ const relearnAll = () => {
               href="/alphabet"
               className="px-3 py-2 bg-pink-500 text-white rounded-md text-sm text-center"
             >
-              あ ア Bảng chữ cái
+              あア Bảng chữ cái
             </Link>
           </div>
-          <div className="w-full p-2">
-            <span className="block mb-2 font-semibold">Chọn bài học:</span>
+          <div className="w-full my-2">
+            <button
+              type="button"
+              onClick={() => setShowChapters((prev) => !prev)}
+              className="flex items-center gap-2 font-semibold cursor-pointer text-black p-2 rounded bg-white"
+            >
+              <span>📝Chọn bài kiểm tra</span>
+
+              <span
+                className={`transition-transform duration-300 ${
+                  showChapters ? "rotate-180" : ""
+                }`}
+              >
+                ▼
+              </span>
+
+              <span className="text-xs bg-blue-100 px-2 py-0.5 rounded-full">
+                {selectedChapterIds.length}
+              </span>
+            </button>
           </div>
-          <div className="flex flex-wrap gap-3">
-            {allDataFlashCards.map((chapter) => {
-              const isSelected = selectedChapterIds.includes(chapter.id);
-              return (
-                <button
-                  key={chapter.id}
-                  type="button"
-                  onClick={() => handleToggleChapter(chapter.id)}
-                  className={`
-                    px-2 py-1 rounded-md border transition-all duration-200
-                    text-sm font-medium
-                    ${
-                      isSelected
-                        ? "bg-blue-500 border-blue-500 text-white shadow-md scale-105"
-                        : "bg-white border-gray-300 hover:border-blue-400 hover:bg-blue-50 text-black"
-                    }
-                  `}
-                >
-                  {isSelected && "✓ "}
-                  {chapter.chapTer}
-                </button>
-              );
-            })}
+
+          <div
+            className={`
+              overflow-hidden
+              transition-all duration-300 ease-in-out
+              ${
+                showChapters
+                  ? "max-h-[500px] opacity-100 mt-2"
+                  : "max-h-0 opacity-0"
+              }
+            `}
+          >
+            <div className="flex flex-wrap gap-3">
+              {allDataFlashCards.map((chapter) => {
+                const isSelected = selectedChapterIds.includes(chapter.id);
+
+                return (
+                  <button
+                    key={chapter.id}
+                    type="button"
+                    onClick={() => handleToggleChapter(chapter.id)}
+                    className={`
+                      px-2 py-1 rounded-md border transition-all duration-200
+                      text-sm font-medium
+                      ${
+                        isSelected
+                          ? "bg-blue-500 border-blue-500 text-white shadow-md scale-105"
+                          : "bg-white border-gray-300 hover:border-blue-400 hover:bg-blue-50 text-black"
+                      }
+                    `}
+                  >
+                    {isSelected && "✓ "}
+                    {chapter.chapTer}
+                  </button>
+                );
+              })}
+            </div>
           </div>
             {
                 !isFinished &&

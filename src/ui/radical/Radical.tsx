@@ -475,14 +475,14 @@ const relearnUnknown = () => {
 
             <Link
               href="/kanji"
-              className="px-3 py-2 bg-green-500 text-white rounded-md text-sm text-center"
+              className="hidden px-3 py-2 bg-green-500 text-white rounded-md text-sm text-center"
             >
               漢 Kanji
             </Link>
 
             <Link
               href="/radical"
-              className="px-3 py-2 bg-purple-500 text-white rounded-md text-sm text-center"
+              className="hidden px-3 py-2 bg-purple-500 text-white rounded-md text-sm text-center"
             >
               ⿰ Bộ thủ
             </Link>
@@ -490,10 +490,10 @@ const relearnUnknown = () => {
               href="/alphabet"
               className="px-3 py-2 bg-pink-500 text-white rounded-md text-sm text-center"
             >
-              あ ア Bảng chữ cái
+              あア Bảng chữ cái
             </Link>
           </div>
-          <div className="w-full p-2">
+          <div className="w-full my-2">
             <label className="block mb-2 font-semibold">Chọn bài học:</label>
             <select
               value={selectedChapter.id}

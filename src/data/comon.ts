@@ -1,3 +1,4 @@
+import { hiraAlphabet, kataAlphabet, yoonFlashcards } from "./alphabet";
 import { initialBai1, initialBai10, initialBai11, initialBai12, initialBai13, initialBai14, initialBai15, initialBai16, initialBai17, initialBai18, initialBai19, initialBai2, initialBai20, initialBai21, initialBai22, initialBai23, initialBai24, initialBai25, initialBai3, initialBai4, initialBai5, initialBai6, initialBai7, initialBai8, initialBai9 } from "./flashcard";
 
 const dataFlashCards = [
@@ -36,3 +37,9 @@ export const allDataFlashCards = dataFlashCards.map((chapter) => ({
     uniqueId: `${chapter.id}_${card.id}`,
   })),
 }));
+
+export const allAlphabetFlashCards = [
+    { id: 1, chapTer: "Hiragana", dataFlashCard: hiraAlphabet },
+    { id: 2, chapTer: "Katakana", dataFlashCard: kataAlphabet },
+    { id: 3, chapTer: "Âm ghép", dataFlashCard: yoonFlashcards}
+];
